@@ -36,6 +36,7 @@ class PuppiesController < ApplicationController
   private
 
   def puppies!
+    average_age = Kennel.average_age
     reticulate_splines
     combobulate
     discombobulate
