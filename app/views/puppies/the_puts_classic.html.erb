@@ -1,0 +1,21 @@
+<h1>The Puts Classic</h1>
+
+<p>If "puts debugging" is the practice of sprinkling <code>puts</code> throughout your application to see what bits of code are executing, the next step is to use <code>Time.zone.now</code> to figure out how long it took.</p>
+
+<code><pre><%= raw PuppiesController.instance_method(:the_puts_classic).source %></pre></code>
+
+<h2>Pros</h2>
+
+<ul>
+  <li>Anyone can do it.</li>
+  <li>Doesn't require any extra tooling.</li>
+</ul>
+
+<h2>Disadvantages</h2>
+
+<ul>
+  <li>Requires lots of changes to application code.</li>
+  <li>100% guaranteed to accidentally commit it.</li>
+  <li>Requires lots of iterations to zero in on hotspots, so you sort of need to know what you're looking for in advance.</li>
+  <li>Tells you how long something took, but not a lot about CPU usage or RAM consumption.</li>
+</ul>

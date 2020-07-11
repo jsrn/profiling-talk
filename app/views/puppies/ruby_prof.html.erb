@@ -1,0 +1,13 @@
+<h1>ruby-prof</h1>
+
+<p><a href="https://ruby-prof.github.io/">ruby-prof</a> is a profiler for MRI Ruby.</p>
+
+<code><pre><%= raw PuppiesController.instance_method(:ruby_prof).source %></pre></code>
+
+<h2>Flat Report</h2>
+
+<pre><%= File.read(Rails.root.join('public/reports/ruby_prof.flat.txt'))%></pre>
+
+<h2>Graph Report</h2>
+
+<iframe src="/reports/ruby_prof.graph.html"></iframe>

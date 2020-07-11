@@ -1,0 +1,3653 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style media="all" type="text/css">
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+      background-color: #F5F7FB;
+      margin: 0;
+      padding: 0;
+      font-size: 16px;
+    }
+
+    table {
+      border-collapse: collapse;
+      /* border: 1px solid #E1E3E7; */
+      border: 1px solid #F3F9FE;
+      font-size: 14px;
+      line-height: normal;
+      width: 100%;
+    }
+
+    table:empty {
+      display: none;
+    }
+
+    th:first-child {
+      border-left: 0;
+    }
+
+    th {
+      text-align: center;
+      background: #F3F9FE;
+      padding: 1rem;
+      /* border-left: 1px solid #E1E3E7; */
+      text-transform: uppercase;
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+
+    tr.break td {
+      border: 0;
+      border-top: 1px solid #BDC3DD;
+      padding: 0;
+      margin: 0;
+    }
+
+    tr.method td {
+      font-weight: bold;
+    }
+
+    td {
+      padding: 0.5em;
+    }
+
+    td:first-child {
+      width: 190px;
+    }
+
+    tr > td > table {
+      box-shadow: 0px -2px 1px #F9FAFB, 0px 1px 1px #E4EEEE, 0px 1px 2px #EEF3F8;
+      border-radius: 2px;
+      overflow: hidden;
+    }
+
+    tr.break + tr > td.method_name {
+      font-weight: bold;
+    }
+
+    td {
+      /* I'm removing this border because I think it looks way cleaner without it but feel free to add it if you feel it's necessary */
+      /* border-left: 1px solid #E1E3E7; */
+      text-align: center;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .method_name {
+      text-align: left;
+    }
+
+    tfoot td {
+      text-align: left;
+    }
+
+    .report-header {
+      background-color: #0D2483;
+      color: white;
+      padding: 1.5rem 2rem;
+    }
+
+    .report-header > div {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .report-header h1 {
+      margin-bottom: 0;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+    }
+
+    h6 {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .table-header {
+      padding: 3rem 0 1rem;
+    }
+
+    .table-wrapper {
+      margin: 1rem auto;
+      max-width: 1440px;
+      padding: 4rem 5rem;
+      background: white;
+      border-radius: 0.5rem;
+    }
+
+    .center {
+      max-width: 1440px;
+      margin: 0 auto;
+    }
+
+    .layout-right {
+      margin-left: auto;
+    }
+
+    .text-right {
+      display: flex;
+      align-items: flex-end;
+      flex-direction: column;
+    }
+
+    .timestamp {
+      font-size: 12px;
+      margin-bottom: 1rem;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .logo {
+      width: 140px;
+      height: 30px;
+      opacity: 0.5;
+      background-repeat: no-repeat;
+      background-image: url("data:image/svg+xml,%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 190 41'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%23fff%7D%3C/style%3E%3C/defs%3E%3Cpath class='cls-1' d='M63.49 16.74c0-1.37-.91-2-2.26-2h-3.38v3.93h3.58c1.24.01 2.06-.56 2.06-1.93zM110.43 14.75h-3.6v5h3.6a2.32 2.32 0 0 0 2.5-2.49 2.34 2.34 0 0 0-2.5-2.51zM128.77 14.75h-3.53v4.94h3.53a2.28 2.28 0 0 0 2.47-2.45 2.3 2.3 0 0 0-2.47-2.49zM61.81 21.83h-4v4.32h3.91c1.44 0 2.45-.62 2.45-2.14s-.99-2.18-2.36-2.18zM21 14.75h-3.57v4.94H21a2.28 2.28 0 0 0 2.47-2.45A2.3 2.3 0 0 0 21 14.75z'/%3E%3Cpath class='cls-1' d='M184 .44H5.87A4.93 4.93 0 0 0 .94 5.37V35.5a4.94 4.94 0 0 0 4.93 4.94H184a4.94 4.94 0 0 0 4.94-4.94V5.37A4.94 4.94 0 0 0 184 .44zm-34.38 10.78c4.79 0 8.46 2.89 9.18 7.54h-3.86a5.48 5.48 0 0 0-10.68 0h-3.83c.71-4.65 4.36-7.54 9.19-7.54zM24 29.44L20.46 23h-3v6.46h-3.72v-18h7.68c3.41 0 5.78 2.07 5.78 5.76a5.34 5.34 0 0 1-2.88 5.14l3.82 7.06zm24.31-7.3c0 4.8-2.92 7.56-7.63 7.56S33 26.94 33 22.14V11.48h3.69v10.61c0 2.81 1.37 4.32 4 4.32s3.94-1.51 3.94-4.32V11.48h3.69zm13.92 7.3h-8v-18h7.52c3.24 0 5.59 1.61 5.59 5A4 4 0 0 1 65.51 20 4.22 4.22 0 0 1 68 24.21c0 3.43-2.4 5.23-5.81 5.23zm19.66-6.92v6.92h-3.7v-6.92l-6.81-11h4.29L80 18.85l4.34-7.37h4.32zm16-.5h-7.62v-3.26h7.59zm13 1h-4v6.39h-3.72v-18h7.77c3.41 0 5.79 2.09 5.79 5.79s-2.41 5.85-5.82 5.85zm20.86 6.39L128.26 23h-3v6.46h-3.72v-18h7.69c3.4 0 5.78 2.07 5.78 5.76a5.34 5.34 0 0 1-2.88 5.14l3.87 7.08zm17.85.26c-4.88 0-8.55-2.95-9.21-7.68h3.81A5.49 5.49 0 0 0 155 22h3.84c-.69 4.75-4.38 7.7-9.22 7.7zm18.4-.23h-3.72v-3.7H168zm6.36-7.54h-10.05v-3.26h10.08zm1.44-7.16h-11.49v-3.26h11.52z'/%3E%3C/svg%3E");
+    }
+  </style>
+</head>
+<body>
+<div class="report-header">
+  <div class="center">
+    <div class="layout-left">
+      <h6>Profile Report</h6>
+      <h1>Wall_time</h1>
+    </div>
+    <div class="layout-right text-right">
+      <div class="timestamp">Saturday, July 11 at  4:45:02 PM (BST)</div>
+      <div class="logo"></div>
+    </div>
+  </div>
+</div>
+<div class="table-wrapper">
+  <table>
+    <tr>
+      <th>Thread ID</th>
+      <th>Fiber ID</th>
+      <th>Total</th>
+    </tr>
+    
+      <tr>
+        <td>70282691008200</td>
+        <td><a href="#70282701917460">70282701917460</a></td>
+        <td>1.4326601229986409</td>
+      </tr>
+    
+      <tr>
+        <td>70282692603180</td>
+        <td><a href="#70282703831700">70282703831700</a></td>
+        <td>1.2100670029903995</td>
+      </tr>
+    
+      <tr>
+        <td>70282699293520</td>
+        <td><a href="#70282703831600">70282703831600</a></td>
+        <td>1.1084546470083296</td>
+      </tr>
+    
+      <tr>
+        <td>70282691043020</td>
+        <td><a href="#70282699897720">70282699897720</a></td>
+        <td>0.46003173501230776</td>
+      </tr>
+    
+  </table>
+
+  <!-- Methods Tables -->
+  
+    <h2><a name="70282701917460">Thread 70282691008200, Fiber: 70282701917460</a></h2>
+    <table>
+      <thead>
+      <tr>
+        <th>%Total</th>
+        <th>%Self</th>
+        <th>Total</th>
+        <th>Self</th>
+        <th>Wait</th>
+        <th>Child</th>
+        <th>Calls</th>
+        <th class="method_name">Name</th>
+        
+        <th>Line</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+
+        <!-- Parents -->
+        
+        <tr class="method">
+          <td>100.00%</td>
+          <td>0.00%</td>
+          <td>1.43</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>1.43</td>
+          <td>1</td>
+          <td class="method_name">
+            <a name="PuppiesController_ruby_prof_70282701917460">
+               PuppiesController#ruby_prof
+            </a>
+          </td>
+
+          
+
+          <td><a href="file:///Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb#22" title="/Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb:22">22</a></td>
+        </tr>
+
+        
+
+        <!-- Children -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>1.43</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>1.43</td>
+            <td>1/1</td>
+            <td class="method_name"><a href="#PuppiesController_puppies!_70282701917460">PuppiesController#puppies!</a></td>
+            
+            <td><a href="file:///Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb#22" title="/Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb:22">22</a>
+          </tr>
+        
+
+        <!-- Create divider row -->
+        <tr class="break">
+          <td colspan="10"></td>
+        </tr>
+      
+
+        <!-- Parents -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>1.43</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>1.43</td>
+            <td>1/1</td>
+            <td class="method_name"><a href="#PuppiesController_ruby_prof_70282701917460">PuppiesController#ruby_prof</a></td>
+            
+            <td><a href="file:///Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb#22" title="/Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb:22">22</a></td>
+          </tr>
+        
+        <tr class="method">
+          <td>100.00%</td>
+          <td>0.00%</td>
+          <td>1.43</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>1.43</td>
+          <td>1</td>
+          <td class="method_name">
+            <a name="PuppiesController_puppies!_70282701917460">
+               PuppiesController#puppies!
+            </a>
+          </td>
+
+          
+
+          <td><a href="file:///Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb#38" title="/Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb:38">38</a></td>
+        </tr>
+
+        
+
+        <!-- Children -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.67</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.67</td>
+            <td>1/1</td>
+            <td class="method_name"><a href="#PuppiesController_combobulate_70282701917460">PuppiesController#combobulate</a></td>
+            
+            <td><a href="file:///Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb#40" title="/Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb:40">40</a>
+          </tr>
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.40</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.40</td>
+            <td>1/1</td>
+            <td class="method_name"><a href="#PuppiesController_discombobulate_70282701917460">PuppiesController#discombobulate</a></td>
+            
+            <td><a href="file:///Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb#41" title="/Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb:41">41</a>
+          </tr>
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.36</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.36</td>
+            <td>1/1</td>
+            <td class="method_name"><a href="#PuppiesController_reticulate_splines_70282701917460">PuppiesController#reticulate_splines</a></td>
+            
+            <td><a href="file:///Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb#39" title="/Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb:39">39</a>
+          </tr>
+        
+
+        <!-- Create divider row -->
+        <tr class="break">
+          <td colspan="10"></td>
+        </tr>
+      
+
+        <!-- Parents -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.36</td>
+            <td>0.18</td>
+            <td>0.00</td>
+            <td>0.18</td>
+            <td>1/2428</td>
+            <td class="method_name"><a href="#PuppiesController_reticulate_splines_70282701917460">PuppiesController#reticulate_splines</a></td>
+            
+            <td><a href="file:///Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb#45" title="/Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb:45">45</a></td>
+          </tr>
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.39</td>
+            <td>0.39</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>2425/2428</td>
+            <td class="method_name"><a href="#PuppiesController_odd_combobulation_70282701917460">PuppiesController#odd_combobulation</a></td>
+            
+            <td><a href="file:///Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb#71" title="/Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb:71">71</a></td>
+          </tr>
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.40</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.40</td>
+            <td>1/2428</td>
+            <td class="method_name"><a href="#PuppiesController_discombobulate_70282701917460">PuppiesController#discombobulate</a></td>
+            
+            <td><a href="file:///Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb#57" title="/Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb:57">57</a></td>
+          </tr>
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.67</td>
+            <td>0.34</td>
+            <td>0.00</td>
+            <td>0.33</td>
+            <td>1/2428</td>
+            <td class="method_name"><a href="#PuppiesController_combobulate_70282701917460">PuppiesController#combobulate</a></td>
+            
+            <td><a href="file:///Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb#51" title="/Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb:51">51</a></td>
+          </tr>
+        
+        <tr class="method">
+          <td>100.00%</td>
+          <td>64.15%</td>
+          <td>1.43</td>
+          <td>0.92</td>
+          <td>0.00</td>
+          <td>0.51</td>
+          <td>2428</td>
+          <td class="method_name">
+            <a name="Integer_times_70282701917460">
+              *Integer#times
+            </a>
+          </td>
+
+          
+
+          <td></td>
+        </tr>
+
+        
+
+        <!-- Children -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.40</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.39</td>
+            <td>2425/2425</td>
+            <td class="method_name"><a href="#PuppiesController_odd_combobulation_70282701917460">PuppiesController#odd_combobulation</a></td>
+            
+            <td><a href="file:///Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb#61" title="/Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb:61">61</a>
+          </tr>
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.33</td>
+            <td>0.33</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>1485836/1485839</td>
+            <td class="method_name"><a href="#Kernel_rand_70282701917460">Kernel#rand</a></td>
+            
+            <td><a href="file:///Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb#46" title="/Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb:46">46</a>
+          </tr>
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.18</td>
+            <td>0.18</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>1485836/1485836</td>
+            <td class="method_name"><a href="#_Module__Math__sqrt_70282701917460">&lt;Module::Math&gt;#sqrt</a></td>
+            
+            <td><a href="file:///Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb#46" title="/Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb:46">46</a>
+          </tr>
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>4821/4821</td>
+            <td class="method_name"><a href="#Float_to_i_70282701917460">Float#to_i</a></td>
+            
+            <td><a href="file:///Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb#58" title="/Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb:58">58</a>
+          </tr>
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>4821/4821</td>
+            <td class="method_name"><a href="#Integer_even__70282701917460">Integer#even?</a></td>
+            
+            <td><a href="file:///Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb#58" title="/Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb:58">58</a>
+          </tr>
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>2396/2396</td>
+            <td class="method_name"><a href="#PuppiesController_even_combobulation_70282701917460">PuppiesController#even_combobulation</a></td>
+            
+            <td><a href="file:///Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb#59" title="/Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb:59">59</a>
+          </tr>
+        
+
+        <!-- Create divider row -->
+        <tr class="break">
+          <td colspan="10"></td>
+        </tr>
+      
+
+        <!-- Parents -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.67</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.67</td>
+            <td>1/1</td>
+            <td class="method_name"><a href="#PuppiesController_puppies!_70282701917460">PuppiesController#puppies!</a></td>
+            
+            <td><a href="file:///Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb#40" title="/Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb:40">40</a></td>
+          </tr>
+        
+        <tr class="method">
+          <td>46.61%</td>
+          <td>0.00%</td>
+          <td>0.67</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.67</td>
+          <td>1</td>
+          <td class="method_name">
+            <a name="PuppiesController_combobulate_70282701917460">
+               PuppiesController#combobulate
+            </a>
+          </td>
+
+          
+
+          <td><a href="file:///Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb#50" title="/Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb:50">50</a></td>
+        </tr>
+
+        
+
+        <!-- Children -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.67</td>
+            <td>0.34</td>
+            <td>0.00</td>
+            <td>0.33</td>
+            <td>1/2428</td>
+            <td class="method_name"><a href="#Integer_times_70282701917460">Integer#times</a></td>
+            
+            <td><a href="file:///Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb#51" title="/Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb:51">51</a>
+          </tr>
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>1/1485839</td>
+            <td class="method_name"><a href="#Kernel_rand_70282701917460">Kernel#rand</a></td>
+            
+            <td><a href="file:///Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb#51" title="/Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb:51">51</a>
+          </tr>
+        
+
+        <!-- Create divider row -->
+        <tr class="break">
+          <td colspan="10"></td>
+        </tr>
+      
+
+        <!-- Parents -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.40</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.40</td>
+            <td>1/1</td>
+            <td class="method_name"><a href="#PuppiesController_puppies!_70282701917460">PuppiesController#puppies!</a></td>
+            
+            <td><a href="file:///Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb#41" title="/Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb:41">41</a></td>
+          </tr>
+        
+        <tr class="method">
+          <td>28.22%</td>
+          <td>0.00%</td>
+          <td>0.40</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.40</td>
+          <td>1</td>
+          <td class="method_name">
+            <a name="PuppiesController_discombobulate_70282701917460">
+               PuppiesController#discombobulate
+            </a>
+          </td>
+
+          
+
+          <td><a href="file:///Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb#56" title="/Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb:56">56</a></td>
+        </tr>
+
+        
+
+        <!-- Children -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.40</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.40</td>
+            <td>1/2428</td>
+            <td class="method_name"><a href="#Integer_times_70282701917460">Integer#times</a></td>
+            
+            <td><a href="file:///Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb#57" title="/Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb:57">57</a>
+          </tr>
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>1/1485839</td>
+            <td class="method_name"><a href="#Kernel_rand_70282701917460">Kernel#rand</a></td>
+            
+            <td><a href="file:///Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb#57" title="/Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb:57">57</a>
+          </tr>
+        
+
+        <!-- Create divider row -->
+        <tr class="break">
+          <td colspan="10"></td>
+        </tr>
+      
+
+        <!-- Parents -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.40</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.39</td>
+            <td>2425/2425</td>
+            <td class="method_name"><a href="#Integer_times_70282701917460">Integer#times</a></td>
+            
+            <td></td>
+          </tr>
+        
+        <tr class="method">
+          <td>27.58%</td>
+          <td>0.07%</td>
+          <td>0.40</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.39</td>
+          <td>2425</td>
+          <td class="method_name">
+            <a name="PuppiesController_odd_combobulation_70282701917460">
+               PuppiesController#odd_combobulation
+            </a>
+          </td>
+
+          
+
+          <td><a href="file:///Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb#70" title="/Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb:70">70</a></td>
+        </tr>
+
+        
+
+        <!-- Children -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.39</td>
+            <td>0.39</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>2425/2428</td>
+            <td class="method_name"><a href="#Integer_times_70282701917460">Integer#times</a></td>
+            
+            <td><a href="file:///Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb#71" title="/Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb:71">71</a>
+          </tr>
+        
+
+        <!-- Create divider row -->
+        <tr class="break">
+          <td colspan="10"></td>
+        </tr>
+      
+
+        <!-- Parents -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.36</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.36</td>
+            <td>1/1</td>
+            <td class="method_name"><a href="#PuppiesController_puppies!_70282701917460">PuppiesController#puppies!</a></td>
+            
+            <td><a href="file:///Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb#39" title="/Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb:39">39</a></td>
+          </tr>
+        
+        <tr class="method">
+          <td>25.16%</td>
+          <td>0.00%</td>
+          <td>0.36</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.36</td>
+          <td>1</td>
+          <td class="method_name">
+            <a name="PuppiesController_reticulate_splines_70282701917460">
+               PuppiesController#reticulate_splines
+            </a>
+          </td>
+
+          
+
+          <td><a href="file:///Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb#44" title="/Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb:44">44</a></td>
+        </tr>
+
+        
+
+        <!-- Children -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.36</td>
+            <td>0.18</td>
+            <td>0.00</td>
+            <td>0.18</td>
+            <td>1/2428</td>
+            <td class="method_name"><a href="#Integer_times_70282701917460">Integer#times</a></td>
+            
+            <td><a href="file:///Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb#45" title="/Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb:45">45</a>
+          </tr>
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>1/1485839</td>
+            <td class="method_name"><a href="#Kernel_rand_70282701917460">Kernel#rand</a></td>
+            
+            <td><a href="file:///Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb#45" title="/Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb:45">45</a>
+          </tr>
+        
+
+        <!-- Create divider row -->
+        <tr class="break">
+          <td colspan="10"></td>
+        </tr>
+      
+
+        <!-- Parents -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>1/1485839</td>
+            <td class="method_name"><a href="#PuppiesController_combobulate_70282701917460">PuppiesController#combobulate</a></td>
+            
+            <td><a href="file:///Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb#51" title="/Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb:51">51</a></td>
+          </tr>
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>1/1485839</td>
+            <td class="method_name"><a href="#PuppiesController_discombobulate_70282701917460">PuppiesController#discombobulate</a></td>
+            
+            <td><a href="file:///Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb#57" title="/Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb:57">57</a></td>
+          </tr>
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>1/1485839</td>
+            <td class="method_name"><a href="#PuppiesController_reticulate_splines_70282701917460">PuppiesController#reticulate_splines</a></td>
+            
+            <td><a href="file:///Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb#45" title="/Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb:45">45</a></td>
+          </tr>
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.33</td>
+            <td>0.33</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>1485836/1485839</td>
+            <td class="method_name"><a href="#Integer_times_70282701917460">Integer#times</a></td>
+            
+            <td></td>
+          </tr>
+        
+        <tr class="method">
+          <td>23.21%</td>
+          <td>23.21%</td>
+          <td>0.33</td>
+          <td>0.33</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>1485839</td>
+          <td class="method_name">
+            <a name="Kernel_rand_70282701917460">
+               Kernel#rand
+            </a>
+          </td>
+
+          
+
+          <td></td>
+        </tr>
+
+        
+
+        <!-- Children -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>3/3</td>
+            <td class="method_name"><a href="#Integer_-_70282701917460">Integer#-</a></td>
+            
+            <td>
+          </tr>
+        
+
+        <!-- Create divider row -->
+        <tr class="break">
+          <td colspan="10"></td>
+        </tr>
+      
+
+        <!-- Parents -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.18</td>
+            <td>0.18</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>1485836/1485836</td>
+            <td class="method_name"><a href="#Integer_times_70282701917460">Integer#times</a></td>
+            
+            <td></td>
+          </tr>
+        
+        <tr class="method">
+          <td>12.39%</td>
+          <td>12.39%</td>
+          <td>0.18</td>
+          <td>0.18</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>1485836</td>
+          <td class="method_name">
+            <a name="_Module__Math__sqrt_70282701917460">
+               &lt;Module::Math&gt;#sqrt
+            </a>
+          </td>
+
+          
+
+          <td></td>
+        </tr>
+
+        
+
+        <!-- Children -->
+        
+
+        <!-- Create divider row -->
+        <tr class="break">
+          <td colspan="10"></td>
+        </tr>
+      
+
+        <!-- Parents -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>4821/4821</td>
+            <td class="method_name"><a href="#Integer_times_70282701917460">Integer#times</a></td>
+            
+            <td></td>
+          </tr>
+        
+        <tr class="method">
+          <td>0.05%</td>
+          <td>0.05%</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>4821</td>
+          <td class="method_name">
+            <a name="Float_to_i_70282701917460">
+               Float#to_i
+            </a>
+          </td>
+
+          
+
+          <td></td>
+        </tr>
+
+        
+
+        <!-- Children -->
+        
+
+        <!-- Create divider row -->
+        <tr class="break">
+          <td colspan="10"></td>
+        </tr>
+      
+
+        <!-- Parents -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>4821/4821</td>
+            <td class="method_name"><a href="#Integer_times_70282701917460">Integer#times</a></td>
+            
+            <td></td>
+          </tr>
+        
+        <tr class="method">
+          <td>0.05%</td>
+          <td>0.05%</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>4821</td>
+          <td class="method_name">
+            <a name="Integer_even__70282701917460">
+               Integer#even?
+            </a>
+          </td>
+
+          
+
+          <td></td>
+        </tr>
+
+        
+
+        <!-- Children -->
+        
+
+        <!-- Create divider row -->
+        <tr class="break">
+          <td colspan="10"></td>
+        </tr>
+      
+
+        <!-- Parents -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>2396/2396</td>
+            <td class="method_name"><a href="#Integer_times_70282701917460">Integer#times</a></td>
+            
+            <td></td>
+          </tr>
+        
+        <tr class="method">
+          <td>0.05%</td>
+          <td>0.05%</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>2396</td>
+          <td class="method_name">
+            <a name="PuppiesController_even_combobulation_70282701917460">
+               PuppiesController#even_combobulation
+            </a>
+          </td>
+
+          
+
+          <td><a href="file:///Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb#66" title="/Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb:66">66</a></td>
+        </tr>
+
+        
+
+        <!-- Children -->
+        
+
+        <!-- Create divider row -->
+        <tr class="break">
+          <td colspan="10"></td>
+        </tr>
+      
+
+        <!-- Parents -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>3/3</td>
+            <td class="method_name"><a href="#Kernel_rand_70282701917460">Kernel#rand</a></td>
+            
+            <td></td>
+          </tr>
+        
+        <tr class="method">
+          <td>0.00%</td>
+          <td>0.00%</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>3</td>
+          <td class="method_name">
+            <a name="Integer_-_70282701917460">
+               Integer#-
+            </a>
+          </td>
+
+          
+
+          <td></td>
+        </tr>
+
+        
+
+        <!-- Children -->
+        
+
+        <!-- Create divider row -->
+        <tr class="break">
+          <td colspan="10"></td>
+        </tr>
+      
+      </tbody>
+      <tfoot>
+      <tr>
+        <td colspan="9">* indicates recursively called methods</td>
+      </tr>
+      </tfoot>
+    </table>
+  
+    <h2><a name="70282703831700">Thread 70282692603180, Fiber: 70282703831700</a></h2>
+    <table>
+      <thead>
+      <tr>
+        <th>%Total</th>
+        <th>%Self</th>
+        <th>Total</th>
+        <th>Self</th>
+        <th>Wait</th>
+        <th>Child</th>
+        <th>Calls</th>
+        <th class="method_name">Name</th>
+        
+        <th>Line</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+
+        <!-- Parents -->
+        
+        <tr class="method">
+          <td>100.00%</td>
+          <td>0.00%</td>
+          <td>1.21</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>1.21</td>
+          <td>1</td>
+          <td class="method_name">
+            <a name="_Class__ActiveRecord__ConnectionAdapters__ConnectionPool__Reaper__spawn_thread_70282703831700">
+               &lt;Class::ActiveRecord::ConnectionAdapters::ConnectionPool::Reaper&gt;#spawn_thread
+            </a>
+          </td>
+
+          
+
+          <td><a href="file:///Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb#338" title="/Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:338">338</a></td>
+        </tr>
+
+        
+
+        <!-- Children -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>1.21</td>
+            <td>0.00</td>
+            <td>1.21</td>
+            <td>0.00</td>
+            <td>1/1</td>
+            <td class="method_name"><a href="#Kernel_sleep_70282703831700">Kernel#sleep</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb#337" title="/Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:337">337</a>
+          </tr>
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>1/1</td>
+            <td class="method_name"><a href="#Thread__Mutex_synchronize_70282703831700">Thread::Mutex#synchronize</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb#338" title="/Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:338">338</a>
+          </tr>
+        
+
+        <!-- Create divider row -->
+        <tr class="break">
+          <td colspan="10"></td>
+        </tr>
+      
+
+        <!-- Parents -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>1.21</td>
+            <td>0.00</td>
+            <td>1.21</td>
+            <td>0.00</td>
+            <td>1/1</td>
+            <td class="method_name"><a href="#_Class__ActiveRecord__ConnectionAdapters__ConnectionPool__Reaper__spawn_thread_70282703831700">&lt;Class::ActiveRecord::ConnectionAdapters::ConnectionPool::Reaper&gt;#spawn_thread</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb#337" title="/Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:337">337</a></td>
+          </tr>
+        
+        <tr class="method">
+          <td>99.99%</td>
+          <td>0.00%</td>
+          <td>1.21</td>
+          <td>0.00</td>
+          <td>1.21</td>
+          <td>0.00</td>
+          <td>1</td>
+          <td class="method_name">
+            <a name="Kernel_sleep_70282703831700">
+               Kernel#sleep
+            </a>
+          </td>
+
+          
+
+          <td><a href="file:///Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb#337" title="/Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:337">337</a></td>
+        </tr>
+
+        
+
+        <!-- Children -->
+        
+
+        <!-- Create divider row -->
+        <tr class="break">
+          <td colspan="10"></td>
+        </tr>
+      
+
+        <!-- Parents -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>1/1</td>
+            <td class="method_name"><a href="#_Class__ActiveRecord__ConnectionAdapters__ConnectionPool__Reaper__spawn_thread_70282703831700">&lt;Class::ActiveRecord::ConnectionAdapters::ConnectionPool::Reaper&gt;#spawn_thread</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb#338" title="/Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:338">338</a></td>
+          </tr>
+        
+        <tr class="method">
+          <td>0.01%</td>
+          <td>0.00%</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>1</td>
+          <td class="method_name">
+            <a name="Thread__Mutex_synchronize_70282703831700">
+               Thread::Mutex#synchronize
+            </a>
+          </td>
+
+          
+
+          <td></td>
+        </tr>
+
+        
+
+        <!-- Children -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>1/5</td>
+            <td class="method_name"><a href="#Array_each_70282703831700">Array#each</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb#340" title="/Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:340">340</a>
+          </tr>
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>1/1</td>
+            <td class="method_name"><a href="#Array_select!_70282703831700">Array#select!</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb#339" title="/Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:339">339</a>
+          </tr>
+        
+
+        <!-- Create divider row -->
+        <tr class="break">
+          <td colspan="10"></td>
+        </tr>
+      
+
+        <!-- Parents -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>2/5</td>
+            <td class="method_name"><a href="#MonitorMixin_synchronize_70282703831700">MonitorMixin#synchronize</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/monitor.rb#652" title="/Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/monitor.rb:652">652</a></td>
+          </tr>
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>1/5</td>
+            <td class="method_name"><a href="#ActiveRecord__ConnectionAdapters__ConnectionPool_reap_70282703831700">ActiveRecord::ConnectionAdapters::ConnectionPool#reap</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb#659" title="/Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:659">659</a></td>
+          </tr>
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>1/5</td>
+            <td class="method_name"><a href="#ActiveRecord__ConnectionAdapters__ConnectionPool_flush_70282703831700">ActiveRecord::ConnectionAdapters::ConnectionPool#flush</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb#687" title="/Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:687">687</a></td>
+          </tr>
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>1/5</td>
+            <td class="method_name"><a href="#Thread__Mutex_synchronize_70282703831700">Thread::Mutex#synchronize</a></td>
+            
+            <td></td>
+          </tr>
+        
+        <tr class="method">
+          <td>0.01%</td>
+          <td>0.00%</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>5</td>
+          <td class="method_name">
+            <a name="Array_each_70282703831700">
+              *Array#each
+            </a>
+          </td>
+
+          
+
+          <td></td>
+        </tr>
+
+        
+
+        <!-- Children -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>2/2</td>
+            <td class="method_name"><a href="#Delegator_method_missing_70282703831700">Delegator#method_missing</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb#341" title="/Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:341">341</a>
+          </tr>
+        
+
+        <!-- Create divider row -->
+        <tr class="break">
+          <td colspan="10"></td>
+        </tr>
+      
+
+        <!-- Parents -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>2/2</td>
+            <td class="method_name"><a href="#Array_each_70282703831700">Array#each</a></td>
+            
+            <td></td>
+          </tr>
+        
+        <tr class="method">
+          <td>0.01%</td>
+          <td>0.00%</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>2</td>
+          <td class="method_name">
+            <a name="Delegator_method_missing_70282703831700">
+               Delegator#method_missing
+            </a>
+          </td>
+
+          
+
+          <td><a href="file:///Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/delegate.rb#78" title="/Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/delegate.rb:78">78</a></td>
+        </tr>
+
+        
+
+        <!-- Children -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>1/1</td>
+            <td class="method_name"><a href="#ActiveRecord__ConnectionAdapters__ConnectionPool_reap_70282703831700">ActiveRecord::ConnectionAdapters::ConnectionPool#reap</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/delegate.rb#83" title="/Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/delegate.rb:83">83</a>
+          </tr>
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>1/1</td>
+            <td class="method_name"><a href="#ActiveRecord__ConnectionAdapters__ConnectionPool_flush_70282703831700">ActiveRecord::ConnectionAdapters::ConnectionPool#flush</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/delegate.rb#83" title="/Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/delegate.rb:83">83</a>
+          </tr>
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>2/2</td>
+            <td class="method_name"><a href="#WeakRef___getobj___70282703831700">WeakRef#__getobj__</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/delegate.rb#80" title="/Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/delegate.rb:80">80</a>
+          </tr>
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>2/2</td>
+            <td class="method_name"><a href="#Kernel_respond_to__70282703831700">Kernel#respond_to?</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/delegate.rb#82" title="/Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/delegate.rb:82">82</a>
+          </tr>
+        
+
+        <!-- Create divider row -->
+        <tr class="break">
+          <td colspan="10"></td>
+        </tr>
+      
+
+        <!-- Parents -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>1/2</td>
+            <td class="method_name"><a href="#ActiveRecord__ConnectionAdapters__ConnectionPool_flush_70282703831700">ActiveRecord::ConnectionAdapters::ConnectionPool#flush</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb#675" title="/Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:675">675</a></td>
+          </tr>
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>1/2</td>
+            <td class="method_name"><a href="#ActiveRecord__ConnectionAdapters__ConnectionPool_reap_70282703831700">ActiveRecord::ConnectionAdapters::ConnectionPool#reap</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb#650" title="/Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:650">650</a></td>
+          </tr>
+        
+        <tr class="method">
+          <td>0.00%</td>
+          <td>0.00%</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>2</td>
+          <td class="method_name">
+            <a name="MonitorMixin_synchronize_70282703831700">
+               MonitorMixin#synchronize
+            </a>
+          </td>
+
+          
+
+          <td><a href="file:///Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/monitor.rb#227" title="/Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/monitor.rb:227">227</a></td>
+        </tr>
+
+        
+
+        <!-- Children -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>2/2</td>
+            <td class="method_name"><a href="#MonitorMixin_mon_exit_70282703831700">MonitorMixin#mon_exit</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/monitor.rb#232" title="/Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/monitor.rb:232">232</a>
+          </tr>
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>2/2</td>
+            <td class="method_name"><a href="#MonitorMixin_mon_enter_70282703831700">MonitorMixin#mon_enter</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/monitor.rb#228" title="/Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/monitor.rb:228">228</a>
+          </tr>
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>2/2</td>
+            <td class="method_name"><a href="#Array_select_70282703831700">Array#select</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb#652" title="/Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:652">652</a>
+          </tr>
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>2/5</td>
+            <td class="method_name"><a href="#Array_each_70282703831700">Array#each</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb#652" title="/Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:652">652</a>
+          </tr>
+        
+
+        <!-- Create divider row -->
+        <tr class="break">
+          <td colspan="10"></td>
+        </tr>
+      
+
+        <!-- Parents -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>1/1</td>
+            <td class="method_name"><a href="#Delegator_method_missing_70282703831700">Delegator#method_missing</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/delegate.rb#83" title="/Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/delegate.rb:83">83</a></td>
+          </tr>
+        
+        <tr class="method">
+          <td>0.00%</td>
+          <td>0.00%</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>1</td>
+          <td class="method_name">
+            <a name="ActiveRecord__ConnectionAdapters__ConnectionPool_reap_70282703831700">
+               ActiveRecord::ConnectionAdapters::ConnectionPool#reap
+            </a>
+          </td>
+
+          
+
+          <td><a href="file:///Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb#649" title="/Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:649">649</a></td>
+        </tr>
+
+        
+
+        <!-- Children -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>1/2</td>
+            <td class="method_name"><a href="#MonitorMixin_synchronize_70282703831700">MonitorMixin#synchronize</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb#650" title="/Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:650">650</a>
+          </tr>
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>1/5</td>
+            <td class="method_name"><a href="#Array_each_70282703831700">Array#each</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb#659" title="/Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:659">659</a>
+          </tr>
+        
+
+        <!-- Create divider row -->
+        <tr class="break">
+          <td colspan="10"></td>
+        </tr>
+      
+
+        <!-- Parents -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>1/1</td>
+            <td class="method_name"><a href="#Delegator_method_missing_70282703831700">Delegator#method_missing</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/delegate.rb#83" title="/Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/delegate.rb:83">83</a></td>
+          </tr>
+        
+        <tr class="method">
+          <td>0.00%</td>
+          <td>0.00%</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>1</td>
+          <td class="method_name">
+            <a name="ActiveRecord__ConnectionAdapters__ConnectionPool_flush_70282703831700">
+               ActiveRecord::ConnectionAdapters::ConnectionPool#flush
+            </a>
+          </td>
+
+          
+
+          <td><a href="file:///Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb#672" title="/Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:672">672</a></td>
+        </tr>
+
+        
+
+        <!-- Children -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>1/2</td>
+            <td class="method_name"><a href="#MonitorMixin_synchronize_70282703831700">MonitorMixin#synchronize</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb#675" title="/Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:675">675</a>
+          </tr>
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>1/5</td>
+            <td class="method_name"><a href="#Array_each_70282703831700">Array#each</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb#687" title="/Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:687">687</a>
+          </tr>
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>1/1</td>
+            <td class="method_name"><a href="#Kernel_nil__70282703831700">Kernel#nil?</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb#673" title="/Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:673">673</a>
+          </tr>
+        
+
+        <!-- Create divider row -->
+        <tr class="break">
+          <td colspan="10"></td>
+        </tr>
+      
+
+        <!-- Parents -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>1/1</td>
+            <td class="method_name"><a href="#Thread__Mutex_synchronize_70282703831700">Thread::Mutex#synchronize</a></td>
+            
+            <td></td>
+          </tr>
+        
+        <tr class="method">
+          <td>0.00%</td>
+          <td>0.00%</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>1</td>
+          <td class="method_name">
+            <a name="Array_select!_70282703831700">
+               Array#select!
+            </a>
+          </td>
+
+          
+
+          <td></td>
+        </tr>
+
+        
+
+        <!-- Children -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>1/1</td>
+            <td class="method_name"><a href="#WeakRef_weakref_alive__70282703831700">WeakRef#weakref_alive?</a></td>
+            
+            <td>
+          </tr>
+        
+
+        <!-- Create divider row -->
+        <tr class="break">
+          <td colspan="10"></td>
+        </tr>
+      
+
+        <!-- Parents -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>2/2</td>
+            <td class="method_name"><a href="#MonitorMixin_synchronize_70282703831700">MonitorMixin#synchronize</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/monitor.rb#232" title="/Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/monitor.rb:232">232</a></td>
+          </tr>
+        
+        <tr class="method">
+          <td>0.00%</td>
+          <td>0.00%</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>2</td>
+          <td class="method_name">
+            <a name="MonitorMixin_mon_exit_70282703831700">
+               MonitorMixin#mon_exit
+            </a>
+          </td>
+
+          
+
+          <td><a href="file:///Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/monitor.rb#199" title="/Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/monitor.rb:199">199</a></td>
+        </tr>
+
+        
+
+        <!-- Children -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>2/2</td>
+            <td class="method_name"><a href="#MonitorMixin_mon_check_owner_70282703831700">MonitorMixin#mon_check_owner</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/monitor.rb#200" title="/Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/monitor.rb:200">200</a>
+          </tr>
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>2/2</td>
+            <td class="method_name"><a href="#Thread__Mutex_unlock_70282703831700">Thread::Mutex#unlock</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/monitor.rb#204" title="/Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/monitor.rb:204">204</a>
+          </tr>
+        
+
+        <!-- Create divider row -->
+        <tr class="break">
+          <td colspan="10"></td>
+        </tr>
+      
+
+        <!-- Parents -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>2/2</td>
+            <td class="method_name"><a href="#MonitorMixin_synchronize_70282703831700">MonitorMixin#synchronize</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/monitor.rb#228" title="/Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/monitor.rb:228">228</a></td>
+          </tr>
+        
+        <tr class="method">
+          <td>0.00%</td>
+          <td>0.00%</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>2</td>
+          <td class="method_name">
+            <a name="MonitorMixin_mon_enter_70282703831700">
+               MonitorMixin#mon_enter
+            </a>
+          </td>
+
+          
+
+          <td><a href="file:///Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/monitor.rb#187" title="/Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/monitor.rb:187">187</a></td>
+        </tr>
+
+        
+
+        <!-- Children -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>4/6</td>
+            <td class="method_name"><a href="#_Class__Thread__current_70282703831700">&lt;Class::Thread&gt;#current</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/monitor.rb#188" title="/Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/monitor.rb:188">188</a>
+          </tr>
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>2/2</td>
+            <td class="method_name"><a href="#Thread__Mutex_lock_70282703831700">Thread::Mutex#lock</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/monitor.rb#189" title="/Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/monitor.rb:189">189</a>
+          </tr>
+        
+
+        <!-- Create divider row -->
+        <tr class="break">
+          <td colspan="10"></td>
+        </tr>
+      
+
+        <!-- Parents -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>1/1</td>
+            <td class="method_name"><a href="#Array_select!_70282703831700">Array#select!</a></td>
+            
+            <td></td>
+          </tr>
+        
+        <tr class="method">
+          <td>0.00%</td>
+          <td>0.00%</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>1</td>
+          <td class="method_name">
+            <a name="WeakRef_weakref_alive__70282703831700">
+               WeakRef#weakref_alive?
+            </a>
+          </td>
+
+          
+
+          <td><a href="file:///Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/weakref.rb#57" title="/Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/weakref.rb:57">57</a></td>
+        </tr>
+
+        
+
+        <!-- Children -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>1/1</td>
+            <td class="method_name"><a href="#ObjectSpace__WeakMap_key__70282703831700">ObjectSpace::WeakMap#key?</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/weakref.rb#58" title="/Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/weakref.rb:58">58</a>
+          </tr>
+        
+
+        <!-- Create divider row -->
+        <tr class="break">
+          <td colspan="10"></td>
+        </tr>
+      
+
+        <!-- Parents -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>2/2</td>
+            <td class="method_name"><a href="#MonitorMixin_synchronize_70282703831700">MonitorMixin#synchronize</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/monitor.rb#652" title="/Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/monitor.rb:652">652</a></td>
+          </tr>
+        
+        <tr class="method">
+          <td>0.00%</td>
+          <td>0.00%</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>2</td>
+          <td class="method_name">
+            <a name="Array_select_70282703831700">
+               Array#select
+            </a>
+          </td>
+
+          
+
+          <td></td>
+        </tr>
+
+        
+
+        <!-- Children -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>1/1</td>
+            <td class="method_name"><a href="#Thread_alive__70282703831700">Thread#alive?</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb#653" title="/Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:653">653</a>
+          </tr>
+        
+
+        <!-- Create divider row -->
+        <tr class="break">
+          <td colspan="10"></td>
+        </tr>
+      
+
+        <!-- Parents -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>2/2</td>
+            <td class="method_name"><a href="#Delegator_method_missing_70282703831700">Delegator#method_missing</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/delegate.rb#80" title="/Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/delegate.rb:80">80</a></td>
+          </tr>
+        
+        <tr class="method">
+          <td>0.00%</td>
+          <td>0.00%</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>2</td>
+          <td class="method_name">
+            <a name="WeakRef___getobj___70282703831700">
+               WeakRef#__getobj__
+            </a>
+          </td>
+
+          
+
+          <td><a href="file:///Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/weakref.rb#46" title="/Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/weakref.rb:46">46</a></td>
+        </tr>
+
+        
+
+        <!-- Children -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>2/2</td>
+            <td class="method_name"><a href="#ObjectSpace__WeakMap_[]_70282703831700">ObjectSpace::WeakMap#[]</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/weakref.rb#47" title="/Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/weakref.rb:47">47</a>
+          </tr>
+        
+
+        <!-- Create divider row -->
+        <tr class="break">
+          <td colspan="10"></td>
+        </tr>
+      
+
+        <!-- Parents -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>1/1</td>
+            <td class="method_name"><a href="#ActiveRecord__ConnectionAdapters__ConnectionPool_flush_70282703831700">ActiveRecord::ConnectionAdapters::ConnectionPool#flush</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb#673" title="/Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:673">673</a></td>
+          </tr>
+        
+        <tr class="method">
+          <td>0.00%</td>
+          <td>0.00%</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>1</td>
+          <td class="method_name">
+            <a name="Kernel_nil__70282703831700">
+               Kernel#nil?
+            </a>
+          </td>
+
+          
+
+          <td></td>
+        </tr>
+
+        
+
+        <!-- Children -->
+        
+
+        <!-- Create divider row -->
+        <tr class="break">
+          <td colspan="10"></td>
+        </tr>
+      
+
+        <!-- Parents -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>2/2</td>
+            <td class="method_name"><a href="#MonitorMixin_mon_exit_70282703831700">MonitorMixin#mon_exit</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/monitor.rb#200" title="/Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/monitor.rb:200">200</a></td>
+          </tr>
+        
+        <tr class="method">
+          <td>0.00%</td>
+          <td>0.00%</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>2</td>
+          <td class="method_name">
+            <a name="MonitorMixin_mon_check_owner_70282703831700">
+               MonitorMixin#mon_check_owner
+            </a>
+          </td>
+
+          
+
+          <td><a href="file:///Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/monitor.rb#267" title="/Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/monitor.rb:267">267</a></td>
+        </tr>
+
+        
+
+        <!-- Children -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>2/6</td>
+            <td class="method_name"><a href="#_Class__Thread__current_70282703831700">&lt;Class::Thread&gt;#current</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/monitor.rb#268" title="/Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/monitor.rb:268">268</a>
+          </tr>
+        
+
+        <!-- Create divider row -->
+        <tr class="break">
+          <td colspan="10"></td>
+        </tr>
+      
+
+        <!-- Parents -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>1/1</td>
+            <td class="method_name"><a href="#WeakRef_weakref_alive__70282703831700">WeakRef#weakref_alive?</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/weakref.rb#58" title="/Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/weakref.rb:58">58</a></td>
+          </tr>
+        
+        <tr class="method">
+          <td>0.00%</td>
+          <td>0.00%</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>1</td>
+          <td class="method_name">
+            <a name="ObjectSpace__WeakMap_key__70282703831700">
+               ObjectSpace::WeakMap#key?
+            </a>
+          </td>
+
+          
+
+          <td></td>
+        </tr>
+
+        
+
+        <!-- Children -->
+        
+
+        <!-- Create divider row -->
+        <tr class="break">
+          <td colspan="10"></td>
+        </tr>
+      
+
+        <!-- Parents -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>2/6</td>
+            <td class="method_name"><a href="#MonitorMixin_mon_check_owner_70282703831700">MonitorMixin#mon_check_owner</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/monitor.rb#268" title="/Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/monitor.rb:268">268</a></td>
+          </tr>
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>4/6</td>
+            <td class="method_name"><a href="#MonitorMixin_mon_enter_70282703831700">MonitorMixin#mon_enter</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/monitor.rb#188" title="/Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/monitor.rb:188">188</a></td>
+          </tr>
+        
+        <tr class="method">
+          <td>0.00%</td>
+          <td>0.00%</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>6</td>
+          <td class="method_name">
+            <a name="_Class__Thread__current_70282703831700">
+               &lt;Class::Thread&gt;#current
+            </a>
+          </td>
+
+          
+
+          <td></td>
+        </tr>
+
+        
+
+        <!-- Children -->
+        
+
+        <!-- Create divider row -->
+        <tr class="break">
+          <td colspan="10"></td>
+        </tr>
+      
+
+        <!-- Parents -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>2/2</td>
+            <td class="method_name"><a href="#Delegator_method_missing_70282703831700">Delegator#method_missing</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/delegate.rb#82" title="/Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/delegate.rb:82">82</a></td>
+          </tr>
+        
+        <tr class="method">
+          <td>0.00%</td>
+          <td>0.00%</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>2</td>
+          <td class="method_name">
+            <a name="Kernel_respond_to__70282703831700">
+               Kernel#respond_to?
+            </a>
+          </td>
+
+          
+
+          <td></td>
+        </tr>
+
+        
+
+        <!-- Children -->
+        
+
+        <!-- Create divider row -->
+        <tr class="break">
+          <td colspan="10"></td>
+        </tr>
+      
+
+        <!-- Parents -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>2/2</td>
+            <td class="method_name"><a href="#MonitorMixin_mon_enter_70282703831700">MonitorMixin#mon_enter</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/monitor.rb#189" title="/Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/monitor.rb:189">189</a></td>
+          </tr>
+        
+        <tr class="method">
+          <td>0.00%</td>
+          <td>0.00%</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>2</td>
+          <td class="method_name">
+            <a name="Thread__Mutex_lock_70282703831700">
+               Thread::Mutex#lock
+            </a>
+          </td>
+
+          
+
+          <td></td>
+        </tr>
+
+        
+
+        <!-- Children -->
+        
+
+        <!-- Create divider row -->
+        <tr class="break">
+          <td colspan="10"></td>
+        </tr>
+      
+
+        <!-- Parents -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>2/2</td>
+            <td class="method_name"><a href="#WeakRef___getobj___70282703831700">WeakRef#__getobj__</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/weakref.rb#47" title="/Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/weakref.rb:47">47</a></td>
+          </tr>
+        
+        <tr class="method">
+          <td>0.00%</td>
+          <td>0.00%</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>2</td>
+          <td class="method_name">
+            <a name="ObjectSpace__WeakMap_[]_70282703831700">
+               ObjectSpace::WeakMap#[]
+            </a>
+          </td>
+
+          
+
+          <td></td>
+        </tr>
+
+        
+
+        <!-- Children -->
+        
+
+        <!-- Create divider row -->
+        <tr class="break">
+          <td colspan="10"></td>
+        </tr>
+      
+
+        <!-- Parents -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>2/2</td>
+            <td class="method_name"><a href="#MonitorMixin_mon_exit_70282703831700">MonitorMixin#mon_exit</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/monitor.rb#204" title="/Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/monitor.rb:204">204</a></td>
+          </tr>
+        
+        <tr class="method">
+          <td>0.00%</td>
+          <td>0.00%</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>2</td>
+          <td class="method_name">
+            <a name="Thread__Mutex_unlock_70282703831700">
+               Thread::Mutex#unlock
+            </a>
+          </td>
+
+          
+
+          <td></td>
+        </tr>
+
+        
+
+        <!-- Children -->
+        
+
+        <!-- Create divider row -->
+        <tr class="break">
+          <td colspan="10"></td>
+        </tr>
+      
+
+        <!-- Parents -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>1/1</td>
+            <td class="method_name"><a href="#Array_select_70282703831700">Array#select</a></td>
+            
+            <td></td>
+          </tr>
+        
+        <tr class="method">
+          <td>0.00%</td>
+          <td>0.00%</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>1</td>
+          <td class="method_name">
+            <a name="Thread_alive__70282703831700">
+               Thread#alive?
+            </a>
+          </td>
+
+          
+
+          <td></td>
+        </tr>
+
+        
+
+        <!-- Children -->
+        
+
+        <!-- Create divider row -->
+        <tr class="break">
+          <td colspan="10"></td>
+        </tr>
+      
+      </tbody>
+      <tfoot>
+      <tr>
+        <td colspan="9">* indicates recursively called methods</td>
+      </tr>
+      </tfoot>
+    </table>
+  
+    <h2><a name="70282703831600">Thread 70282699293520, Fiber: 70282703831600</a></h2>
+    <table>
+      <thead>
+      <tr>
+        <th>%Total</th>
+        <th>%Self</th>
+        <th>Total</th>
+        <th>Self</th>
+        <th>Wait</th>
+        <th>Child</th>
+        <th>Calls</th>
+        <th class="method_name">Name</th>
+        
+        <th>Line</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+
+        <!-- Parents -->
+        
+        <tr class="method">
+          <td>100.00%</td>
+          <td>0.00%</td>
+          <td>1.11</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>1.11</td>
+          <td>1</td>
+          <td class="method_name">
+            <a name="__Class_0x00007fd7ee9226b0__start_70282703831600">
+               #&lt;Class:0x00007fd7ee9226b0&gt;#start
+            </a>
+          </td>
+
+          
+
+          <td><a href="file:///Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/plugin/tmp_restart.rb#24" title="/Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/plugin/tmp_restart.rb:24">24</a></td>
+        </tr>
+
+        
+
+        <!-- Children -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>1.01</td>
+            <td>0.00</td>
+            <td>1.01</td>
+            <td>0.00</td>
+            <td>1/1</td>
+            <td class="method_name"><a href="#Kernel_sleep_70282703831600">Kernel#sleep</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/plugin/tmp_restart.rb#21" title="/Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/plugin/tmp_restart.rb:21">21</a>
+          </tr>
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.10</td>
+            <td>0.00</td>
+            <td>0.10</td>
+            <td>0.00</td>
+            <td>1/1</td>
+            <td class="method_name"><a href="#_Class__File__stat_70282703831600">&lt;Class::File&gt;#stat</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/plugin/tmp_restart.rb#24" title="/Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/plugin/tmp_restart.rb:24">24</a>
+          </tr>
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>1/1</td>
+            <td class="method_name"><a href="#Comparable___70282703831600">Comparable#&gt;</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/plugin/tmp_restart.rb#28" title="/Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/plugin/tmp_restart.rb:28">28</a>
+          </tr>
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>1/1</td>
+            <td class="method_name"><a href="#File__Stat_mtime_70282703831600">File::Stat#mtime</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/plugin/tmp_restart.rb#24" title="/Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/plugin/tmp_restart.rb:24">24</a>
+          </tr>
+        
+
+        <!-- Create divider row -->
+        <tr class="break">
+          <td colspan="10"></td>
+        </tr>
+      
+
+        <!-- Parents -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>1.01</td>
+            <td>0.00</td>
+            <td>1.01</td>
+            <td>0.00</td>
+            <td>1/1</td>
+            <td class="method_name"><a href="#__Class_0x00007fd7ee9226b0__start_70282703831600">#&lt;Class:0x00007fd7ee9226b0&gt;#start</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/plugin/tmp_restart.rb#21" title="/Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/plugin/tmp_restart.rb:21">21</a></td>
+          </tr>
+        
+        <tr class="method">
+          <td>90.85%</td>
+          <td>0.00%</td>
+          <td>1.01</td>
+          <td>0.00</td>
+          <td>1.01</td>
+          <td>0.00</td>
+          <td>1</td>
+          <td class="method_name">
+            <a name="Kernel_sleep_70282703831600">
+               Kernel#sleep
+            </a>
+          </td>
+
+          
+
+          <td><a href="file:///Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/plugin/tmp_restart.rb#21" title="/Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/plugin/tmp_restart.rb:21">21</a></td>
+        </tr>
+
+        
+
+        <!-- Children -->
+        
+
+        <!-- Create divider row -->
+        <tr class="break">
+          <td colspan="10"></td>
+        </tr>
+      
+
+        <!-- Parents -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.10</td>
+            <td>0.00</td>
+            <td>0.10</td>
+            <td>0.00</td>
+            <td>1/1</td>
+            <td class="method_name"><a href="#__Class_0x00007fd7ee9226b0__start_70282703831600">#&lt;Class:0x00007fd7ee9226b0&gt;#start</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/plugin/tmp_restart.rb#24" title="/Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/plugin/tmp_restart.rb:24">24</a></td>
+          </tr>
+        
+        <tr class="method">
+          <td>9.15%</td>
+          <td>0.01%</td>
+          <td>0.10</td>
+          <td>0.00</td>
+          <td>0.10</td>
+          <td>0.00</td>
+          <td>1</td>
+          <td class="method_name">
+            <a name="_Class__File__stat_70282703831600">
+               &lt;Class::File&gt;#stat
+            </a>
+          </td>
+
+          
+
+          <td></td>
+        </tr>
+
+        
+
+        <!-- Children -->
+        
+
+        <!-- Create divider row -->
+        <tr class="break">
+          <td colspan="10"></td>
+        </tr>
+      
+
+        <!-- Parents -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>1/1</td>
+            <td class="method_name"><a href="#__Class_0x00007fd7ee9226b0__start_70282703831600">#&lt;Class:0x00007fd7ee9226b0&gt;#start</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/plugin/tmp_restart.rb#28" title="/Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/plugin/tmp_restart.rb:28">28</a></td>
+          </tr>
+        
+        <tr class="method">
+          <td>0.00%</td>
+          <td>0.00%</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>1</td>
+          <td class="method_name">
+            <a name="Comparable___70282703831600">
+               Comparable#&gt;
+            </a>
+          </td>
+
+          
+
+          <td></td>
+        </tr>
+
+        
+
+        <!-- Children -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>1/1</td>
+            <td class="method_name"><a href="#Time_____70282703831600">Time#&lt;=&gt;</a></td>
+            
+            <td>
+          </tr>
+        
+
+        <!-- Create divider row -->
+        <tr class="break">
+          <td colspan="10"></td>
+        </tr>
+      
+
+        <!-- Parents -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>1/1</td>
+            <td class="method_name"><a href="#Comparable___70282703831600">Comparable#&gt;</a></td>
+            
+            <td></td>
+          </tr>
+        
+        <tr class="method">
+          <td>0.00%</td>
+          <td>0.00%</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>1</td>
+          <td class="method_name">
+            <a name="Time_____70282703831600">
+               Time#&lt;=&gt;
+            </a>
+          </td>
+
+          
+
+          <td><a href="file:///Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/time/calculations.rb#292" title="/Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/time/calculations.rb:292">292</a></td>
+        </tr>
+
+        
+
+        <!-- Children -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>1/1</td>
+            <td class="method_name"><a href="#Kernel_class_70282703831600">Kernel#class</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/time/calculations.rb#294" title="/Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/time/calculations.rb:294">294</a>
+          </tr>
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>1/1</td>
+            <td class="method_name"><a href="#Time_compare_without_coercion_70282703831600">Time#compare_without_coercion</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/time/calculations.rb#295" title="/Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/time/calculations.rb:295">295</a>
+          </tr>
+        
+
+        <!-- Create divider row -->
+        <tr class="break">
+          <td colspan="10"></td>
+        </tr>
+      
+
+        <!-- Parents -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>1/1</td>
+            <td class="method_name"><a href="#__Class_0x00007fd7ee9226b0__start_70282703831600">#&lt;Class:0x00007fd7ee9226b0&gt;#start</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/plugin/tmp_restart.rb#24" title="/Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/plugin/tmp_restart.rb:24">24</a></td>
+          </tr>
+        
+        <tr class="method">
+          <td>0.00%</td>
+          <td>0.00%</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>1</td>
+          <td class="method_name">
+            <a name="File__Stat_mtime_70282703831600">
+               File::Stat#mtime
+            </a>
+          </td>
+
+          
+
+          <td></td>
+        </tr>
+
+        
+
+        <!-- Children -->
+        
+
+        <!-- Create divider row -->
+        <tr class="break">
+          <td colspan="10"></td>
+        </tr>
+      
+
+        <!-- Parents -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>1/1</td>
+            <td class="method_name"><a href="#Time_____70282703831600">Time#&lt;=&gt;</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/time/calculations.rb#294" title="/Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/time/calculations.rb:294">294</a></td>
+          </tr>
+        
+        <tr class="method">
+          <td>0.00%</td>
+          <td>0.00%</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>1</td>
+          <td class="method_name">
+            <a name="Kernel_class_70282703831600">
+               Kernel#class
+            </a>
+          </td>
+
+          
+
+          <td></td>
+        </tr>
+
+        
+
+        <!-- Children -->
+        
+
+        <!-- Create divider row -->
+        <tr class="break">
+          <td colspan="10"></td>
+        </tr>
+      
+
+        <!-- Parents -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>1/1</td>
+            <td class="method_name"><a href="#Time_____70282703831600">Time#&lt;=&gt;</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/time/calculations.rb#295" title="/Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/time/calculations.rb:295">295</a></td>
+          </tr>
+        
+        <tr class="method">
+          <td>0.00%</td>
+          <td>0.00%</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>1</td>
+          <td class="method_name">
+            <a name="Time_compare_without_coercion_70282703831600">
+               Time#compare_without_coercion
+            </a>
+          </td>
+
+          
+
+          <td></td>
+        </tr>
+
+        
+
+        <!-- Children -->
+        
+
+        <!-- Create divider row -->
+        <tr class="break">
+          <td colspan="10"></td>
+        </tr>
+      
+      </tbody>
+      <tfoot>
+      <tr>
+        <td colspan="9">* indicates recursively called methods</td>
+      </tr>
+      </tfoot>
+    </table>
+  
+    <h2><a name="70282699897720">Thread 70282691043020, Fiber: 70282699897720</a></h2>
+    <table>
+      <thead>
+      <tr>
+        <th>%Total</th>
+        <th>%Self</th>
+        <th>Total</th>
+        <th>Self</th>
+        <th>Wait</th>
+        <th>Child</th>
+        <th>Calls</th>
+        <th class="method_name">Name</th>
+        
+        <th>Line</th>
+      </tr>
+      </thead>
+      <tbody>
+      
+
+        <!-- Parents -->
+        
+        <tr class="method">
+          <td>100.00%</td>
+          <td>0.00%</td>
+          <td>0.46</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.46</td>
+          <td>1</td>
+          <td class="method_name">
+            <a name="Puma__ThreadPool__Automaton_start!_70282699897720">
+               Puma::ThreadPool::Automaton#start!
+            </a>
+          </td>
+
+          
+
+          <td><a href="file:///Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/thread_pool.rb#261" title="/Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/thread_pool.rb:261">261</a></td>
+        </tr>
+
+        
+
+        <!-- Children -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.46</td>
+            <td>0.00</td>
+            <td>0.46</td>
+            <td>0.00</td>
+            <td>1/1</td>
+            <td class="method_name"><a href="#Kernel_sleep_70282699897720">Kernel#sleep</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/thread_pool.rb#262" title="/Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/thread_pool.rb:262">262</a>
+          </tr>
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>1/1</td>
+            <td class="method_name"><a href="#Kernel_public_send_70282699897720">Kernel#public_send</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/thread_pool.rb#261" title="/Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/thread_pool.rb:261">261</a>
+          </tr>
+        
+
+        <!-- Create divider row -->
+        <tr class="break">
+          <td colspan="10"></td>
+        </tr>
+      
+
+        <!-- Parents -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.46</td>
+            <td>0.00</td>
+            <td>0.46</td>
+            <td>0.00</td>
+            <td>1/1</td>
+            <td class="method_name"><a href="#Puma__ThreadPool__Automaton_start!_70282699897720">Puma::ThreadPool::Automaton#start!</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/thread_pool.rb#262" title="/Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/thread_pool.rb:262">262</a></td>
+          </tr>
+        
+        <tr class="method">
+          <td>99.99%</td>
+          <td>0.00%</td>
+          <td>0.46</td>
+          <td>0.00</td>
+          <td>0.46</td>
+          <td>0.00</td>
+          <td>1</td>
+          <td class="method_name">
+            <a name="Kernel_sleep_70282699897720">
+               Kernel#sleep
+            </a>
+          </td>
+
+          
+
+          <td><a href="file:///Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/thread_pool.rb#262" title="/Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/thread_pool.rb:262">262</a></td>
+        </tr>
+
+        
+
+        <!-- Children -->
+        
+
+        <!-- Create divider row -->
+        <tr class="break">
+          <td colspan="10"></td>
+        </tr>
+      
+
+        <!-- Parents -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>1/1</td>
+            <td class="method_name"><a href="#Puma__ThreadPool__Automaton_start!_70282699897720">Puma::ThreadPool::Automaton#start!</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/thread_pool.rb#261" title="/Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/thread_pool.rb:261">261</a></td>
+          </tr>
+        
+        <tr class="method">
+          <td>0.01%</td>
+          <td>0.00%</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>1</td>
+          <td class="method_name">
+            <a name="Kernel_public_send_70282699897720">
+               Kernel#public_send
+            </a>
+          </td>
+
+          
+
+          <td></td>
+        </tr>
+
+        
+
+        <!-- Children -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>1/1</td>
+            <td class="method_name"><a href="#Puma__ThreadPool_reap_70282699897720">Puma::ThreadPool#reap</a></td>
+            
+            <td>
+          </tr>
+        
+
+        <!-- Create divider row -->
+        <tr class="break">
+          <td colspan="10"></td>
+        </tr>
+      
+
+        <!-- Parents -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>1/1</td>
+            <td class="method_name"><a href="#Kernel_public_send_70282699897720">Kernel#public_send</a></td>
+            
+            <td></td>
+          </tr>
+        
+        <tr class="method">
+          <td>0.01%</td>
+          <td>0.00%</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>1</td>
+          <td class="method_name">
+            <a name="Puma__ThreadPool_reap_70282699897720">
+               Puma::ThreadPool#reap
+            </a>
+          </td>
+
+          
+
+          <td><a href="file:///Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/thread_pool.rb#231" title="/Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/thread_pool.rb:231">231</a></td>
+        </tr>
+
+        
+
+        <!-- Children -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>1/1</td>
+            <td class="method_name"><a href="#Thread__Mutex_synchronize_70282699897720">Thread::Mutex#synchronize</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/thread_pool.rb#232" title="/Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/thread_pool.rb:232">232</a>
+          </tr>
+        
+
+        <!-- Create divider row -->
+        <tr class="break">
+          <td colspan="10"></td>
+        </tr>
+      
+
+        <!-- Parents -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>1/1</td>
+            <td class="method_name"><a href="#Puma__ThreadPool_reap_70282699897720">Puma::ThreadPool#reap</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/thread_pool.rb#232" title="/Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/thread_pool.rb:232">232</a></td>
+          </tr>
+        
+        <tr class="method">
+          <td>0.00%</td>
+          <td>0.00%</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>1</td>
+          <td class="method_name">
+            <a name="Thread__Mutex_synchronize_70282699897720">
+               Thread::Mutex#synchronize
+            </a>
+          </td>
+
+          
+
+          <td></td>
+        </tr>
+
+        
+
+        <!-- Children -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>1/1</td>
+            <td class="method_name"><a href="#Array_reject_70282699897720">Array#reject</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/thread_pool.rb#233" title="/Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/thread_pool.rb:233">233</a>
+          </tr>
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>1/1</td>
+            <td class="method_name"><a href="#Array_delete_if_70282699897720">Array#delete_if</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/thread_pool.rb#240" title="/Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/thread_pool.rb:240">240</a>
+          </tr>
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>1/1</td>
+            <td class="method_name"><a href="#Array_each_70282699897720">Array#each</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/thread_pool.rb#235" title="/Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/thread_pool.rb:235">235</a>
+          </tr>
+        
+
+        <!-- Create divider row -->
+        <tr class="break">
+          <td colspan="10"></td>
+        </tr>
+      
+
+        <!-- Parents -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>1/1</td>
+            <td class="method_name"><a href="#Thread__Mutex_synchronize_70282699897720">Thread::Mutex#synchronize</a></td>
+            
+            <td></td>
+          </tr>
+        
+        <tr class="method">
+          <td>0.00%</td>
+          <td>0.00%</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>1</td>
+          <td class="method_name">
+            <a name="Array_reject_70282699897720">
+               Array#reject
+            </a>
+          </td>
+
+          
+
+          <td></td>
+        </tr>
+
+        
+
+        <!-- Children -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>5/5</td>
+            <td class="method_name"><a href="#Thread_alive__70282699897720">Thread#alive?</a></td>
+            
+            <td>
+          </tr>
+        
+
+        <!-- Create divider row -->
+        <tr class="break">
+          <td colspan="10"></td>
+        </tr>
+      
+
+        <!-- Parents -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>1/1</td>
+            <td class="method_name"><a href="#Thread__Mutex_synchronize_70282699897720">Thread::Mutex#synchronize</a></td>
+            
+            <td></td>
+          </tr>
+        
+        <tr class="method">
+          <td>0.00%</td>
+          <td>0.00%</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>1</td>
+          <td class="method_name">
+            <a name="Array_delete_if_70282699897720">
+               Array#delete_if
+            </a>
+          </td>
+
+          
+
+          <td></td>
+        </tr>
+
+        
+
+        <!-- Children -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>5/5</td>
+            <td class="method_name"><a href="#Array_include__70282699897720">Array#include?</a></td>
+            
+            <td><a href="file:///Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/thread_pool.rb#241" title="/Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/thread_pool.rb:241">241</a>
+          </tr>
+        
+
+        <!-- Create divider row -->
+        <tr class="break">
+          <td colspan="10"></td>
+        </tr>
+      
+
+        <!-- Parents -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>5/5</td>
+            <td class="method_name"><a href="#Array_reject_70282699897720">Array#reject</a></td>
+            
+            <td></td>
+          </tr>
+        
+        <tr class="method">
+          <td>0.00%</td>
+          <td>0.00%</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>5</td>
+          <td class="method_name">
+            <a name="Thread_alive__70282699897720">
+               Thread#alive?
+            </a>
+          </td>
+
+          
+
+          <td></td>
+        </tr>
+
+        
+
+        <!-- Children -->
+        
+
+        <!-- Create divider row -->
+        <tr class="break">
+          <td colspan="10"></td>
+        </tr>
+      
+
+        <!-- Parents -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>5/5</td>
+            <td class="method_name"><a href="#Array_delete_if_70282699897720">Array#delete_if</a></td>
+            
+            <td></td>
+          </tr>
+        
+        <tr class="method">
+          <td>0.00%</td>
+          <td>0.00%</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>5</td>
+          <td class="method_name">
+            <a name="Array_include__70282699897720">
+               Array#include?
+            </a>
+          </td>
+
+          
+
+          <td></td>
+        </tr>
+
+        
+
+        <!-- Children -->
+        
+
+        <!-- Create divider row -->
+        <tr class="break">
+          <td colspan="10"></td>
+        </tr>
+      
+
+        <!-- Parents -->
+        
+          <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>0.00</td>
+            <td>1/1</td>
+            <td class="method_name"><a href="#Thread__Mutex_synchronize_70282699897720">Thread::Mutex#synchronize</a></td>
+            
+            <td></td>
+          </tr>
+        
+        <tr class="method">
+          <td>0.00%</td>
+          <td>0.00%</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>0.00</td>
+          <td>1</td>
+          <td class="method_name">
+            <a name="Array_each_70282699897720">
+               Array#each
+            </a>
+          </td>
+
+          
+
+          <td></td>
+        </tr>
+
+        
+
+        <!-- Children -->
+        
+
+        <!-- Create divider row -->
+        <tr class="break">
+          <td colspan="10"></td>
+        </tr>
+      
+      </tbody>
+      <tfoot>
+      <tr>
+        <td colspan="9">* indicates recursively called methods</td>
+      </tr>
+      </tfoot>
+    </table>
+  
+</div>
+
+<script type="application/javascript">
+  function toggleAllocations(element)
+  {
+    if (element.style.display == 'none')
+      element.style.display = 'block'
+    else
+      element.style.display = 'none'
+  }
+
+  function onClick(event)
+  {
+    if (event.target.tagName == 'A' && event.target.classList.contains('allocations'))
+    {
+      var url = new URL(event.target.href)
+      var element = document.querySelector(url.hash)
+      toggleAllocations(element)
+      event.preventDefault()
+    }
+  }
+
+  window.addEventListener('DOMContentLoaded', function(event)
+  {
+    document.addEventListener('click', onClick)
+  })
+
+</script>
+</body>
+</html>

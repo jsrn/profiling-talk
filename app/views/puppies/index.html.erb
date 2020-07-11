@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Profiling Rails Applications</title>
+
+		<link rel="stylesheet" href="/slideshow/dist/reset.css">
+		<link rel="stylesheet" href="/slideshow/dist/reveal.css">
+		<link rel="stylesheet" href="/slideshow/dist/theme/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="/slideshow/plugin/highlight/monokai.css" id="highlight-theme">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<!--
+					* title
+					* why profile?
+						* no investor cash
+						* users getting mad
+					* types of profiling
+						* memory
+						* cpu
+						* time
+					* tools of the trade
+						* Benchmark
+						* ruby-prof - https://github.com/ruby-prof/ruby-prof
+					* worked example
+				-->
+
+				<!-- title -->
+				<section>
+          <img src="/hugo-searching.png" style="height: 40vh;">
+          <h2>Profiling Rails Applications</h2>
+					<em style="font-family: serif;">the Pups Unlimited story</em>
+          <br><br>
+          <small>header image: <a href="https://icons8.com/illustrations/illustration/hugo-searching">icons8</a> / css: <a href="https://github.com/andybrewer/mvp">mvp</a> / twitter: <a href="https://twitter.com/jsrndoftime">jsrndoftime</a> / feedback: <a href="mailto:jsrn@hey.com">jsrn@hey.com</a></small>
+				</section>
+        <section><h1>🐶 Background 🐶</h1></section>
+        <section>
+          <p>You're a developer at Pups Unlimited, a small company that specialises in housing dogs and pairing them with new homes.</p>
+        </section>
+        <section>
+          <p>People who want dogs can go on the Pups Unlimited website to view the catalogue (dogalogue?) of available pups and make reservations to come visit them.</p>
+        </section>
+        <section>
+          <p>You're working with a pretty conventional stack:</p>
+          <ul>
+            <li>Ruby 2.6</li>
+            <li>Rails 6</li>
+            <li>Postgresql</li>
+          </ul>
+        </section>
+        <section>
+          <p>Despite its name, Pups Unlimited is a pretty small company. You usually have anywhere from 5 to 10 pups on the go at any one time. The app is pretty happy running under these conditions.</p>
+        </section>
+        <section>
+          <p>But one day, disaster strikes.</p>
+        </section>
+        <section>
+          <p>An illegal breeding operation running from nearby industrial estate has just gotten busted.</p>
+        </section>
+        <section>
+          <p>You have to shift a million dogs. And the page is timing out. And setting your server on fire.</p>
+          <p>And you can't just solve this with pagination for some reason.</p>
+        </section>
+				<section>
+					<h2>Why Profile?</h2>
+
+					<ul>
+						<li>no investor cash</li>
+						<li>users getting mad</li>
+					</ul>
+				</section>
+
+        <section>
+          <h1>🕵️‍♀️ Methods 🕵️‍♀️</h1>
+        </section>
+
+        <section>
+          <h2>"The Rails Developer"</h2>
+
+          <img src="/slideshow/img/resize-instance.png" style="height: 50vh;">
+        </section>
+
+				<section>
+					<h2>"The Puts Classic"</h2>
+
+          <a href="/puppies/the_puts_classic" target="_blank">click me!</a>
+				</section>
+
+        <section>
+          <h2>Benchmark</h2>
+
+          <li><a href="/puppies/benchmark" target="_blank">click me!</a></li>
+        </section>
+
+        <section>
+          <h2>ruby-prof</h2>
+
+          <li><a href="/puppies/ruby_prof" target="_blank">click me!</a></li>
+        </section>
+
+        <section>
+          <h2>rack-mini-profiler</h2>
+
+          <li><a href="/puppies/rack_mini_profiler" target="_blank">click me!</a></li>
+        </section>
+
+				<section>
+					<h2>Problems</h2>
+
+					<img src="/slideshow/img/memprof-site.png">
+					<img src="/slideshow/img/memprof-support.png">
+				</section>
+			</div>
+		</div>
+
+		<script src="/slideshow/dist/reveal.js"></script>
+		<script src="/slideshow/plugin/notes/notes.js"></script>
+		<script src="/slideshow/plugin/markdown/markdown.js"></script>
+		<script src="/slideshow/plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>

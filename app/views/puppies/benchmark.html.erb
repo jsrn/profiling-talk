@@ -1,0 +1,20 @@
+<h1>Benchmark</h1>
+
+<p>The Ruby standard library comes with a pretty nice module called <a href="https://ruby-doc.org/stdlib-2.7.1/libdoc/benchmark/rdoc/Benchmark.html">Benchmark</a> which can tell us how long certain bits of code took to execute.</p>
+
+<code><pre><%= raw PuppiesController.instance_method(:benchmark).source %></pre></code>
+
+<h2>Advantages</h2>
+
+<ul>
+  <li>Makes a distinction between user CPU time, system CPU time and real time elapsed.</li>
+  <li>Consistent, readable formatting.</li>
+  <li>Provides the <code>bmbm</code> method to mitigate the impact of inconsistent garbage collection/class preloading/etc. between runs.</li>
+</ul>
+
+<h2>Disdvantages</h2>
+
+<ul>
+  <li>Still quite tightly bound to the application code.</li>
+  <li>Only tells us about time taken.
+</ul>

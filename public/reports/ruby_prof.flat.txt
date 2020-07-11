@@ -1,0 +1,106 @@
+Measure Mode: wall_time
+Thread ID: 70143100605040
+Fiber ID: 70143136389060
+Total: 1.542502
+Sort by: self_time
+
+ %self      total      self      wait     child     calls  name                           location
+ 60.09      1.542     0.927     0.000     0.615     1703  *Integer#times                  
+ 26.08      0.402     0.402     0.000     0.000  1794056   Kernel#rand                    
+ 13.68      0.211     0.211     0.000     0.000  1794053   <Module::Math>#sqrt            
+  0.05      0.292     0.001     0.000     0.291     1700   PuppiesController#odd_combobulation /Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb:68
+  0.03      0.000     0.000     0.000     0.000     3400   Integer#even?                  
+  0.03      0.000     0.000     0.000     0.000     3400   Float#to_i                     
+  0.03      0.000     0.000     0.000     0.000     1700   PuppiesController#even_combobulation /Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb:64
+  0.00      1.543     0.000     0.000     1.542        1   PuppiesController#ruby_prof    /Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb:22
+  0.00      1.542     0.000     0.000     1.542        1   PuppiesController#puppies!     /Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb:36
+  0.00      0.298     0.000     0.000     0.298        1   PuppiesController#discombobulate /Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb:54
+  0.00      0.603     0.000     0.000     0.603        1   PuppiesController#combobulate  /Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb:48
+  0.00      0.000     0.000     0.000     0.000        3   Integer#-                      
+  0.00      0.642     0.000     0.000     0.642        1   PuppiesController#reticulate_splines /Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb:42
+
+* recursively called methods
+
+Columns are:
+
+  %self     - The percentage of time spent in this method, derived from self_time/total_time.
+  total     - The time spent in this method and its children.
+  self      - The time spent in this method.
+  wait      - The amount of time this method waited for other threads.
+  child     - The time spent in this method's children.
+  calls     - The number of times this method was called.
+  name      - The name of the method.
+  location  - The location of the method.
+
+The interpretation of method names is:
+
+  * MyObject#test - An instance method "test" of the class "MyObject"
+  * <Object:MyObject>#test - The <> characters indicate a method on a singleton class.
+Measure Mode: wall_time
+Thread ID: 70143100687300
+Fiber ID: 70143102481980
+Total: 1.016480
+Sort by: self_time
+
+ %self      total      self      wait     child     calls  name                           location
+  0.00      0.000     0.000     0.000     0.000        2   Thread::Mutex#synchronize      
+  0.00      1.016     0.000     1.016     0.000        2   Kernel#sleep                   /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/thread_pool.rb:262
+  0.00      0.000     0.000     0.000     0.000        2   Kernel#public_send             
+  0.00      0.000     0.000     0.000     0.000        2   Array#reject                   
+  0.00      1.016     0.000     0.000     1.016        1   Puma::ThreadPool::Automaton#start! /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/thread_pool.rb:261
+  0.00      0.000     0.000     0.000     0.000        2   Array#delete_if                
+  0.00      0.000     0.000     0.000     0.000       10   Thread#alive?                  
+  0.00      0.000     0.000     0.000     0.000        2   Puma::ThreadPool#reap          /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/thread_pool.rb:231
+  0.00      0.000     0.000     0.000     0.000       10   Array#include?                 
+  0.00      0.000     0.000     0.000     0.000        2   Array#each                     
+
+* recursively called methods
+
+Columns are:
+
+  %self     - The percentage of time spent in this method, derived from self_time/total_time.
+  total     - The time spent in this method and its children.
+  self      - The time spent in this method.
+  wait      - The amount of time this method waited for other threads.
+  child     - The time spent in this method's children.
+  calls     - The number of times this method was called.
+  name      - The name of the method.
+  location  - The location of the method.
+
+The interpretation of method names is:
+
+  * MyObject#test - An instance method "test" of the class "MyObject"
+  * <Object:MyObject>#test - The <> characters indicate a method on a singleton class.
+Measure Mode: wall_time
+Thread ID: 70143100406140
+Fiber ID: 70143102482020
+Total: 0.332848
+Sort by: self_time
+
+ %self      total      self      wait     child     calls  name                           location
+  0.01      0.102     0.000     0.101     0.000        1   <Class::File>#stat             
+  0.00      0.231     0.000     0.231     0.000        1   Kernel#sleep                   /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/plugin/tmp_restart.rb:21
+  0.00      0.333     0.000     0.000     0.333        1   #<Class:0x00007f96f116bb30>#start /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/plugin/tmp_restart.rb:24
+  0.00      0.000     0.000     0.000     0.000        1   Comparable#>                   
+  0.00      0.000     0.000     0.000     0.000        1   File::Stat#mtime               
+  0.00      0.000     0.000     0.000     0.000        1   Time#<=>                       /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/time/calculations.rb:292
+  0.00      0.000     0.000     0.000     0.000        1   Time#compare_without_coercion  
+  0.00      0.000     0.000     0.000     0.000        1   Kernel#class                   
+
+* recursively called methods
+
+Columns are:
+
+  %self     - The percentage of time spent in this method, derived from self_time/total_time.
+  total     - The time spent in this method and its children.
+  self      - The time spent in this method.
+  wait      - The amount of time this method waited for other threads.
+  child     - The time spent in this method's children.
+  calls     - The number of times this method was called.
+  name      - The name of the method.
+  location  - The location of the method.
+
+The interpretation of method names is:
+
+  * MyObject#test - An instance method "test" of the class "MyObject"
+  * <Object:MyObject>#test - The <> characters indicate a method on a singleton class.
