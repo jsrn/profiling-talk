@@ -36,39 +36,22 @@ class PuppiesController < ApplicationController
   private
 
   def puppies!
-    average_age = Kennel.average_age
     reticulate_splines
-    combobulate
-    discombobulate
+
+    kennel = Kennel.new
+    kennel.validate_puppies!
+
+    @report = OpenStruct.new(
+      count: Puppy.count,
+      average_age: kennel.average_age,
+      percentage_chipped: kennel.percentage_chipped,
+      ears_spot_checked: kennel.perform_ear_spot_check
+    )
   end
 
   def reticulate_splines
-    rand(500_000..1_000_000).times do
+    Puppy.count.times do
       Math.sqrt(rand(1_000_000))
     end
-  end
-
-  def combobulate
-    rand(500_000..1_000_000).times do
-      Math.sqrt(rand(1_000_000))
-    end
-  end
-
-  def discombobulate
-    rand(1_000..5_000).times do
-      if Math.sqrt(rand(1_000_000)).to_i.even?
-        even_combobulation
-      else
-        odd_combobulation
-      end
-    end
-  end
-
-  def even_combobulation
-    'create an object!'
-  end
-
-  def odd_combobulation
-    1_000.times { 'create 10k objects!' }
   end
 end

@@ -1,58 +1,905 @@
 Measure Mode: wall_time
-Thread ID: 70143100605040
-Fiber ID: 70143136389060
-Total: 1.542502
+Thread ID: 70343933662060
+Fiber ID: 70343933728860
+Total: 26.551818
 Sort by: self_time
 
  %self      total      self      wait     child     calls  name                           location
- 60.09      1.542     0.927     0.000     0.615     1703  *Integer#times                  
- 26.08      0.402     0.402     0.000     0.000  1794056   Kernel#rand                    
- 13.68      0.211     0.211     0.000     0.000  1794053   <Module::Math>#sqrt            
-  0.05      0.292     0.001     0.000     0.291     1700   PuppiesController#odd_combobulation /Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb:68
-  0.03      0.000     0.000     0.000     0.000     3400   Integer#even?                  
-  0.03      0.000     0.000     0.000     0.000     3400   Float#to_i                     
-  0.03      0.000     0.000     0.000     0.000     1700   PuppiesController#even_combobulation /Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb:64
-  0.00      1.543     0.000     0.000     1.542        1   PuppiesController#ruby_prof    /Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb:22
-  0.00      1.542     0.000     0.000     1.542        1   PuppiesController#puppies!     /Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb:36
-  0.00      0.298     0.000     0.000     0.298        1   PuppiesController#discombobulate /Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb:54
-  0.00      0.603     0.000     0.000     0.603        1   PuppiesController#combobulate  /Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb:48
-  0.00      0.000     0.000     0.000     0.000        3   Integer#-                      
-  0.00      0.642     0.000     0.000     0.642        1   PuppiesController#reticulate_splines /Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb:42
-
-* recursively called methods
-
-Columns are:
-
-  %self     - The percentage of time spent in this method, derived from self_time/total_time.
-  total     - The time spent in this method and its children.
-  self      - The time spent in this method.
-  wait      - The amount of time this method waited for other threads.
-  child     - The time spent in this method's children.
-  calls     - The number of times this method was called.
-  name      - The name of the method.
-  location  - The location of the method.
-
-The interpretation of method names is:
-
-  * MyObject#test - An instance method "test" of the class "MyObject"
-  * <Object:MyObject>#test - The <> characters indicate a method on a singleton class.
-Measure Mode: wall_time
-Thread ID: 70143100687300
-Fiber ID: 70143102481980
-Total: 1.016480
-Sort by: self_time
-
- %self      total      self      wait     child     calls  name                           location
-  0.00      0.000     0.000     0.000     0.000        2   Thread::Mutex#synchronize      
-  0.00      1.016     0.000     1.016     0.000        2   Kernel#sleep                   /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/thread_pool.rb:262
-  0.00      0.000     0.000     0.000     0.000        2   Kernel#public_send             
-  0.00      0.000     0.000     0.000     0.000        2   Array#reject                   
-  0.00      1.016     0.000     0.000     1.016        1   Puma::ThreadPool::Automaton#start! /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/thread_pool.rb:261
+ 13.27      5.210     3.524     0.001     1.685       31  *Array#map                      
+  7.72      2.942     2.050     0.000     0.892  1000000   ActiveRecord::Core#init_internals /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/core.rb:568
+  7.65      6.071     2.031     0.000     4.040  2000000   ActiveSupport::Callbacks#run_callbacks /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:97
+  6.05      3.020     1.608     0.000     1.412  2000224  *Class#new                      
+  5.93     12.369     1.575     0.000    10.794  1000000   ActiveRecord::Core#init_with_attributes /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/core.rb:355
+  5.02      3.085     1.334     0.000     1.751  2000000   ActiveRecord::Base#__callbacks /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/class/attribute.rb:123
+  4.27      1.134     1.134     0.000     0.000  1000000   ActiveModel::LazyAttributeHash#initialize /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activemodel-6.0.3.2/lib/active_model/attribute_set/builder.rb:25
+  4.03     18.678     1.070     0.000    17.607  1000000  *ActiveRecord::ModelSchema::ClassMethods#attributes_builder /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/model_schema.rb:343
+  3.95      1.684     1.050     0.000     0.634  2000000   ActiveModel::Type::Integer#deserialize /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activemodel-6.0.3.2/lib/active_model/type/integer.rb:21
+  3.85     18.678     1.022     0.000    17.655  1000000  *ActiveRecord::Persistence::ClassMethods#instantiate_instance_of /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/persistence.rb:401
+  3.07      3.756     0.814     0.000     2.942  1000000   ActiveRecord::Associations#init_internals /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/associations.rb:264
+  2.35      0.625     0.625     0.000     0.000        8   PG::Result#values_without_profiling 
+  2.32      0.616     0.616     0.000     0.000  1000000   Class#allocate                 
+  2.24      1.041     0.594     0.000     0.448  2000009   Kernel#public_send             
+  2.20      3.596     0.584     0.000     3.012  1000000   ActiveModel::AttributeSet::Builder#build_from_database /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activemodel-6.0.3.2/lib/active_model/attribute_set/builder.rb:15
+  2.07      0.600     0.550     0.051     0.000        4   PG::Connection#exec_params_without_profiling 
+  2.05      0.544     0.544     0.000     0.000  4000155   Kernel#class                   
+  1.68      0.448     0.447     0.000     0.000  2000000   <Class::ActiveRecord::Base>#__callbacks /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/class/attribute.rb:106
+  1.66      0.442     0.442     0.000     0.000  2000021   Kernel#instance_variable_defined? 
+  1.66      0.440     0.440     0.000     0.000  2000000   ActiveSupport::Callbacks::CallbackChain#empty? /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:539
+  1.59      0.421     0.421     0.000     0.000  3000102   Kernel#block_given?            
+  1.57      3.514     0.416     0.000     3.097  1000000   ActiveRecord::Base#_run_find_callbacks /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:824
+  1.56      0.414     0.414     0.000     0.000  2000000   Numeric#blank?                 /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/object/blank.rb:141
+  1.53      3.379     0.405     0.000     2.973  1000000   ActiveRecord::Base#_run_initialize_callbacks /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:824
+  1.40      0.380     0.372     0.000     0.009  1000091  *ActiveRecord::AttributeMethods::PrimaryKey::ClassMethods#primary_key /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/attribute_methods/primary_key.rb:66
+  1.22      0.646     0.324     0.000     0.322        1   Integer#times                  
+  1.13      0.312     0.299     0.000     0.013   100000   Puppy#ear_inside_out?          /Users/jsrn/Code/profiling-talk/app/app/models/puppy.rb:8
+  1.02      0.270     0.270     0.000     0.000  1000001   ActiveModel::AttributeSet#initialize /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activemodel-6.0.3.2/lib/active_model/attribute_set.rb:11
+  0.90      0.245     0.240     0.000     0.004  1000000   ActiveRecord::AttributeMethods::ClassMethods#define_attribute_methods /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/attribute_methods.rb:48
+  0.90      0.239     0.239     0.000     0.000  2000005   Symbol#to_sym                  
+  0.83      0.220     0.220     0.000     0.000  2000016   Integer#to_i                   
+  0.79      0.211     0.211     0.000     0.000  1000000   Kernel#rand                    
+  0.44      0.118     0.117     0.000     0.000      996   Array#any?                     
+  0.42      0.111     0.111     0.000     0.000  1000000   <Module::Math>#sqrt            
+  0.41     19.164     0.109     0.000    19.055      217  *Array#each                     
+  0.16      0.043     0.043     0.000     0.000        4   PG::Result#clear               
+  0.16      0.752     0.043     0.084     0.625        8   PG::Result#mp_report_sql       /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-mini-profiler-2.0.2/lib/patches/db/pg.rb:22
+  0.10      0.028     0.027     0.000     0.000       16   <Class::SqlPatches>#elapsed_time /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-mini-profiler-2.0.2/lib/patches/sql_patches.rb:22
+  0.10      0.027     0.027     0.000     0.000   100001   Array#sample                   
+  0.03      0.008     0.007     0.000     0.001        4   <Module::Bootsnap::CompileCache::Native>#fetch 
+  0.03      0.007     0.007     0.000     0.000    24958   Puppy#fix_ear                  /Users/jsrn/Code/profiling-talk/app/app/models/puppy.rb:13
+  0.01      0.003     0.003     0.000     0.000        4   PG::Connection#exec_without_profiling 
+  0.01      0.634     0.003     0.000     0.631        4   PG::Connection#exec_params     /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-mini-profiler-2.0.2/lib/patches/db/pg.rb:68
+  0.01      0.002     0.002     0.000     0.000       86   Module#module_eval             
+  0.01      0.002     0.002     0.000     0.000        2   #<Module:0x00007ff4760f84b8>#orig_sum 
+  0.01      0.001     0.001     0.000     0.000     1049   String#sub                     
+  0.00      0.001     0.001     0.000     0.000        8   <Module::Kernel>#caller        
+  0.00      0.001     0.001     0.000     0.000     3596   <Class::Rack::MiniProfiler>#config /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-mini-profiler-2.0.2/lib/mini_profiler/profiler.rb:23
+  0.00      0.001     0.001     0.000     0.000        9   Kernel#caller                  
+  0.00      0.010     0.001     0.000     0.010        4  *Kernel#require_without_bootsnap 
+  0.00      0.001     0.001     0.000     0.000       36   IO#write                       
+  0.00      0.000     0.000     0.000     0.000      895   String#=~                      
+  0.00      0.000     0.000     0.000     0.000        1   <Class::RubyVM::InstructionSequence>#compile_file 
+  0.00      0.000     0.000     0.000     0.000      898   String#gsub!                   
+  0.00      0.000     0.000     0.000     0.000      600   Regexp#match?                  
+  0.00      0.000     0.000     0.000     0.000        4   <Class::RubyVM::InstructionSequence>#load_from_binary 
+  0.00      0.000     0.000     0.000     0.000      329   Hash#fetch                     
+  0.00      0.000     0.000     0.000     0.000       66   <Class::ActiveRecord::Base>#logger /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/module/attribute_accessors.rb:57
+  0.00      0.006     0.000     0.000     0.005       79  *MonitorMixin#synchronize       /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/monitor.rb:227
+  0.00      0.002     0.000     0.000     0.002       76   ActiveModel::AttributeMethods::ClassMethods#define_proxy_call /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activemodel-6.0.3.2/lib/active_model/attribute_methods.rb:366
+  0.00      0.000     0.000     0.000     0.000      587   <Class::Thread>#current        
+  0.00      0.001     0.000     0.000     0.000      148   Concurrent::Map#[]             /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/concurrent-ruby-1.1.6/lib/concurrent-ruby/concurrent/map.rb:132
+  0.00      0.092     0.000     0.000     0.091       46  *Arel::Visitors::Visitor#visit  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/visitors/visitor.rb:27
+  0.00      0.000     0.000     0.000     0.000       96   <Module::Process>#clock_gettime 
+  0.00      0.000     0.000     0.000     0.000     1053   Kernel#nil?                    
+  0.00      0.000     0.000     0.000     0.000      209   Thread#[]                      
+  0.00      0.000     0.000     0.000     0.000       96   MonitorMixin#mon_exit          /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/monitor.rb:199
+  0.00      0.000     0.000     0.000     0.000      148   Concurrent::Collection::NonConcurrentMapBackend#[] /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/concurrent-ruby-1.1.6/lib/concurrent-ruby/concurrent/collection/map/non_concurrent_map_backend.rb:19
+  0.00      0.000     0.000     0.000     0.000       36   Enumerator::Lazy#map           
+  0.00      0.000     0.000     0.000     0.000      381   Class#superclass               
+  0.00      0.008     0.000     0.000     0.008       13   ActiveRecord::LogSubscriber#sql /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/log_subscriber.rb:22
+  0.00      1.447     0.000     0.000     1.447       34  *<Class::Thread>#handle_interrupt 
+  0.00      0.001     0.000     0.000     0.000      196   Kernel#respond_to?             
+  0.00      0.002     0.000     0.000     0.002       36   Logger#add                     /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/logger.rb:455
+  0.00      0.001     0.000     0.000     0.000       49   ActiveSupport::LoggerThreadSafeLevel#local_level /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/logger_thread_safe_level.rb:35
+  0.00      0.000     0.000     0.000     0.000       36   ActiveSupport::TaggedLogging::Formatter#call /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/tagged_logging.rb:22
+  0.00      0.000     0.000     0.000     0.000       83  *Kernel#dup                     
+  0.00      0.001     0.000     0.000     0.001       90   ActiveRecord::AttributeMethods::ClassMethods#instance_method_already_implemented? /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/attribute_methods.rb:81
+  0.00      0.001     0.000     0.000     0.001       26   ActiveRecord::ConnectionHandling#retrieve_connection /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_handling.rb:220
+  0.00      0.000     0.000     0.000     0.000      211   Kernel#hash                    
+  0.00      0.000     0.000     0.000     0.000      181   ActiveRecord::AttributeMethods::ClassMethods#method_defined_within? /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/attribute_methods.rb:103
+  0.00      0.000     0.000     0.000     0.000       79   MonitorMixin#mon_enter         /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/monitor.rb:187
+  0.00      0.000     0.000     0.000     0.000       72   Rack::MiniProfiler::TimerStruct::Base#[] /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-mini-profiler-2.0.2/lib/mini_profiler/timer_struct/base.rb:17
+  0.00      0.000     0.000     0.000     0.000       78  *ActiveRecord::ConnectionHandling#connection_specification_name /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_handling.rb:195
+  0.00      0.000     0.000     0.000     0.000       58  *Array#hash                     
+  0.00      0.000     0.000     0.000     0.000       98   ActiveSupport::PerThreadRegistry#instance /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/per_thread_registry.rb:46
+  0.00      0.005     0.000     0.000     0.005        8   Rack::MiniProfiler::TimerStruct::Sql#initialize /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-mini-profiler-2.0.2/lib/mini_profiler/timer_struct/sql.rb:11
+  0.00      0.000     0.000     0.000     0.000      293   Module#method_defined?         
+  0.00      0.000     0.000     0.000     0.000       25   Float#round                    
+  0.00      0.000     0.000     0.000     0.000       90   String#%                       
+  0.00      0.000     0.000     0.000     0.000       66   ActiveRecord::LogSubscriber#logger /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/log_subscriber.rb:92
+  0.00      0.000     0.000     0.000     0.000      104   MonitorMixin#mon_check_owner   /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/monitor.rb:267
+  0.00     22.297     0.000     0.000    22.297       14  *ActiveSupport::Notifications::Instrumenter#instrument /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/notifications/instrumenter.rb:20
+  0.00      0.001     0.000     0.000     0.000       56  *Concurrent::Map#fetch          /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/concurrent-ruby-1.1.6/lib/concurrent-ruby/concurrent/map.rb:168
+  0.00      0.000     0.000     0.000     0.000       62   Concurrent::Collection::NonConcurrentMapBackend#get_or_default /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/concurrent-ruby-1.1.6/lib/concurrent-ruby/concurrent/collection/map/non_concurrent_map_backend.rb:108
+  0.00      0.002     0.000     0.000     0.002       36   ActiveSupport::LoggerThreadSafeLevel#add /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/logger_thread_safe_level.rb:51
+  0.00      0.000     0.000     0.000     0.000       68   Arel::Collectors::Composite#<< /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/collectors/composite.rb:11
+  0.00      0.000     0.000     0.000     0.000       83  *Kernel#initialize_dup          
+  0.00      0.001     0.000     0.000     0.001       90   ActiveRecord::AttributeMethods::PrimaryKey::ClassMethods#instance_method_already_implemented? /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/attribute_methods/primary_key.rb:55
+  0.00     26.547     0.000     0.000    26.547        8  *ActiveRecord::QueryMethods#arel_column /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/query_methods.rb:1212
+  0.00     23.533     0.000     0.000    23.533        9  *Arel::Visitors::Visitor#accept /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/visitors/visitor.rb:10
+  0.00      0.000     0.000     0.000     0.000       37   Hash#key?                      
+  0.00      0.000     0.000     0.000     0.000       15   Kernel#tap                     
+  0.00      0.005     0.000     0.000     0.005       35  *Thread::Mutex#synchronize      
+  0.00      0.000     0.000     0.000     0.000      154   <Class::ActiveRecord::DynamicMatchers::Method>#pattern /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/dynamic_matchers.rb:37
+  0.00      0.003     0.000     0.000     0.003        9   Enumerator::Generator#each     
+  0.00      0.000     0.000     0.000     0.000       78   ActiveRecord::DynamicMatchers#respond_to_missing? /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/dynamic_matchers.rb:6
+  0.00      0.000     0.000     0.000     0.000      143   Set#include?                   /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/set.rb:253
+  0.00      0.000     0.000     0.000     0.000      137   Module#===                     
+  0.00      0.000     0.000     0.000     0.000      136   Rack::MiniProfiler::TimerStruct::Base#attributes /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-mini-profiler-2.0.2/lib/mini_profiler/timer_struct/base.rb:13
+  0.00     26.538     0.000     0.000    26.538        9  *ActiveRecord::Relation#skip_query_cache_if_necessary /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation.rb:833
+  0.00      0.003     0.000     0.000     0.003       45  *Arel::Visitors::ToSql#collect_nodes_for /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/visitors/to_sql.rb:177
+  0.00      0.000     0.000     0.000     0.000        9   Enumerable#lazy                
+  0.00      0.000     0.000     0.000     0.000      139   String#to_s                    
+  0.00      0.001     0.000     0.000     0.001       49   ActiveSupport::LoggerThreadSafeLevel#level /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/logger_thread_safe_level.rb:47
+  0.00     26.543     0.000     0.000    26.543        9  *ActiveRecord::QueryMethods#arel /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/query_methods.rb:1015
+  0.00      0.009     0.000     0.000     0.009       13   ActiveSupport::Subscriber#finish /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/subscriber.rb:139
+  0.00      0.000     0.000     0.000     0.000       47   Regexp#===                     
+  0.00     25.891     0.000     0.000    25.891       13  *ActiveRecord::ConnectionAdapters::DatabaseStatements#to_sql_and_binds /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/database_statements.rb:17
+  0.00      0.000     0.000     0.000     0.000       69   Arel::Collectors::PlainString#<< /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/collectors/plain_string.rb:14
+  0.00      0.009     0.000     0.000     0.009       26  *ActiveSupport::Notifications::Fanout::Subscribers::Evented#finish /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/notifications/fanout.rb:159
+  0.00      0.000     0.000     0.000     0.000       43   Hash#initialize_copy           
+  0.00      0.000     0.000     0.000     0.000       39   ActiveRecord::ConnectionAdapters::AbstractAdapter#prepared_statements /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract_adapter.rb:180
+  0.00      0.000     0.000     0.000     0.000        7   <Module::Arel>#sql             /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel.rb:37
+  0.00      0.000     0.000     0.000     0.000       21   Array#push                     
+  0.00      0.000     0.000     0.000     0.000       63   Enumerator::Generator#initialize 
+  0.00      0.000     0.000     0.000     0.000      135   NilClass#to_s                  
+  0.00      0.000     0.000     0.000     0.000       36   Time#initialize                
+  0.00      0.001     0.000     0.000     0.001        9   ActiveRecord::Scoping::Named::ClassMethods#all /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/scoping/named.rb:26
+  0.00      0.000     0.000     0.000     0.000       12   ActiveRecord::Scoping::ScopeRegistry#value_for /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/scoping.rb:79
+  0.00      0.000     0.000     0.000     0.000        1   RubyVM::InstructionSequence#to_binary 
+  0.00      0.000     0.000     0.000     0.000       19   ActiveRecord::Inheritance::ClassMethods#base_class /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/inheritance.rb:99
+  0.00      0.006     0.000     0.000     0.006        8   Rack::MiniProfiler::ProfilingMethods#record_sql /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-mini-profiler-2.0.2/lib/mini_profiler/profiling_methods.rb:7
+  0.00      0.006     0.000     0.000     0.006        9   ActiveRecord::LogSubscriber#log_query_source /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/log_subscriber.rb:104
+  0.00     25.891     0.000     0.000    25.891        9  *ActiveRecord::ConnectionAdapters::QueryCache#select_all /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:96
+  0.00      0.000     0.000     0.000     0.000        4   <Module::Bootsnap::CompileCache::ISeq>#storage_to_output /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/bootsnap-1.4.6/lib/bootsnap/compile_cache/iseq.rb:18
+  0.00      0.000     0.000     0.000     0.000        8   Rack::MiniProfiler::TimerStruct::Sql#report_reader_duration /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-mini-profiler-2.0.2/lib/mini_profiler/timer_struct/sql.rb:52
+  0.00      0.000     0.000     0.000     0.000       90   ActiveRecord::AttributeMethods::ClassMethods#dangerous_attribute_method? /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/attribute_methods.rb:99
+  0.00      0.000     0.000     0.000     0.000       30   <Class::ActiveRecord::Base>#connection_handler /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/core.rb:135
+  0.00      0.001     0.000     0.000     0.000       26   ActiveRecord::ConnectionAdapters::ConnectionHandler#retrieve_connection /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:1107
+  0.00      0.000     0.000     0.000     0.000       71   Kernel#is_a?                   
+  0.00      0.000     0.000     0.000     0.000      183   ActiveModel::AttributeMethods::ClassMethods#generated_attribute_methods /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activemodel-6.0.3.2/lib/active_model/attribute_methods.rb:332
+  0.00      0.000     0.000     0.000     0.000       36   Logger#format_message          /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/logger.rb:581
+  0.00      0.000     0.000     0.000     0.000       18   ActiveSupport::LogSubscriber#color /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/log_subscriber.rb:127
+  0.00      0.001     0.000     0.000     0.001       36   Logger::LogDevice#write        /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/logger.rb:684
+  0.00      0.000     0.000     0.000     0.000        9   Float#to_s                     
+  0.00      0.000     0.000     0.000     0.000       36   <Class::Time>#now              
+  0.00      0.000     0.000     0.000     0.000       54   Kernel#object_id               
+  0.00      0.000     0.000     0.000     0.000       64   Rack::MiniProfiler::TimerStruct::Base#[]= /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-mini-profiler-2.0.2/lib/mini_profiler/timer_struct/base.rb:21
+  0.00      1.434     0.000     0.000     1.434        4   ActiveRecord::ConnectionAdapters::PostgreSQLAdapter#exec_no_cache /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/postgresql_adapter.rb:665
+  0.00      0.004     0.000     0.000     0.004       44  *ActiveRecord::ModelSchema::ClassMethods#load_schema /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/model_schema.rb:473
+  0.00      0.000     0.000     0.000     0.000        9   ActiveRecord::Scoping::Default::ClassMethods#build_default_scope /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/scoping/default.rb:102
+  0.00      0.002     0.000     0.000     0.002       18   #<Module:0x00007ff4769dee10>#add /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/logger.rb:25
+  0.00      0.000     0.000     0.000     0.000       36   ActiveSupport::TaggedLogging::Formatter#tags_text /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/tagged_logging.rb:53
+  0.00      0.000     0.000     0.000     0.000       39   ActiveRecord::ConnectionAdapters::AbstractAdapter#prepared_statements_disabled_cache /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract_adapter.rb:184
+  0.00      0.000     0.000     0.000     0.000       49   ActiveSupport::LoggerThreadSafeLevel#local_log_id /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/logger_thread_safe_level.rb:31
+  0.00      0.000     0.000     0.000     0.000       32   <Class::Rack::MiniProfiler>#current /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-mini-profiler-2.0.2/lib/mini_profiler/profiler.rb:35
+  0.00      0.000     0.000     0.000     0.000       26   ActiveSupport::Notifications::Event#now /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/notifications/instrumenter.rb:139
+  0.00      0.000     0.000     0.000     0.000       36   ActiveSupport::TaggedLogging::Formatter#current_tags /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/tagged_logging.rb:47
+  0.00      0.000     0.000     0.000     0.000       12   <Class::ActiveRecord::Scoping::ScopeRegistry>#value_for /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/per_thread_registry.rb:55
+  0.00      0.000     0.000     0.000     0.000       90   ActiveModel::AttributeMethods::ClassMethods#instance_method_already_implemented? /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activemodel-6.0.3.2/lib/active_model/attribute_methods.rb:336
+  0.00     26.547     0.000     0.000    26.547        6  *ActiveRecord::Calculations#execute_simple_calculation /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/calculations.rb:272
+  0.00      0.000     0.000     0.000     0.000       49   <Class::ActiveSupport::Logger>#local_levels /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/module/attribute_accessors.rb:57
+  0.00      0.000     0.000     0.000     0.000       18   Module#<=                      
+  0.00      0.000     0.000     0.000     0.000       36   ActiveSupport::Logger::SimpleFormatter#call /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/logger.rb:88
+  0.00      0.000     0.000     0.000     0.000       27   Enumerator::Lazy#reject        
+  0.00      0.000     0.000     0.000     0.000       39   ActiveSupport::Subscriber#event_stack /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/subscriber.rb:149
+  0.00      0.000     0.000     0.000     0.000        8   ActiveSupport::Concurrency::ShareLock#wait_for /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/concurrency/share_lock.rb:218
+  0.00      0.000     0.000     0.000     0.000       30   Thread#thread_variable_get     
+  0.00      0.000     0.000     0.000     0.000       90   ActiveRecord::AttributeMethods::PrimaryKey::ClassMethods#dangerous_attribute_method? /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/attribute_methods/primary_key.rb:59
+  0.00      0.000     0.000     0.000     0.000       26   ActiveRecord::ConnectionAdapters::ConnectionPool#connection /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:436
+  0.00      0.000     0.000     0.000     0.000       26   ActiveRecord::ConnectionAdapters::ConnectionHandler#owner_to_pool /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:1162
+  0.00      0.000     0.000     0.000     0.000       26   ActiveSupport::Notifications::Event#now_cpu /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/notifications/instrumenter.rb:144
+  0.00      0.000     0.000     0.000     0.000       50   Array#include?                 
+  0.00      0.000     0.000     0.000     0.000       77   <Class::ActiveRecord::DynamicMatchers::Method>#match /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/dynamic_matchers.rb:32
+  0.00      0.000     0.000     0.000     0.000       68   Arel::Collectors::Bind#<<      /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/collectors/bind.rb:10
+  0.00      0.001     0.000     0.000     0.001       13   ActiveSupport::Subscriber#start /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/subscriber.rb:130
+  0.00      0.000     0.000     0.000     0.000       53   Thread::Mutex#lock             
+  0.00      0.000     0.000     0.000     0.000       30   Module#name                    
+  0.00      0.000     0.000     0.000     0.000       17   MonitorMixin#mon_try_enter     /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/monitor.rb:170
+  0.00      0.641     0.000     0.000     0.641        8   ActiveSupport::Concurrency::ShareLock#yield_shares /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/concurrency/share_lock.rb:171
+  0.00      0.000     0.000     0.000     0.000       25   Float#*                        
+  0.00      0.000     0.000     0.000     0.000       10   ActiveSupport::NumericWithFormat#to_s /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/numeric/conversions.rb:105
+  0.00      0.000     0.000     0.000     0.000       31   ActiveRecord::Inheritance::ClassMethods#abstract_class? /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/inheritance.rb:161
+  0.00      0.000     0.000     0.000     0.000       66   Thread::Mutex#unlock           
+  0.00      0.000     0.000     0.000     0.000       77   Array#join                     
+  0.00      0.000     0.000     0.000     0.000       65   NilClass#nil?                  
+  0.00      0.000     0.000     0.000     0.000       35   Hash#delete                    
+  0.00      0.000     0.000     0.000     0.000       26   ActiveRecord::ConnectionAdapters::ConnectionHandler#retrieve_connection_pool /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:1144
+  0.00      0.000     0.000     0.000     0.000       90   ActiveModel::AttributeMethods::ClassMethods::AttributeMethodMatcher#method_name /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activemodel-6.0.3.2/lib/active_model/attribute_methods.rb:407
+  0.00      0.000     0.000     0.000     0.000       13   ActiveSupport::Notifications::Event#initialize /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/notifications/instrumenter.rb:64
+  0.00      0.000     0.000     0.000     0.000      184   Module#private_method_defined? 
+  0.00      0.000     0.000     0.000     0.000       18   ActiveRecord::ModelSchema::ClassMethods#attribute_types /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/model_schema.rb:361
+  0.00      0.000     0.000     0.000     0.000       44   Array#first                    
+  0.00      0.005     0.000     0.000     0.005        5   <Module::ActiveSupport::Notifications>#instrument /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/notifications.rb:178
+  0.00     26.547     0.000     0.000    26.547        6  *ActiveRecord::Calculations#perform_calculation /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/calculations.rb:229
+  0.00      0.000     0.000     0.000     0.000       12   ActiveRecord::Scoping::ClassMethods#current_scope /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/scoping.rb:26
+  0.00      0.000     0.000     0.000     0.000        9   ActiveRecord::Relation#initialize /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation.rb:27
+  0.00      0.000     0.000     0.000     0.000       38   Array#one?                     
+  0.00      1.435     0.000     0.000     1.435        4   ActiveRecord::ConnectionAdapters::DatabaseStatements#select_all /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/database_statements.rb:59
+  0.00      0.000     0.000     0.000     0.000       39   ActiveSupport::SubscriberQueueRegistry#get_queue /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/subscriber.rb:165
+  0.00      0.000     0.000     0.000     0.000       54   Arel::Visitors::ToSql#maybe_visit /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/visitors/to_sql.rb:780
+  0.00      0.002     0.000     0.000     0.002       18   Logger#debug                   /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/logger.rb:490
+  0.00      0.000     0.000     0.000     0.000        9   ActiveRecord::LogSubscriber#backtrace_cleaner /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/class/attribute.rb:123
+  0.00      0.000     0.000     0.000     0.000       77   String#inspect                 
+  0.00      0.011     0.000     0.000     0.011        4  *Object#require                 /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/zeitwerk-2.3.1/lib/zeitwerk/kernel.rb:24
+  0.00      0.003     0.000     0.000     0.003       18  *Enumerator#each                
+  0.00      0.000     0.000     0.000     0.000       26   #<Class:0x00007ff4762f2e80>#get_time /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/concurrent-ruby-1.1.6/lib/concurrent-ruby/concurrent/utility/monotonic_time.rb:13
+  0.00      0.000     0.000     0.000     0.000        9   ActiveRecord::QueryMethods#build_select /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/query_methods.rb:1185
+  0.00      0.010     0.000     0.000     0.010        4  *Bootsnap::LoadPathCache::LoadedFeaturesIndex#register /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/bootsnap-1.4.6/lib/bootsnap/load_path_cache/loaded_features_index.rb:85
+  0.00      0.000     0.000     0.000     0.000        8   <Module::ERB::Util>#unwrapped_html_escape /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/string/output_safety.rb:34
+  0.00      0.003     0.000     0.000     0.003       17  *Arel::Visitors::ToSql#inject_join /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/visitors/to_sql.rb:786
+  0.00      0.011     0.000     0.000     0.010        4  *Kernel#zeitwerk_original_require /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/bootsnap-1.4.6/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:27
+  0.00      0.003     0.000     0.000     0.003        9   ActiveRecord::LogSubscriber#extract_query_source_location /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/log_subscriber.rb:112
+  0.00      0.001     0.000     0.000     0.001       26   ActiveSupport::Notifications::Fanout::Subscribers::Evented#start /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/notifications/fanout.rb:155
+  0.00      0.000     0.000     0.000     0.000       40   BasicObject#initialize         
+  0.00      0.000     0.000     0.000     0.000       17   Array#uniq                     
+  0.00      0.007     0.000     0.000     0.007        9   ActiveRecord::LogSubscriber#debug /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/log_subscriber.rb:96
+  0.00      0.000     0.000     0.000     0.000       13   String#split                   
+  0.00      0.000     0.000     0.000     0.000       44   ActiveRecord::ModelSchema::ClassMethods#schema_loaded? /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/model_schema.rb:469
+  0.00      0.009     0.000     0.000     0.009       13   ActiveSupport::LogSubscriber#finish /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/log_subscriber.rb:106
+  0.00      0.000     0.000     0.000     0.000       26   ActiveRecord::ConnectionAdapters::ConnectionPool#current_thread /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:743
+  0.00      0.000     0.000     0.000     0.000        8   <Module::ActiveModel::AttributeMethods::AttrNames>#define_attribute_accessor_method /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activemodel-6.0.3.2/lib/active_model/attribute_methods.rb:502
+  0.00      0.000     0.000     0.000     0.000       12   String#gsub                    
+  0.00      0.752     0.000     0.000     0.752        8   PG::Result#values              /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-mini-profiler-2.0.2/lib/patches/db/pg.rb:8
+  0.00      0.000     0.000     0.000     0.000      110   Module#method_added            
+  0.00      0.051     0.000     0.000     0.050        9   Arel::Visitors::ToSql#visit_Arel_Nodes_SelectCore /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/visitors/to_sql.rb:147
+  0.00      0.000     0.000     0.000     0.000       26   <Module::Concurrent>#monotonic_time /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/concurrent-ruby-1.1.6/lib/concurrent-ruby/concurrent/utility/monotonic_time.rb:53
+  0.00      0.000     0.000     0.000     0.000       13   ActiveSupport::Notifications::Event#start! /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/notifications/instrumenter.rb:78
+  0.00      0.000     0.000     0.000     0.000        9   <Class::ActiveRecord::Base>#verbose_query_logs /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/module/attribute_accessors.rb:57
+  0.00      0.006     0.000     0.000     0.006        4   PG::Connection#async_exec      /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-mini-profiler-2.0.2/lib/patches/db/pg.rb:109
+  0.00      0.000     0.000     0.000     0.000        9   ActiveSupport::BacktraceCleaner#filter_backtrace /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/backtrace_cleaner.rb:107
+  0.00      0.000     0.000     0.000     0.000        9   Arel::Nodes::SelectCore#initialize /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/nodes/select_core.rb:9
+  0.00      0.001     0.000     0.000     0.001       13   ActiveSupport::LogSubscriber#start /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/log_subscriber.rb:102
+  0.00      0.001     0.000     0.000     0.001        9   ActiveRecord::QueryMethods#build_arel /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/query_methods.rb:1040
+  0.00      0.001     0.000     0.000     0.001       26   ActiveRecord::ConnectionHandling#connection /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_handling.rb:188
+  0.00      0.001     0.000     0.000     0.000        9   ActiveRecord::Core::ClassMethods#relation /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/core.rb:294
+  0.00      0.000     0.000     0.000     0.000       13   ActiveRecord::ExplainRegistry#collect? /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/explain_registry.rb:23
+  0.00      0.001     0.000     0.000     0.001        7   Hash#each                      
+  0.00      0.000     0.000     0.000     0.000        5   ActiveRecord::ConnectionAdapters::PostgreSQL::Quoting#lookup_cast_type_from_column /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/postgresql/quoting.rb:77
+  0.00      0.000     0.000     0.000     0.000       15   ActiveRecord::ConnectionAdapters::PostgreSQL::Quoting#quote_table_name /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/postgresql/quoting.rb:32
+  0.00      0.001     0.000     0.000     0.001       24  *ActiveRecord::Type::TypeMap#fetch /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/type/type_map.rb:19
+  0.00      0.000     0.000     0.000     0.000       77   Enumerable#find                
+  0.00      0.002     0.000     0.000     0.002        9   Arel::Visitors::ToSql#visit_Arel_Nodes_JoinSource /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/visitors/to_sql.rb:442
+  0.00     25.769     0.000     0.000    25.769        9  *ActiveRecord::ConnectionAdapters::DetermineIfPreparableVisitor#accept /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/determine_if_preparable_visitor.rb:8
+  0.00      0.000     0.000     0.000     0.000       13   ActiveSupport::Notifications::Event#finish! /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/notifications/instrumenter.rb:85
+  0.00      0.000     0.000     0.000     0.000       77   Array#map!                     
+  0.00      0.001     0.000     0.000     0.001       13   ActiveRecord::ConnectionAdapters::PostgreSQLAdapter#get_oid_type /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/postgresql_adapter.rb:508
+  0.00      0.000     0.000     0.000     0.000        9   Arel::SelectManager#initialize /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/select_manager.rb:9
+  0.00      0.000     0.000     0.000     0.000       12  *ActiveRecord::Type::HashLookupTypeMap#perform_fetch /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/type/hash_lookup_type_map.rb:19
+  0.00      0.000     0.000     0.000     0.000       21   ActiveRecord::QueryMethods#group_values /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/query_methods.rb:93
+  0.00      0.000     0.000     0.000     0.000       13   ActiveSupport::LoggerThreadSafeLevel#debug? /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/logger_thread_safe_level.rb:18
+  0.00      0.000     0.000     0.000     0.000       10   ActiveRecord::Relation#eager_loading? /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation.rb:678
+  0.00      0.000     0.000     0.000     0.000       15   String#initialize              
+  0.00      0.000     0.000     0.000     0.000        9   ActiveSupport::BacktraceCleaner#clean /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/backtrace_cleaner.rb:41
+  0.00      0.000     0.000     0.000     0.000       13   <Class::ActiveRecord::ExplainRegistry>#collect? /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/per_thread_registry.rb:55
+  0.00      0.004     0.000     0.000     0.004        1   ActiveRecord::AttributeMethods::PrimaryKey::ClassMethods#reset_primary_key /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/attribute_methods/primary_key.rb:77
+  0.00      0.000     0.000     0.000     0.000       13   ActiveRecord::ExplainSubscriber#finish /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/explain_subscriber.rb:12
+  0.00      0.003     0.000     0.000     0.003        9   Enumerable#first               
+  0.00      0.000     0.000     0.000     0.000       29   Symbol#to_s                    
+  0.00      0.000     0.000     0.000     0.000        9   <Class::ActiveRecord::LogSubscriber>#backtrace_cleaner /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/class/attribute.rb:106
+  0.00      0.000     0.000     0.000     0.000       25   ActiveRecord::QueryMethods#from_clause /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/query_methods.rb:93
+  0.00      0.000     0.000     0.000     0.000        9   ActiveRecord::Delegation::DelegateCache#relation_delegate_class /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/delegation.rb:8
+  0.00      0.000     0.000     0.000     0.000       26   ActiveSupport::Notifications::Event#now_allocations /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/notifications/instrumenter.rb:158
+  0.00      0.009     0.000     0.000     0.009       14   ActiveSupport::Notifications::Instrumenter#finish_with_state /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/notifications/instrumenter.rb:44
+  0.00      0.000     0.000     0.000     0.000       19   ActiveRecord::QueryMethods#includes_values /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/query_methods.rb:93
+  0.00      0.000     0.000     0.000     0.000       11   Kernel#singleton_class         
+  0.00      0.000     0.000     0.000     0.000        9   ActiveRecord::Delegation::ClassMethods#create /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/delegation.rb:116
+  0.00      0.000     0.000     0.000     0.000        9   ActiveRecord::LogSubscriber#colorize_payload_name /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/log_subscriber.rb:63
+  0.00      0.000     0.000     0.000     0.000        4   <Class::ActiveRecord::Base>#default_timezone /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/module/attribute_accessors.rb:57
+  0.00      0.000     0.000     0.000     0.000        6   ActiveRecord::Result#first     /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/result.rb:97
+  0.00      0.000     0.000     0.000     0.000       10   ActiveRecord::Relation#reset   /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation.rb:637
+  0.00      0.000     0.000     0.000     0.000        9   ActiveRecord::QueryMethods#lock_value /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/query_methods.rb:93
+  0.00      0.000     0.000     0.000     0.000        8   Object#html_safe?              /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/string/output_safety.rb:123
+  0.00      0.000     0.000     0.000     0.000       27   ActiveSupport::LogSubscriber#colorize_logging /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/module/attribute_accessors.rb:64
+  0.00      0.006     0.000     0.000     0.006        8   Rack::MiniProfiler::TimerStruct::Request#add_sql /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-mini-profiler-2.0.2/lib/mini_profiler/timer_struct/request.rb:104
+  0.00      1.447     0.000     0.000     1.447       17  *ActiveSupport::Concurrency::LoadInterlockAwareMonitor#synchronize /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/concurrency/load_interlock_aware_monitor.rb:20
+  0.00      0.000     0.000     0.000     0.000       28   ActiveRecord::QueryMethods#assert_mutability! /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/query_methods.rb:1035
+  0.00      0.000     0.000     0.000     0.000       42   String#hash                    
+  0.00      0.000     0.000     0.000     0.000        9   ActiveRecord::ConnectionAdapters::AbstractAdapter#collector /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract_adapter.rb:754
+  0.00      0.000     0.000     0.000     0.000       19   ActiveSupport::Notifications::Fanout#listeners_for /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/notifications/fanout.rb:69
+  0.00      0.000     0.000     0.000     0.000       13   Arel::Visitors::ToSql#quote_table_name /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/visitors/to_sql.rb:761
+  0.00      0.000     0.000     0.000     0.000       22   Array#eql?                     
+  0.00      0.000     0.000     0.000     0.000       10   Module#define_method           
+  0.00      0.000     0.000     0.000     0.000        6   ActiveRecord::QueryMethods#unscope! /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/query_methods.rb:435
+  0.00      0.000     0.000     0.000     0.000       30  *Concurrent::Map#fetch_or_store /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/concurrent-ruby-1.1.6/lib/concurrent-ruby/concurrent/map.rb:191
+  0.00      0.000     0.000     0.000     0.000       16   Module#append_features         
+  0.00      0.000     0.000     0.000     0.000       12   Module#const_set               
+  0.00      0.000     0.000     0.000     0.000        5   <Module::Zeitwerk::Registry>#loader_for /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/zeitwerk-2.3.1/lib/zeitwerk/registry.rb:129
+  0.00      0.001     0.000     0.000     0.000        1   <Module::Bootsnap::CompileCache::ISeq>#input_to_storage /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/bootsnap-1.4.6/lib/bootsnap/compile_cache/iseq.rb:12
+  0.00      0.003     0.000     0.000     0.003       21  *Enumerable#each_with_index     
+  0.00      0.000     0.000     0.000     0.000       26   <Module::GC>#stat              
+  0.00      0.000     0.000     0.000     0.000       18   ActiveRecord::Relation::WhereClause#empty? /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/where_clause.rb:6
+  0.00      0.000     0.000     0.000     0.000       10   Kernel#clone                   
+  0.00      0.001     0.000     0.000     0.001       14   ActiveSupport::Notifications::Fanout#start /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/notifications/fanout.rb:57
+  0.00      0.000     0.000     0.000     0.000       16   Float#to_f                     
+  0.00      0.000     0.000     0.000     0.000       17   ActiveSupport::Concurrency::LoadInterlockAwareMonitor#mon_enter /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/concurrency/load_interlock_aware_monitor.rb:15
+  0.00      0.000     0.000     0.000     0.000        9   Arel::SelectManager#project    /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/select_manager.rb:132
+  0.00      0.000     0.000     0.000     0.000       25   Object#present?                /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/object/blank.rb:25
+  0.00      0.000     0.000     0.000     0.000       13   Concurrent::Map#initialize     /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/concurrent-ruby-1.1.6/lib/concurrent-ruby/concurrent/map.rb:118
+  0.00      0.000     0.000     0.000     0.000        5   ActiveRecord::ConnectionAdapters::PostgreSQL::SchemaStatements#fetch_type_metadata /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/postgresql/schema_statements.rb:646
+  0.00      0.000     0.000     0.000     0.000        9   ActiveRecord::LogSubscriber#sql_color /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/log_subscriber.rb:71
+  0.00      0.000     0.000     0.000     0.000       29   ActiveRecord::QueryMethods#select_values /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/query_methods.rb:93
+  0.00      0.008     0.000     0.000     0.008        4   Bootsnap::CompileCache::ISeq::InstructionSequenceMixin#load_iseq /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/bootsnap-1.4.6/lib/bootsnap/compile_cache/iseq.rb:34
+  0.00      0.000     0.000     0.000     0.000       26   Module#<                       
+  0.00      0.000     0.000     0.000     0.000       19   Concurrent::Collection::NonConcurrentMapBackend#[]= /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/concurrent-ruby-1.1.6/lib/concurrent-ruby/concurrent/collection/map/non_concurrent_map_backend.rb:23
+  0.00      0.002     0.000     0.000     0.002        3  *Array#sum                      /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/enumerable.rb:180
+  0.00      0.000     0.000     0.000     0.000        9   ActiveRecord::Result#initialize_copy /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/result.rb:127
+  0.00      0.641     0.000     0.000     0.641        8   ActiveSupport::Dependencies::Interlock#permit_concurrent_loads /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/dependencies/interlock.rb:46
+  0.00      0.000     0.000     0.000     0.000       30   <Class::ActiveRecord::Base>#default_connection_handler /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/class/attribute.rb:106
+  0.00      0.000     0.000     0.000     0.000       49   <Class::Fiber>#current         
+  0.00      0.000     0.000     0.000     0.000       36   Logger#format_severity         /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/logger.rb:577
+  0.00      0.646     0.000     0.000     0.646        8   ActiveRecord::ConnectionAdapters::AbstractAdapter#log /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract_adapter.rb:711
+  0.00      0.000     0.000     0.000     0.000        3   Zeitwerk::Loader::Callbacks#on_file_autoloaded /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/zeitwerk-2.3.1/lib/zeitwerk/loader/callbacks.rb:9
+  0.00      0.000     0.000     0.000     0.000       13   <Class::ActiveRecord::LogSubscriber>#runtime /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/log_subscriber.rb:13
+  0.00      0.000     0.000     0.000     0.000       10   ActiveRecord::SpawnMethods#spawn /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/spawn_methods.rb:10
+  0.00      0.001     0.000     0.000     0.001       14   ActiveSupport::Notifications::Instrumenter#start /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/notifications/instrumenter.rb:35
+  0.00      0.000     0.000     0.000     0.000        9   ActiveRecord::ConnectionAdapters::QueryCache#locked? /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:144
+  0.00      0.002     0.000     0.000     0.002        5  *ActiveRecord::ConnectionAdapters::PostgreSQL::SchemaStatements#new_column_from_field /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/postgresql/schema_statements.rb:624
+  0.00      0.000     0.000     0.000     0.000       13   String#initialize_copy         
+  0.00      0.000     0.000     0.000     0.000        9   ActiveRecord::QueryMethods#build_order /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/query_methods.rb:1267
+  0.00      0.000     0.000     0.000     0.000        9   Module#redefine_method         /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/module/redefine_method.rb:17
+  0.00      0.000     0.000     0.000     0.000       49   BasicObject#__id__             
+  0.00      0.051     0.000     0.000     0.051        9   Arel::Visitors::ToSql#visit_Arel_Nodes_SelectStatement /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/visitors/to_sql.rb:120
+  0.00      0.000     0.000     0.000     0.000       10   Kernel#instance_variable_set   
+  0.00      0.000     0.000     0.000     0.000        6   Arel::Expressions#count        /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/expressions.rb:5
+  0.00      0.000     0.000     0.000     0.000        8   ActiveRecord::Calculations#has_include? /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/calculations.rb:225
+  0.00      0.000     0.000     0.000     0.000        9   Arel::SelectManager#from       /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/select_manager.rb:87
+  0.00     26.548     0.000     0.000    26.548        5  *ActiveRecord::Querying#count   /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/querying.rb:21
+  0.00      0.009     0.000     0.000     0.009       14   ActiveSupport::Notifications::Fanout#finish /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/notifications/fanout.rb:61
+  0.00      0.000     0.000     0.000     0.000        8   <Class::SqlPatches>#should_measure? /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-mini-profiler-2.0.2/lib/patches/sql_patches.rb:17
+  0.00     23.051     0.000     0.000    23.051        1   ActiveRecord::Relation#records /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation.rb:249
+  0.00      0.000     0.000     0.000     0.000       13   Hash#merge!                    
+  0.00      0.000     0.000     0.000     0.000        6   ActiveSupport::Concern#append_features /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/concern.rb:113
+  0.00      0.000     0.000     0.000     0.000        8   CGI::Escape#escapeHTML         
+  0.00      0.000     0.000     0.000     0.000       15   ActiveRecord::QueryMethods#limit_value /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/query_methods.rb:93
+  0.00      0.000     0.000     0.000     0.000        6   ActiveRecord::QueryMethods#unscope /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/query_methods.rb:430
+  0.00      0.000     0.000     0.000     0.000        8   ActiveSupport::SafeBuffer#initialize /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/string/output_safety.rb:173
+  0.00     25.855     0.000     0.000    25.855        2  *ActiveRecord::Calculations#pluck /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/calculations.rb:181
+  0.00      0.001     0.000     0.000     0.001        9   ActiveSupport::LogSubscriber#debug /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/log_subscriber.rb:117
+  0.00      0.000     0.000     0.000     0.000       26   ActiveRecord::ConnectionAdapters::ConnectionPool#connection_cache_key /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:739
+  0.00      0.000     0.000     0.000     0.000       15   ActiveRecord::QueryMethods#distinct_value /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/query_methods.rb:93
+  0.00      0.000     0.000     0.000     0.000       14   String#start_with?             
+  0.00      0.000     0.000     0.000     0.000        8   Rack::MiniProfiler::TimerStruct::Sql#trim_binds /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-mini-profiler-2.0.2/lib/mini_profiler/timer_struct/sql.rb:60
+  0.00      0.000     0.000     0.000     0.000       10   ActiveRecord::Relation#initialize_copy /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation.rb:37
+  0.00      0.000     0.000     0.000     0.000        9   Arel::Nodes::SelectStatement#initialize /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/nodes/select_statement.rb:9
+  0.00      0.000     0.000     0.000     0.000       10   ActiveRecord::Attributes::ClassMethods#define_default_attribute /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/attributes.rb:261
+  0.00      0.000     0.000     0.000     0.000       24   Array#last                     
+  0.00      0.000     0.000     0.000     0.000        9   Module#redefine_singleton_method /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/module/redefine_method.rb:26
+  0.00      0.000     0.000     0.000     0.000       13   Concurrent::Collection::MriMapBackend#initialize /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/concurrent-ruby-1.1.6/lib/concurrent-ruby/concurrent/collection/map/mri_map_backend.rb:12
+  0.00      0.000     0.000     0.000     0.000        4   ActiveRecord::ModelSchema::ClassMethods#reload_schema_from_cache /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/model_schema.rb:499
+  0.00      0.000     0.000     0.000     0.000       26   <Module::Process>#pid          
+  0.00     26.552     0.000     0.000    26.552        1   PuppiesController#reticulate_splines /Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb:53
+  0.00      0.000     0.000     0.000     0.000       13   <Class::ActiveRecord::LogSubscriber>#runtime= /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/log_subscriber.rb:9
+  0.00      0.000     0.000     0.000     0.000        9   Enumerator::Yielder#<<         
+  0.00      0.000     0.000     0.000     0.000       14   ActiveRecord::Scoping::ScopeRegistry#raise_invalid_scope_type! /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/scoping.rb:98
+  0.00      0.000     0.000     0.000     0.000        1   Float#/                        
+  0.00      0.000     0.000     0.000     0.000       26   Array#blank?                   
+  0.00      0.000     0.000     0.000     0.000       20   String#sub!                    
+  0.00      0.000     0.000     0.000     0.000        9   Array#|                        
+  0.00      0.000     0.000     0.000     0.000        8   MonitorMixin::ConditionVariable#broadcast /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/monitor.rb:149
+  0.00      0.000     0.000     0.000     0.000        4   Bootsnap::LoadPathCache::Cache#find /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/bootsnap-1.4.6/lib/bootsnap/load_path_cache/cache.rb:47
+  0.00      0.000     0.000     0.000     0.000       11   String#end_with?               
+  0.00      0.000     0.000     0.000     0.000        8   <Module::ERB::Util>#html_escape /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/string/output_safety.rb:20
+  0.00      0.000     0.000     0.000     0.000       13   ActiveRecord::ConnectionAdapters::DatabaseStatements#arel_from_relation /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/database_statements.rb:509
+  0.00      0.000     0.000     0.000     0.000       10   ActiveRecord::QueryMethods#eager_load_values /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/query_methods.rb:93
+  0.00      0.000     0.000     0.000     0.000        9   ActiveRecord::Scoping::Named::ClassMethods#default_scoped /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/scoping/named.rb:57
+  0.00     26.547     0.000     0.000    26.547        6  *ActiveRecord::Calculations#aggregate_column /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/calculations.rb:260
+  0.00      0.000     0.000     0.000     0.000       10   Arel::Nodes::Binary#initialize /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/nodes/binary.rb:8
+  0.00      0.000     0.000     0.000     0.000       25   BasicObject#singleton_method_added 
+  0.00      0.000     0.000     0.000     0.000        9   Arel::Nodes::JoinSource#initialize /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/nodes/join_source.rb:11
+  0.00      0.000     0.000     0.000     0.000       22   ActiveSupport::Notifications::Event#duration /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/notifications/instrumenter.rb:126
+  0.00      0.000     0.000     0.000     0.000        2   ActiveRecord::AttributeMethods::ClassMethods#initialize_generated_modules /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/attribute_methods.rb:37
+  0.00      0.000     0.000     0.000     0.000       15   ActiveRecord::QueryMethods#offset_value /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/query_methods.rb:93
+  0.00     25.769     0.000     0.000    25.769        9  *Arel::Visitors::ToSql#compile  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/visitors/to_sql.rb:17
+  0.00      0.000     0.000     0.000     0.000        6   Arel::Visitors::ToSql#visit_Arel_Nodes_Count /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/visitors/to_sql.rb:362
+  0.00      0.000     0.000     0.000     0.000        7   Array#flatten!                 
+  0.00      0.000     0.000     0.000     0.000        9   Arel::Visitors::ToSql#visit_Arel_Table /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/visitors/to_sql.rb:507
+  0.00      0.000     0.000     0.000     0.000        6   ActiveRecord::Calculations#operation_over_aggregate_column /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/calculations.rb:268
+  0.00      0.000     0.000     0.000     0.000       13   <Class::ActiveRecord::RuntimeRegistry>#sql_runtime /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/runtime_registry.rb:20
+  0.00      0.000     0.000     0.000     0.000        9   Arel::Visitors::ToSql#visit_Arel_Nodes_SelectOptions /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/visitors/to_sql.rb:141
+  0.00      0.000     0.000     0.000     0.000       16   Module#include                 
+  0.00      0.000     0.000     0.000     0.000        4   ActiveRecord::AttributeDecorators::ClassMethods#decorate_matching_attribute_types /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/attribute_decorators.rb:40
+  0.00      0.000     0.000     0.000     0.000        8   MonitorMixin::ConditionVariable#wait_while /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/monitor.rb:123
+  0.00      0.000     0.000     0.000     0.000        9   Arel::SelectManager#distinct   /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/select_manager.rb:156
+  0.00      0.000     0.000     0.000     0.000        9   Module#alias_method            
+  0.00      0.051     0.000     0.000     0.051       14   Enumerable#inject              
+  0.00      0.000     0.000     0.000     0.000       21   String#freeze                  
+  0.00      0.000     0.000     0.000     0.000       10   ActiveRecord::Core::ClassMethods#arel_table /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/core.rb:266
+  0.00      0.000     0.000     0.000     0.000       11   ActiveRecord::QueryMethods#where_clause /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/query_methods.rb:93
+  0.00      0.000     0.000     0.000     0.000        3   ActiveRecord::ConnectionAdapters::PostgreSQL::Quoting#quote_column_name /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/postgresql/quoting.rb:46
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::ModelSchema::ClassMethods#column_names /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/model_schema.rb:403
+  0.00      0.000     0.000     0.000     0.000       31   ActiveRecord::ConnectionAdapters::AbstractAdapter#type_map /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract_adapter.rb:628
+  0.00      0.007     0.000     0.000     0.007        4   ActiveRecord::ConnectionAdapters::PostgreSQL::DatabaseStatements#query /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/postgresql/database_statements.rb:60
+  0.00      0.000     0.000     0.000     0.000        8   ActiveRecord::ConnectionAdapters::DatabaseStatements#materialize_transactions /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/database_statements.rb:288
+  0.00      0.000     0.000     0.000     0.000        9   ActiveRecord::Core::ClassMethods#predicate_builder /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/core.rb:276
+  0.00      0.000     0.000     0.000     0.000        4   Arel::Visitors::ToSql#visit_Arel_Attributes_Attribute /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/visitors/to_sql.rb:688
+  0.00      1.435     0.000     0.000     1.435        4   ActiveRecord::ConnectionAdapters::PostgreSQLAdapter#execute_and_clear /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/postgresql_adapter.rb:648
+  0.00      0.000     0.000     0.000     0.000       12   Float#to_i                     
+  0.00      0.000     0.000     0.000     0.000       12   ActiveRecord::Calculations#select_for_count /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/calculations.rb:400
+  0.00      0.000     0.000     0.000     0.000       15   <Class::ActiveRecord::ConnectionAdapters::AbstractAdapter>#quoted_table_names /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract_adapter.rb:115
+  0.00      0.000     0.000     0.000     0.000       16   ActiveRecord::ModelSchema::ClassMethods#_default_attributes /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/model_schema.rb:397
+  0.00      0.000     0.000     0.000     0.000        4   <Module::ActiveSupport::DescendantsTracker>#direct_descendants /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/descendants_tracker.rb:12
+  0.00      0.000     0.000     0.000     0.000       18   Concurrent::Map#put            /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/concurrent-ruby-1.1.6/lib/concurrent-ruby/concurrent/collection/map/mri_map_backend.rb:17
+  0.00      0.000     0.000     0.000     0.000        6   <Module::ActiveSupport::Notifications>#instrumenter /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/notifications.rb:226
+  0.00      0.000     0.000     0.000     0.000        4   Bootsnap::LoadPathCache::Cache#now /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/bootsnap-1.4.6/lib/bootsnap/load_path_cache/cache.rb:175
+  0.00      0.000     0.000     0.000     0.000        9   Arel::Collectors::SQLString#initialize /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/collectors/sql_string.rb:8
+  0.00      1.440     0.000     0.000     1.440        9   ActiveRecord::ConnectionAdapters::QueryCache#cache_sql /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:112
+  0.00      0.000     0.000     0.000     0.000        6   Arel::Visitors::ToSql#aggregate /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/visitors/to_sql.rb:860
+  0.00      0.004     0.000     0.000     0.004        9   ActiveRecord::ModelSchema::ClassMethods#columns_hash /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/model_schema.rb:351
+  0.00      0.000     0.000     0.000     0.000        7   <Class::Hash>#[]               
+  0.00      0.000     0.000     0.000     0.000        6   Class#initialize               
+  0.00      0.000     0.000     0.000     0.000        8   Float#<                        
+  0.00      0.000     0.000     0.000     0.000        6   ActiveSupport::Notifications::InstrumentationRegistry#instrumenter_for /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/notifications.rb:246
+  0.00      0.000     0.000     0.000     0.000        9   ActiveRecord::Delegation::ClassMethods#relation_class_for /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/delegation.rb:121
+  0.00      0.000     0.000     0.000     0.000       12   <Class::ActiveRecord::Base>#attribute_aliases /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/class/attribute.rb:97
+  0.00      0.000     0.000     0.000     0.000        4   <Class::ActiveRecord::Base>#attribute_type_decorations= /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/class/attribute.rb:105
+  0.00      0.000     0.000     0.000     0.000       13   <Class::ActiveRecord::RuntimeRegistry>#sql_runtime= /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/runtime_registry.rb:21
+  0.00      0.000     0.000     0.000     0.000        9   ActiveRecord::QueryMethods#annotate_values /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/query_methods.rb:93
+  0.00      0.000     0.000     0.000     0.000        6   Arel::Nodes::Count#initialize  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/nodes/count.rb:6
+  0.00      0.000     0.000     0.000     0.000        5   ActiveRecord::ConnectionAdapters::QueryCache#cache_notification_info /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:130
+  0.00      0.000     0.000     0.000     0.000        4   ActiveRecord::ConnectionAdapters::AbstractAdapter#preventing_writes? /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract_adapter.rb:153
+  0.00      0.000     0.000     0.000     0.000        4   Module#class_eval              
+  0.00      0.000     0.000     0.000     0.000       10   Kernel#initialize_clone        
+  0.00      0.000     0.000     0.000     0.000        9   Arel::Collectors::Composite#value /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/collectors/composite.rb:23
+  0.00      0.000     0.000     0.000     0.000       11   Kernel#freeze                  
+  0.00     26.547     0.000     0.000    26.547        6  *ActiveRecord::Calculations#count /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/calculations.rb:41
+  0.00      0.000     0.000     0.000     0.000        8   String#html_safe               /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/string/output_safety.rb:312
+  0.00      0.000     0.000     0.000     0.000        9   ActiveRecord::QueryMethods#left_outer_joins_values /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/query_methods.rb:93
+  0.00     26.547     0.000     0.000    26.547        6  *ActiveRecord::Calculations#calculate /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/calculations.rb:127
+  0.00      0.000     0.000     0.000     0.000       10   ActiveRecord::Relation#already_in_scope? /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation.rb:764
+  0.00      0.010     0.000     0.000     0.010        4  *Kernel#require_with_bootsnap_lfi /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/bootsnap-1.4.6/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21
+  0.00      0.000     0.000     0.000     0.000        2   ActiveRecord::ConnectionAdapters::PostgreSQL::Quoting#_quote /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/postgresql/quoting.rb:123
+  0.00      0.000     0.000     0.000     0.000        9   Array#concat                   
+  0.00     25.855     0.000     0.000    25.855        1   Kennel#validate_puppies!       /Users/jsrn/Code/profiling-talk/app/app/models/kennel.rb:10
+  0.00      0.004     0.000     0.000     0.004        2   ActiveRecord::ModelSchema::ClassMethods#table_exists? /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/model_schema.rb:339
+  0.00      0.000     0.000     0.000     0.000        6   Array#select                   
+  0.00      0.000     0.000     0.000     0.000        9   ActiveRecord::QueryMethods#optimizer_hints_values /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/query_methods.rb:93
+  0.00      0.000     0.000     0.000     0.000       12   Hash#values                    
+  0.00      0.000     0.000     0.000     0.000       19   Thread::Mutex#initialize       
+  0.00      0.000     0.000     0.000     0.000        8   ActiveSupport::Multibyte::Unicode#tidy_bytes /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/multibyte/unicode.rb:78
+  0.00      0.000     0.000     0.000     0.000        8   <Module::ActiveSupport::Dependencies>#interlock /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/module/attribute_accessors.rb:57
+  0.00      0.000     0.000     0.000     0.000        8   ActiveRecord::ConnectionAdapters::TransactionManager#materialize_transactions /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/transaction.rb:239
+  0.00      0.000     0.000     0.000     0.000        9   ActiveRecord::QueryMethods#joins_values /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/query_methods.rb:93
+  0.00      0.000     0.000     0.000     0.000       10   ActiveRecord::Attributes::ClassMethods#define_attribute /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/attributes.rb:236
+  0.00      0.000     0.000     0.000     0.000       13   Thread::Mutex#try_lock         
+  0.00      0.000     0.000     0.000     0.000        6   Arel::Nodes::Function#initialize /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/nodes/function.rb:9
+  0.00      0.000     0.000     0.000     0.000       12   String#downcase                
+  0.00      0.000     0.000     0.000     0.000        9   Arel::Collectors::PlainString#initialize /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/collectors/plain_string.rb:6
+  0.00      0.000     0.000     0.000     0.000        5   ActiveRecord::ConnectionAdapters::PostgreSQLAdapter#extract_value_from_default /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/postgresql_adapter.rb:592
+  0.00      0.000     0.000     0.000     0.000        4   Bootsnap::LoadPathCache::Cache#stale? /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/bootsnap-1.4.6/lib/bootsnap/load_path_cache/cache.rb:171
+  0.00     26.552     0.000     0.000    26.552        1   PuppiesController#ruby_prof    /Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb:24
+  0.00      0.000     0.000     0.000     0.000       13   ActiveRecord::ExplainSubscriber#start /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/explain_subscriber.rb:8
+  0.00      0.000     0.000     0.000     0.000        4   ActiveRecord::ConnectionAdapters::PostgreSQL::DatabaseStatements#result_as_array /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/postgresql/database_statements.rb:18
+  0.00      0.000     0.000     0.000     0.000        8   ActiveRecord::QueryMethods#select_values= /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/query_methods.rb:98
+  0.00      0.000     0.000     0.000     0.000       78   Kernel#respond_to_missing?     
+  0.00      0.000     0.000     0.000     0.000       17   <Class::Puppy>#default_scope_override /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/class/attribute.rb:106
+  0.00      0.000     0.000     0.000     0.000        6   Module#extend_object           
+  0.00      0.000     0.000     0.000     0.000        9   Module#method_visibility       /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/module/redefine_method.rb:30
+  0.00      0.000     0.000     0.000     0.000        9   ActiveRecord::Inheritance::ClassMethods#finder_needs_type_condition? /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/inheritance.rb:86
+  0.00      0.000     0.000     0.000     0.000        6   ActiveRecord::Relation#has_limit_or_offset? /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation.rb:730
+  0.00      0.000     0.000     0.000     0.000       11   ActiveRecord::Type::TypeMap#lookup /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/type/type_map.rb:15
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::QueryMethods#where! /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/query_methods.rb:653
+  0.00      0.000     0.000     0.000     0.000        9   Module#silence_redefinition_of_method /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/module/redefine_method.rb:7
+  0.00      0.000     0.000     0.000     0.000        9   Enumerable#flat_map            
+  0.00      0.000     0.000     0.000     0.000        5   ActiveRecord::ConnectionAdapters::PostgreSQL::Column#initialize /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/postgresql/column.rb:9
+  0.00      0.000     0.000     0.000     0.000        4   PG::Result#fields              
+  0.00      0.000     0.000     0.000     0.000       18   Array#initialize_copy          
+  0.00      0.000     0.000     0.000     0.000        9   ActiveRecord::Inheritance::ClassMethods#base_class? /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/inheritance.rb:113
+  0.00      0.000     0.000     0.000     0.000        9   Arel::Visitors::ToSql#collect_optimizer_hints /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/visitors/to_sql.rb:776
+  0.00      0.000     0.000     0.000     0.000        9   Arel::Nodes::JoinSource#empty? /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/nodes/join_source.rb:15
+  0.00      0.000     0.000     0.000     0.000        8   String#scrub                   
+  0.00      0.000     0.000     0.000     0.000        4   Bootsnap::LoadPathCache::LoadedFeaturesIndex#strip_extension_if_elidable /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/bootsnap-1.4.6/lib/bootsnap/load_path_cache/loaded_features_index.rb:139
+  0.00      0.000     0.000     0.000     0.000        9   ActiveSupport::BacktraceCleaner#silence /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/backtrace_cleaner.rb:115
+  0.00      0.000     0.000     0.000     0.000       12   NilClass#===                   
+  0.00      0.000     0.000     0.000     0.000        5   <Class::ActiveRecord::Base>#time_zone_aware_attributes /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/module/attribute_accessors.rb:57
+  0.00      0.000     0.000     0.000     0.000       13   ActiveRecord::Type::HashLookupTypeMap#key? /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/type/hash_lookup_type_map.rb:10
+  0.00      0.000     0.000     0.000     0.000        9   Arel::Collectors::Bind#initialize /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/collectors/bind.rb:6
+  0.00      0.000     0.000     0.000     0.000        9   ActiveRecord::Relation::FromClause#empty? /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/from_clause.rb:17
+  0.00      0.000     0.000     0.000     0.000        8   Bootsnap::LoadPathCache::LoadedFeaturesIndex#extension_elidable? /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/bootsnap-1.4.6/lib/bootsnap/load_path_cache/loaded_features_index.rb:135
+  0.00      0.000     0.000     0.000     0.000        9   Arel::Collectors::Composite#initialize /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/collectors/composite.rb:6
+  0.00      0.000     0.000     0.000     0.000        4   Bootsnap::LoadPathCache::LoadedFeaturesIndex#key? /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/bootsnap-1.4.6/lib/bootsnap/load_path_cache/loaded_features_index.rb:67
+  0.00      0.000     0.000     0.000     0.000        9   ActiveRecord::QueryMethods#skip_query_cache_value /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/query_methods.rb:93
+  0.00      0.002     0.000     0.000     0.002        1   ActiveRecord::Relation::QueryAttribute#unboundable? /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/query_attribute.rb:33
+  0.00      0.000     0.000     0.000     0.000        8   Thread::ConditionVariable#broadcast 
+  0.00      0.000     0.000     0.000     0.000        9   ActiveRecord::ConnectionAdapters::DatabaseLimits#bind_params_length /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/database_limits.rb:80
+  0.00      0.000     0.000     0.000     0.000       13   Concurrent::Collection::NonConcurrentMapBackend#initialize /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/concurrent-ruby-1.1.6/lib/concurrent-ruby/concurrent/collection/map/non_concurrent_map_backend.rb:15
+  0.00      0.000     0.000     0.000     0.000       13   Array#pop                      
+  0.00      0.000     0.000     0.000     0.000        9   Module#const_defined?          
+  0.00      0.000     0.000     0.000     0.000        4   Arel::Visitors::ToSql#quote_column_name /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/visitors/to_sql.rb:766
+  0.00      0.000     0.000     0.000     0.000       13   NilClass#blank?                /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/object/blank.rb:56
+  0.00      0.000     0.000     0.000     0.000        8   Rack::MiniProfiler::TimerStruct::Base#initialize /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-mini-profiler-2.0.2/lib/mini_profiler/timer_struct/base.rb:9
+  0.00      0.000     0.000     0.000     0.000        6   ActiveRecord::ConnectionAdapters::PostgreSQLAdapter#column_name_for_operation /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/postgresql_adapter.rb:429
+  0.00      0.000     0.000     0.000     0.000        6   ActiveRecord::ConnectionAdapters::DetermineIfPreparableVisitor#visit_Arel_Nodes_SqlLiteral /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/determine_if_preparable_visitor.rb:23
+  0.00      0.000     0.000     0.000     0.000       19   PG::Result#ftype               
+  0.00      0.000     0.000     0.000     0.000        9   Arel::TreeManager#initialize   /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/tree_manager.rb:43
+  0.00      0.004     0.000     0.000     0.004        5   ActiveModel::AttributeMethods::ClassMethods#define_attribute_method /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activemodel-6.0.3.2/lib/active_model/attribute_methods.rb:284
+  0.00      0.000     0.000     0.000     0.000        6   ActiveRecord::Delegation::DelegateCache#include_relation_methods /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/delegation.rb:41
+  0.00      0.000     0.000     0.000     0.000        4   <Class::#<Class:0x00007ff476482ef8>>#new 
+  0.00      0.000     0.000     0.000     0.000        9   ActiveRecord::QueryMethods#having_clause /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/query_methods.rb:93
+  0.00      0.000     0.000     0.000     0.000        6   ActiveRecord::Calculations#type_cast_calculated_value /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/calculations.rb:391
+  0.00      0.000     0.000     0.000     0.000        9   <Class::ActiveRecord::Base>#default_scopes /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/class/attribute.rb:97
+  0.00      0.000     0.000     0.000     0.000        9   ActiveRecord::QueryMethods#order_values /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/query_methods.rb:93
+  0.00      1.435     0.000     0.000     1.435        4   ActiveRecord::ConnectionAdapters::PostgreSQL::DatabaseStatements#exec_query /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/postgresql/database_statements.rb:97
+  0.00      0.000     0.000     0.000     0.000        4   ActiveRecord::ConnectionAdapters::Quoting#type_casted_binds /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/quoting.rb:199
+  0.00      0.000     0.000     0.000     0.000        6   ActiveRecord::QueryMethods#unscope_values /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/query_methods.rb:93
+  0.00      0.000     0.000     0.000     0.000        4   ActiveRecord::ConnectionAdapters::PostgreSQLAdapter#update_typemap_for_default_timezone /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/postgresql_adapter.rb:877
+  0.00      0.000     0.000     0.000     0.000        5   ActiveSupport::Notifications::Fanout#listening? /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/notifications/fanout.rb:78
+  0.00      0.000     0.000     0.000     0.000        6   ActiveRecord::QueryMethods#unscope_values= /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/query_methods.rb:98
+  0.00      0.000     0.000     0.000     0.000        5   ActiveRecord::AttributeMethods::TimeZoneConversion::ClassMethods#create_time_zone_conversion_attribute? /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/attribute_methods/time_zone_conversion.rb:80
+  0.00      0.000     0.000     0.000     0.000       11   ActiveModel::Attribute#initialize /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activemodel-6.0.3.2/lib/active_model/attribute.rb:33
+  0.00      0.000     0.000     0.000     0.000        4   Array#initialize               
+  0.00      0.001     0.000     0.000     0.001        2   ActiveRecord::Inheritance::ClassMethods#inherited /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/inheritance.rb:173
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::Scoping::Named::ClassMethods#scope /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/scoping/named.rb:170
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::ModelSchema::ClassMethods#columns /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/model_schema.rb:356
+  0.00      0.000     0.000     0.000     0.000        2   <Class::ActiveRecord::Base>#primary_key_prefix_type /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/module/attribute_accessors.rb:57
+  0.00      0.000     0.000     0.000     0.000        9   Arel::Collectors::Bind#value   /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/collectors/bind.rb:19
+  0.00      0.000     0.000     0.000     0.000        4   Bootsnap::LoadPathCache::Cache#absolute_path? /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/bootsnap-1.4.6/lib/bootsnap/load_path_cache/cache.rb:100
+  0.00      0.000     0.000     0.000     0.000       14   Kernel#kind_of?                
+  0.00      0.000     0.000     0.000     0.000        6   ActiveRecord::QueryMethods#distinct! /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/query_methods.rb:888
+  0.00      0.000     0.000     0.000     0.000        6  *ActiveRecord::ModelSchema::ClassMethods#ignored_columns /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/model_schema.rb:280
+  0.00      0.004     0.000     0.000     0.004        1   ActiveRecord::ConnectionAdapters::SchemaCache#columns /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/schema_cache.rb:75
+  0.00      0.000     0.000     0.000     0.000        9   Arel::SelectManager#locked     /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/select_manager.rb:67
+  0.00      0.000     0.000     0.000     0.000       18   Array#empty?                   
+  0.00      0.000     0.000     0.000     0.000        5   ActiveRecord::ConnectionAdapters::Column#initialize /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/column.rb:18
+  0.00      0.000     0.000     0.000     0.000        4   ActiveRecord::Timestamp::ClassMethods#reload_schema_from_cache /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/timestamp.rb:90
+  0.00      0.000     0.000     0.000     0.000        7   Delegator#initialize           /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/delegate.rb:71
+  0.00      0.000     0.000     0.000     0.000        9   Array#reject!                  
+  0.00      0.001     0.000     0.000     0.001        2   ActiveRecord::AttributeMethods::TimeZoneConversion::ClassMethods#inherited /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/attribute_methods/time_zone_conversion.rb:66
+  0.00     21.650     0.000     0.000    21.650        1   ActiveRecord::Result#each      /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/result.rb:60
+  0.00      0.000     0.000     0.000     0.000        4   ActiveRecord::Result#initialize /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/result.rb:39
+  0.00     23.051     0.000     0.000    23.051        1   ActiveRecord::Querying#find_by_sql /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/querying.rb:45
+  0.00      0.000     0.000     0.000     0.000        8   ActiveRecord::QueryMethods#arel_columns /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/query_methods.rb:1195
+  0.00      0.000     0.000     0.000     0.000        6   ActiveRecord::Calculations#distinct_select? /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/calculations.rb:256
+  0.00      0.000     0.000     0.000     0.000        7   Array#zip                      
+  0.00      0.000     0.000     0.000     0.000        1   Module#attr_reader             
+  0.00      0.000     0.000     0.000     0.000        3   Hash#each_key                  
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::ConnectionAdapters::PostgreSQL::Quoting#_type_cast /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/postgresql/quoting.rb:148
+  0.00      0.000     0.000     0.000     0.000        2   ActiveRecord::Core::ClassMethods#generated_association_methods /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/core.rb:218
+  0.00      0.000     0.000     0.000     0.000       10   String#+@                      
+  0.00      0.000     0.000     0.000     0.000        3   ActiveRecord::Core::ClassMethods#arel_attribute /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/core.rb:270
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::ModelSchema::ClassMethods#compute_table_name /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/model_schema.rb:526
+  0.00      0.000     0.000     0.000     0.000        3   Hash#each_pair                 
+  0.00      0.000     0.000     0.000     0.000        4   Mutex_m#initialize             /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/mutex_m.rb:112
+  0.00      0.000     0.000     0.000     0.000       12   Module#private_constant        
+  0.00      0.000     0.000     0.000     0.000       16   Class#inherited                
+  0.00      0.000     0.000     0.000     0.000        2   String#scan                    
+  0.00      0.000     0.000     0.000     0.000        2   ActiveRecord::ConnectionAdapters::Quoting#quote /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/quoting.rb:11
+  0.00      0.001     0.000     0.000     0.001        1   <Class::Puppy>#microchipped    /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/scoping/named.rb:191
+  0.00      0.000     0.000     0.000     0.000        3   <Class::PG::Connection>#quote_ident 
+  0.00      0.000     0.000     0.000     0.000        8   Integer#-                      
+  0.00      0.004     0.000     0.000     0.004        1   ActiveRecord::AttributeMethods::PrimaryKey::ClassMethods#get_primary_key /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/attribute_methods/primary_key.rb:85
+  0.00      0.000     0.000     0.000     0.000        4   ActiveRecord::AttributeMethods::Read::ClassMethods#define_method_attribute /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/attribute_methods/read.rb:10
+  0.00      0.000     0.000     0.000     0.000        6   ActiveRecord::QueryMethods#distinct_value= /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/query_methods.rb:98
+  0.00      0.000     0.000     0.000     0.000        6   Arel::Visitors::ToSql#visit_Arel_Nodes_SqlLiteral /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/visitors/to_sql.rb:699
+  0.00      0.000     0.000     0.000     0.000        4   ActiveRecord::ConnectionAdapters::ConnectionHandler#prevent_writes /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:1025
+  0.00      0.000     0.000     0.000     0.000        9   Module#public                  
+  0.00      0.000     0.000     0.000     0.000        2  *ActiveRecord::ModelSchema::ClassMethods#reset_table_name /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/model_schema.rb:226
+  0.00      0.000     0.000     0.000     0.000        4   ActiveRecord::ConnectionAdapters::AbstractPool#get_schema_cache /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:24
+  0.00      2.236     0.000     0.000     2.236        2   ActiveRecord::Result#cast_values /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/result.rb:109
+  0.00      0.000     0.000     0.000     0.000       16   Module#included                
+  0.00      0.000     0.000     0.000     0.000        6  *ActiveRecord::ModelSchema::ClassMethods#table_name /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/model_schema.rb:195
+  0.00      0.001     0.000     0.000     0.001        2   ActiveRecord::AttributeMethods::ClassMethods#inherited /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/attribute_methods.rb:32
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::PredicateBuilder#initialize /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/predicate_builder.rb:7
+  0.00      0.000     0.000     0.000     0.000        1   String#demodulize              /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/string/inflections.rb:146
+  0.00      0.000     0.000     0.000     0.000        6   ActiveSupport::Concern#included /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/concern.rb:129
+  0.00      0.000     0.000     0.000     0.000        9   Arel::Collectors::PlainString#value /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/collectors/plain_string.rb:10
+  0.00      0.002     0.000     0.000     0.002        1   ActiveRecord::ConnectionAdapters::SchemaCache#primary_keys /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/schema_cache.rb:48
+  0.00      0.000     0.000     0.000     0.000        4   Arel::Table#[]                 /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/table.rb:81
+  0.00      0.000     0.000     0.000     0.000        6   String#-@                      
+  0.00      0.000     0.000     0.000     0.000        3   Zeitwerk::Loader#cpath         /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/zeitwerk-2.3.1/lib/zeitwerk/loader.rb:715
+  0.00      0.002     0.000     0.000     0.002        1   Arel::Visitors::ToSql#visit_Arel_Nodes_Equality /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/visitors/to_sql.rb:599
+  0.00      0.000     0.000     0.000     0.000        2   WeakRef#initialize             /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/weakref.rb:36
+  0.00      0.000     0.000     0.000     0.000        6   ActiveRecord::QueryMethods#check_if_method_has_arguments! /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/query_methods.rb:1353
+  0.00      0.000     0.000     0.000     0.000        2   <Module::ActiveSupport::DescendantsTracker>#store_inherited /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/descendants_tracker.rb:39
+  0.00     25.855     0.000     0.000    25.855        2  *ActiveRecord::Querying#pluck   /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/querying.rb:21
+  0.00      0.084     0.000     0.000     0.084        2   ActiveRecord::ConnectionAdapters::DatabaseStatements#select /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/database_statements.rb:488
+  0.00      0.001     0.000     0.000     0.001        2   ActiveRecord::Locking::Optimistic::ClassMethods#inherited /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/locking/optimistic.rb:163
+  0.00      0.000     0.000     0.000     0.000        4   Mutex_m#mu_initialize          /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/mutex_m.rb:108
+  0.00      0.000     0.000     0.000     0.000        4   ActiveRecord::ConnectionAdapters::AbstractAdapter#schema_cache /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract_adapter.rb:227
+  0.00      0.000     0.000     0.000     0.000        4   PG::Result#nfields             
+  0.00      0.000     0.000     0.000     0.000        9   Module#singleton_class?        
+  0.00      0.000     0.000     0.000     0.000        8   #<Class:0x00007ff476482ef8>#relation 
+  0.00      0.000     0.000     0.000     0.000        2   ActiveRecord::Enum#inherited   /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/enum.rb:105
+  0.00      0.001     0.000     0.000     0.001        2   ActiveModel::Validations::ClassMethods#inherited /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activemodel-6.0.3.2/lib/active_model/validations.rb:275
+  0.00      0.001     0.000     0.000     0.001        1   ActiveRecord::ConnectionAdapters::PostgreSQL::SchemaStatements#sequence_name_from_parts /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/postgresql/schema_statements.rb:658
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::Relation#preload_associations /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation.rb:739
+  0.00      0.000     0.000     0.000     0.000        9   Module#protected_method_defined? 
+  0.00      0.000     0.000     0.000     0.000        4   Array#-                        
+  0.00      0.000     0.000     0.000     0.000        2   <Class::ActiveRecord::Base>#defined_enums= /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/class/attribute.rb:105
+  0.00      0.000     0.000     0.000     0.000        2   ActiveRecord::ModelSchema::ClassMethods#inherited /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/model_schema.rb:464
+  0.00      0.000     0.000     0.000     0.000        3  *ActiveRecord::ModelSchema::ClassMethods#inheritance_column /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/model_schema.rb:268
+  0.00      0.000     0.000     0.000     0.000        2   ActiveRecord::Relation#arel_attribute /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation.rb:42
+  0.00      0.000     0.000     0.000     0.000        5   ActiveRecord::AttributeDecorators::TypeDecorator#decorators_for /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/attribute_decorators.rb:77
+  0.00      0.000     0.000     0.000     0.000        5   ActiveRecord::ConnectionAdapters::SqlTypeMetadata#initialize /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/sql_type_metadata.rb:9
+  0.00      0.000     0.000     0.000     0.000        1   Module#delegate                /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/module/delegation.rb:171
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::ConnectionAdapters::PostgreSQL::SchemaStatements#data_source_sql /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/postgresql/schema_statements.rb:726
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::Relation::WhereClauseFactory#build /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/where_clause_factory.rb:11
+  0.00      0.000     0.000     0.000     0.000        8   BasicObject#equal?             
+  0.00      0.000     0.000     0.000     0.000        4   ActiveRecord::AttributeDecorators::TypeDecorator#merge /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/attribute_decorators.rb:65
+  0.00      0.000     0.000     0.000     0.000        4   ActiveSupport::DescendantsTracker#direct_descendants /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/descendants_tracker.rb:59
+  0.00      0.000     0.000     0.000     0.000        2   ActiveRecord::Delegation::DelegateCache#inherited /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/delegation.rb:31
+  0.00      0.000     0.000     0.000     0.000        1   ActiveSupport::PerThreadRegistry#method_missing /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/per_thread_registry.rb:51
+  0.00      0.000     0.000     0.000     0.000        5   ActiveRecord::ConnectionAdapters::PostgreSQL::TypeMetadata#initialize /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/postgresql/type_metadata.rb:12
+  0.00      0.000     0.000     0.000     0.000        5   #<Class:0x00007ff47a9f2128>#sql_type /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/delegate.rb:347
+  0.00      0.000     0.000     0.000     0.000        2   ActiveRecord::ConnectionAdapters::PostgreSQL::Utils#extract_schema_qualified_name /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/postgresql/utils.rb:69
+  0.00      0.000     0.000     0.000     0.000        8   PG::Result#fmod                
+  0.00      0.000     0.000     0.000     0.000        3   Module#module_parent_name      /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/module/introspection.rb:10
+  0.00      0.000     0.000     0.000     0.000        7   ActiveRecord::Delegation::DelegateCache#generated_relation_methods /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/delegation.rb:47
+  0.00      0.000     0.000     0.000     0.000        2   ActiveRecord::Core::ClassMethods#initialize_generated_modules /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/core.rb:214
+  0.00      0.000     0.000     0.000     0.000        3   <Class::ActiveRecord::ConnectionAdapters::AbstractAdapter>#quoted_column_names /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract_adapter.rb:111
+  0.00      0.000     0.000     0.000     0.000        2   MonitorMixin#mon_initialize    /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/monitor.rb:257
+  0.00      0.000     0.000     0.000     0.000        2   <Class::ActiveRecord::Base>#_validators= /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/class/attribute.rb:105
+  0.00      0.004     0.000     0.000     0.004        1   ActiveRecord::ModelSchema::ClassMethods#load_schema! /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/model_schema.rb:487
+  0.00      1.351     0.000     0.000     1.351        2   ActiveRecord::ConnectionAdapters::DatabaseStatements#select_prepared /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/database_statements.rb:492
+  0.00      0.000     0.000     0.000     0.000        2   ActiveRecord::Core::ClassMethods#inherited /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/core.rb:151
+  0.00      0.000     0.000     0.000     0.000        3   <Module::Zeitwerk::Registry>#unregister_autoload /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/zeitwerk-2.3.1/lib/zeitwerk/registry.rb:104
+  0.00      0.000     0.000     0.000     0.000        5   String#to_sym                  
+  0.00      0.000     0.000     0.000     0.000        2   ActiveRecord::TableMetadata#type /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/table_metadata.rb:32
+  0.00      0.000     0.000     0.000     0.000       10   ActiveModel::AttributeSet#[]=  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activemodel-6.0.3.2/lib/active_model/attribute_set.rb:19
+  0.00      0.000     0.000     0.000     0.000       12   Module#instance_method         
+  0.00      0.000     0.000     0.000     0.000        6   #<Class:0x00007ff476482ef8>#name 
+  0.00      0.000     0.000     0.000     0.000        2   ActiveRecord::ConnectionAdapters::Quoting#_quote /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/quoting.rb:217
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::LogSubscriber#render_bind /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/log_subscriber.rb:53
+  0.00      0.000     0.000     0.000     0.000        3   Zeitwerk::Loader#cdef?         /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/zeitwerk-2.3.1/lib/zeitwerk/loader.rb:778
+  0.00      0.004     0.000     0.000     0.004        1   ActiveRecord::ConnectionAdapters::PostgreSQLAdapter#column_definitions /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/postgresql_adapter.rb:819
+  0.00      0.001     0.000     0.000     0.001        1   ActiveRecord::ConnectionAdapters::PostgreSQLAdapter#max_identifier_length /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/postgresql_adapter.rb:415
+  0.00      0.002     0.000     0.000     0.002        3   ActiveRecord::ConnectionAdapters::SchemaCache#data_source_exists? /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/schema_cache.rb:53
+  0.00      0.000     0.000     0.000     0.000        5   ActiveRecord::ConnectionAdapters::Column#sql_type /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/column.rb:10
+  0.00      0.000     0.000     0.000     0.000        4   ActiveRecord::AttributeMethods::Write::ClassMethods#define_method_attribute= /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/attribute_methods/write.rb:14
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::ModelSchema::ClassMethods#undecorated_table_name /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/model_schema.rb:520
+  0.00      2.972     0.000     0.000     2.972        1   ActiveRecord::Result#hash_rows /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/result.rb:141
+  0.00      0.000     0.000     0.000     0.000        2   <Class::ActiveRecord::Scoping::ScopeRegistry>#set_value_for /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/per_thread_registry.rb:55
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::Relation#_scoping /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation.rb:782
+  0.00      0.000     0.000     0.000     0.000        1   ActiveSupport::Inflector#underscore /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/inflector/methods.rb:91
+  0.00      0.000     0.000     0.000     0.000        1   OpenStruct#initialize          /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/ostruct.rb:91
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::ConnectionAdapters::Quoting#_type_cast /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/quoting.rb:235
+  0.00      0.000     0.000     0.000     0.000        5   ActiveModel::Attribute#with_type /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activemodel-6.0.3.2/lib/active_model/attribute.rb:83
+  0.00      0.000     0.000     0.000     0.000        5   Object#presence                /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/object/blank.rb:45
+  0.00      0.000     0.000     0.000     0.000        5   ActiveModel::AttributeMethods::ClassMethods#attribute_method_matchers_cache /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activemodel-6.0.3.2/lib/active_model/attribute_methods.rb:349
+  0.00      0.000     0.000     0.000     0.000        3   ActiveSupport::Inflector#inflections /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/inflector/inflections.rb:248
+  0.00      0.000     0.000     0.000     0.000        6   Module#initialize              
+  0.00      0.000     0.000     0.000     0.000        2  *Array#inspect                  
+  0.00     21.650     0.000     0.000    21.650        2   Enumerable#map                 
+  0.00      0.000     0.000     0.000     0.000        2   ActiveSupport::DescendantsTracker::DescendantsArray#<< /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/descendants_tracker.rb:79
+  0.00      0.000     0.000     0.000     0.000        1   Arel::Collectors::SQLString#add_bind /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/collectors/sql_string.rb:13
+  0.00      0.000     0.000     0.000     0.000        5   ActiveRecord::ConnectionAdapters::PostgreSQL::Column#sql_type /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/postgresql/column.rb:23
+  0.00     23.105     0.000     0.000    23.105        1   Kennel#percentage_chipped      /Users/jsrn/Code/profiling-talk/app/app/models/kennel.rb:6
+  0.00      0.000     0.000     0.000     0.000        3   Hash#keys                      
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::ConnectionAdapters::Quoting#type_cast /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/quoting.rb:24
+  0.00      0.000     0.000     0.000     0.000        4   ActiveRecord::ConnectionAdapters::AbstractAdapter#without_prepared_statement? /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract_adapter.rb:739
+  0.00      0.004     0.000     0.000     0.004        3   Mutex_m#synchronize            /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/mutex_m.rb:77
+  0.00      0.000     0.000     0.000     0.000        5   #<Class:0x00007ff47a9f2128>#__setobj__ /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/delegate.rb:399
+  0.00      0.000     0.000     0.000     0.000        4   Hash#merge                     
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::PredicateBuilder#build_bind_attribute /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/predicate_builder.rb:59
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::Relation::QueryAttribute#nil? /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/query_attribute.rb:20
+  0.00      0.000     0.000     0.000     0.000        6   Kernel#extend                  
+  0.00      0.000     0.000     0.000     0.000        2  *ActiveRecord::Inheritance::ClassMethods#descends_from_active_record? /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/inheritance.rb:76
+  0.00      0.000     0.000     0.000     0.000        2   ActiveRecord::ModelSchema::ClassMethods#table_name= /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/model_schema.rb:205
+  0.00      0.002     0.000     0.000     0.002        1   ActiveRecord::ConnectionAdapters::PostgreSQL::SchemaStatements#primary_keys /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/postgresql/schema_statements.rb:355
+  0.00      0.000     0.000     0.000     0.000        2   ActiveRecord::Delegation::DelegateCache#initialize_relation_delegate_cache /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/delegation.rb:12
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::PredicateBuilder#build /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/predicate_builder.rb:50
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::QueryMethods#references! /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/query_methods.rb:217
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::ConnectionAdapters::PostgreSQL::SchemaStatements#extract_schema_qualified_name /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/postgresql/schema_statements.rb:755
+  0.00      0.000     0.000     0.000     0.000        3   <Class::ActiveSupport::Inflector::Inflections>#instance /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/inflector/inflections.rb:64
+  0.00      0.000     0.000     0.000     0.000        2   ActiveModel::Attribute#hash    /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activemodel-6.0.3.2/lib/active_model/attribute.rb:115
+  0.00      0.000     0.000     0.000     0.000        4   ActiveRecord::ConnectionAdapters::AbstractAdapter#replica? /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract_adapter.rb:145
+  0.00      0.000     0.000     0.000     0.000        2   ActiveRecord::Sanitization::ClassMethods#disallow_raw_sql! /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/sanitization.rb:137
+  0.00      0.000     0.000     0.000     0.000        2   ActiveRecord::Relation::QueryAttribute#value_for_database /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/query_attribute.rb:12
+  0.00      0.002     0.000     0.000     0.002        1   ActiveRecord::ConnectionAdapters::SchemaStatements#data_sources /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/schema_statements.rb:36
+  0.00      0.000     0.000     0.000     0.000        2   MatchData#[]                   
+  0.00      0.000     0.000     0.000     0.000       12   UnboundMethod#owner            
+  0.00      0.000     0.000     0.000     0.000        4   Struct#initialize              
+  0.00      0.000     0.000     0.000     0.000        5   ActiveRecord::ConnectionAdapters::PostgreSQLAdapter#has_default_function? /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/postgresql_adapter.rb:622
+  0.00      0.000     0.000     0.000     0.000        5   ActiveRecord::AttributeDecorators::TypeDecorator#apply /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/attribute_decorators.rb:69
+  0.00      0.000     0.000     0.000     0.000        2   ActiveRecord::ConnectionAdapters::PostgreSQL::Name#initialize /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/postgresql/utils.rb:14
+  0.00      0.000     0.000     0.000     0.000        5   ActiveRecord::ConnectionAdapters::PostgreSQLAdapter#extract_default_function /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/postgresql_adapter.rb:618
+  0.00      0.000     0.000     0.000     0.000        1   BasicObject#instance_exec      
+  0.00      0.002     0.000     0.000     0.002        1   Arel::Visitors::ToSql#unboundable? /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/visitors/to_sql.rb:794
+  0.00      0.000     0.000     0.000     0.000        2   ObjectSpace::WeakMap#[]=       
+  0.00      0.000     0.000     0.000     0.000        4   ActiveRecord::AttributeDecorators::TypeDecorator#initialize /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/attribute_decorators.rb:61
+  0.00      0.000     0.000     0.000     0.000        2   ActiveRecord::Core::ClassMethods#initialize_find_by_cache /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/core.rb:147
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::QueryMethods#where /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/query_methods.rb:643
+  0.00      0.000     0.000     0.000     0.000        2   Module#module_parents          /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/module/introspection.rb:67
+  0.00      0.000     0.000     0.000     0.000        3   Enumerable#detect              
+  0.00      0.000     0.000     0.000     0.000        3   Zeitwerk::Loader#reloading_enabled? /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/zeitwerk-2.3.1/lib/zeitwerk/loader.rb:223
+  0.00      0.000     0.000     0.000     0.000        2   MonitorMixin#initialize        /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/monitor.rb:250
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::ModelSchema::ClassMethods#full_table_name_prefix /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/model_schema.rb:236
+  0.00      0.000     0.000     0.000     0.000        2   ActiveSupport::DescendantsTracker#inherited /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/descendants_tracker.rb:54
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::AttributeMethods::ClassMethods#dangerous_class_method? /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/attribute_methods.rb:117
+  0.00      0.000     0.000     0.000     0.000        2   Hash#except                    /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/hash/except.rb:12
+  0.00      0.002     0.000     0.000     0.002        1   ActiveRecord::ConnectionAdapters::SchemaCache#prepare_data_sources /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/schema_cache.rb:136
+  0.00      0.000     0.000     0.000     0.000        2   ActiveRecord::Scoping::ClassMethods#current_scope= /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/scoping.rb:30
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::TableMetadata#associated_with? /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/table_metadata.rb:40
+  0.00      0.000     0.000     0.000     0.000        2   ActiveModel::Type::Value#hash  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activemodel-6.0.3.2/lib/active_model/type/value.rb:109
+  0.00      0.000     0.000     0.000     0.000        2   ActiveRecord::Scoping::ScopeRegistry#set_value_for /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/scoping.rb:92
+  0.00      0.000     0.000     0.000     0.000        1   ActiveModel::Attribute#value_for_database /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activemodel-6.0.3.2/lib/active_model/attribute.rb:54
+  0.00      0.000     0.000     0.000     0.000        1   String#pluralize               /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/string/inflections.rb:33
+  0.00      0.004     0.000     0.000     0.004        2   ActiveRecord::ConnectionAdapters::DatabaseStatements#query_values /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/database_statements.rb:101
+  0.00      0.000     0.000     0.000     0.000        5   ActiveModel::Attribute#has_been_read? /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activemodel-6.0.3.2/lib/active_model/attribute.rb:103
+  0.00      0.000     0.000     0.000     0.000        6   <Class::Puppy>#attribute_type_decorations /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/class/attribute.rb:106
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::TableMetadata#resolve_column_aliases /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/table_metadata.rb:14
+  0.00      0.000     0.000     0.000     0.000        1   ActiveModel::Type::Boolean#cast_value /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activemodel-6.0.3.2/lib/active_model/type/boolean.rb:37
+  0.00      0.000     0.000     0.000     0.000        2   ActiveRecord::ModelSchema::ClassMethods#initialize_load_schema_monitor /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/model_schema.rb:459
+  0.00      0.001     0.000     0.000     0.001        1   ActiveRecord::Relation#_exec_scope /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation.rb:410
+  0.00      0.000     0.000     0.000     0.000        1   ActiveSupport::Inflector#apply_inflections /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/inflector/methods.rb:386
+  0.00      0.000     0.000     0.000     0.000        6   ActiveRecord::PredicateBuilder#register_handler /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/predicate_builder.rb:46
+  0.00      0.004     0.000     0.000     0.004        1   ActiveRecord::ConnectionAdapters::SchemaStatements#columns /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/schema_statements.rb:112
+  0.00      0.000     0.000     0.000     0.000        2   ActiveRecord::ModelSchema::ClassMethods#type_for_attribute /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/model_schema.rb:381
+  0.00      0.000     0.000     0.000     0.000        5   <Class::ActiveModel::Attribute>#from_database /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activemodel-6.0.3.2/lib/active_model/attribute.rb:8
+  0.00      0.004     0.000     0.000     0.004        1   ActiveRecord::ConnectionAdapters::SchemaCache#columns_hash /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/schema_cache.rb:81
+  0.00     24.225     0.000     0.000    24.225        1   Kennel#average_age             /Users/jsrn/Code/profiling-talk/app/app/models/kennel.rb:2
+  0.00      0.000     0.000     0.000     0.000        1   Arel::Nodes::And#initialize    /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/nodes/and.rb:8
+  0.00      0.000     0.000     0.000     0.000        5   ActiveRecord::ConnectionAdapters::PostgreSQL::Column#oid /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/postgresql/column.rb:7
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::QueryMethods#preload_values /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/query_methods.rb:93
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::AttributeMethods::ClassMethods#attribute_names /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/attribute_methods.rb:154
+  0.00      0.000     0.000     0.000     0.000        5   ActiveRecord::AttributeDecorators::TypeDecorator#matching /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/attribute_decorators.rb:81
+  0.00      0.004     0.000     0.000     0.004        1   ActiveRecord::Attributes::ClassMethods#load_schema! /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/attributes.rb:246
   0.00      0.000     0.000     0.000     0.000        2   Array#delete_if                
-  0.00      0.000     0.000     0.000     0.000       10   Thread#alive?                  
-  0.00      0.000     0.000     0.000     0.000        2   Puma::ThreadPool#reap          /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/thread_pool.rb:231
-  0.00      0.000     0.000     0.000     0.000       10   Array#include?                 
-  0.00      0.000     0.000     0.000     0.000        2   Array#each                     
+  0.00      0.000     0.000     0.000     0.000        2   PG::Connection#escape          
+  0.00      0.000     0.000     0.000     0.000        1   <Class::ActiveRecord::Base>#default_scope_override= /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/class/attribute.rb:105
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::PredicateBuilder::BasicObjectHandler#call /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/predicate_builder/basic_object_handler.rb:10
+  0.00      0.000     0.000     0.000     0.000        1   ActiveSupport::Inflector#pluralize /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/inflector/methods.rb:31
+  0.00      0.000     0.000     0.000     0.000        5   ActiveRecord::Locking::Optimistic::ClassMethods#locking_column /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/locking/optimistic.rb:141
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::ConnectionAdapters::PostgreSQL::Name#quoted /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/postgresql/utils.rb:22
+  0.00      0.000     0.000     0.000     0.000        5   Concurrent::Collection::NonConcurrentMapBackend#clear /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/concurrent-ruby-1.1.6/lib/concurrent-ruby/concurrent/collection/map/non_concurrent_map_backend.rb:92
+  0.00      0.000     0.000     0.000     0.000        2   ActiveRecord::ConnectionAdapters::PostgreSQL::Quoting#column_name_matcher /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/postgresql/quoting.rb:81
+  0.00      0.000     0.000     0.000     0.000        2   Hash#deep_dup                  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/object/deep_dup.rb:43
+  0.00      0.000     0.000     0.000     0.000        2   Module#private                 
+  0.00     23.053     0.000     0.000    23.053        1   Kennel#perform_ear_spot_check  /Users/jsrn/Code/profiling-talk/app/app/models/kennel.rb:23
+  0.00      0.000     0.000     0.000     0.000        3   String#include?                
+  0.00     23.053     0.000     0.000    23.053        1   Kennel#ten_percent_of_puppies  /Users/jsrn/Code/profiling-talk/app/app/models/kennel.rb:33
+  0.00      0.000     0.000     0.000     0.000        1   Arel::Collectors::Composite#add_bind /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/collectors/composite.rb:17
+  0.00      0.000     0.000     0.000     0.000        4   ActiveModel::Type::Integer#type /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activemodel-6.0.3.2/lib/active_model/type/integer.rb:17
+  0.00      0.000     0.000     0.000     0.000        5   ActiveModel::Attribute#changed_in_place? /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activemodel-6.0.3.2/lib/active_model/attribute.rb:62
+  0.00      0.000     0.000     0.000     0.000        1   Module#module_parent           /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/module/introspection.rb:43
+  0.00      0.000     0.000     0.000     0.000        4   ActiveModel::Type::Boolean#type /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activemodel-6.0.3.2/lib/active_model/type/boolean.rb:28
+  0.00      0.000     0.000     0.000     0.000        1   ActiveModel::AttributeSet#except /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activemodel-6.0.3.2/lib/active_model/attribute_set.rb:9
+  0.00      0.000     0.000     0.000     0.000        2   Comparable#>=                  
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::Sanitization::ClassMethods#sanitize_sql /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/sanitization.rb:22
+  0.00      0.000     0.000     0.000     0.000        1   Enumerable#sum                 /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/enumerable.rb:37
+  0.00      0.000     0.000     0.000     0.000        5   <Class::ActiveRecord::Base>#attribute_method_matchers /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/class/attribute.rb:106
+  0.00      0.000     0.000     0.000     0.000       10   String#===                     
+  0.00      0.002     0.000     0.000     0.002        1   Arel::Visitors::ToSql#visit_Arel_Nodes_And /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/visitors/to_sql.rb:576
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::Relation::WhereClause#ast /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/where_clause.rb:64
+  0.00      0.000     0.000     0.000     0.000        4   ActiveRecord::ConnectionAdapters::PostgreSQL::Name#unquote /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/postgresql/utils.rb:45
+  0.00      0.000     0.000     0.000     0.000        5   Concurrent::Collection::MriMapBackend#clear /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/concurrent-ruby-1.1.6/lib/concurrent-ruby/concurrent/collection/map/mri_map_backend.rb:61
+  0.00      0.000     0.000     0.000     0.000        1   String#blank?                  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/object/blank.rb:121
+  0.00      0.000     0.000     0.000     0.000        3   TrueClass#===                  
+  0.00      0.000     0.000     0.000     0.000        1   Regexp#match                   
+  0.00      0.000     0.000     0.000     0.000        5   #<Class:0x00007ff47a9f2128>#__getobj__ /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/delegate.rb:392
+  0.00      0.000     0.000     0.000     0.000        2   ActiveRecord::Result#column_type /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/result.rb:135
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::Relation::QueryAttribute#type_cast /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/query_attribute.rb:8
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::QueryMethods#where_clause_factory /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/query_methods.rb:1368
+  0.00      0.000     0.000     0.000     0.000        6   Module#const_get               
+  0.00      0.000     0.000     0.000     0.000        1   Array#compact                  
+  0.00      0.000     0.000     0.000     0.000        5   ActiveRecord::ConnectionAdapters::PostgreSQL::Column#fmod /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/postgresql/column.rb:7
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::Delegation::DelegateCache#generate_relation_method /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/delegation.rb:36
+  0.00      0.000     0.000     0.000     0.000        1   ActiveModel::Attribute#value   /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activemodel-6.0.3.2/lib/active_model/attribute.rb:40
+  0.00      0.000     0.000     0.000     0.000        1   Arel::Visitors::PostgreSQL#visit_Arel_Nodes_BindParam /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/visitors/postgresql.rb:44
+  0.00      0.000     0.000     0.000     0.000        1   <Module::Arel>#star            /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel.rb:41
+  0.00      0.000     0.000     0.000     0.000        1   <Class::ActiveRecord::PredicateBuilder>#references /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/predicate_builder.rb:24
+  0.00      0.002     0.000     0.000     0.002        1   ActiveRecord::ConnectionAdapters::SchemaStatements#primary_key /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/schema_statements.rb:146
+  0.00      0.000     0.000     0.000     0.000        1   ActiveSupport::Inflector#demodulize /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/inflector/methods.rb:220
+  0.00      0.000     0.000     0.000     0.000        2   ActiveRecord::ConnectionAdapters::Quoting#quote_column_name /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/quoting.rb:67
+  0.00      0.000     0.000     0.000     0.000        5   ActiveModel::AttributeSet#[]   /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activemodel-6.0.3.2/lib/active_model/attribute_set.rb:15
+  0.00      0.000     0.000     0.000     0.000        1   Kernel#caller_locations        
+  0.00      0.000     0.000     0.000     0.000        1   Array#flatten                  
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::TableMetadata#arel_attribute /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/table_metadata.rb:24
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::ModelSchema::ClassMethods#full_table_name_suffix /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/model_schema.rb:240
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::ConnectionAdapters::PostgreSQL::SchemaStatements#quoted_scope /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/postgresql/schema_statements.rb:737
+  0.00      0.000     0.000     0.000     0.000        2   ActiveSupport::DescendantsTracker::DescendantsArray#cleanup! /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/descendants_tracker.rb:95
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::AttributeMethods::PrimaryKey::ClassMethods#suppress_composite_primary_key /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/attribute_methods/primary_key.rb:122
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::Relation#_deprecated_spawn /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation.rb:771
+  0.00      0.000     0.000     0.000     0.000        1   Arel::Table#initialize         /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/table.rb:16
+  0.00      0.000     0.000     0.000     0.000        1   Arel::TreeManager#where        /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/tree_manager.rb:64
+  0.00      0.000     0.000     0.000     0.000        1   <Class::ActiveRecord::Base>#aggregate_reflections /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/class/attribute.rb:97
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::QueryMethods#readonly_value /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/query_methods.rb:93
+  0.00      0.000     0.000     0.000     0.000        2   Hash#slice                     
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::Scoping::Named::ClassMethods#valid_scope_name? /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/scoping/named.rb:208
+  0.00      0.000     0.000     0.000     0.000        1   Arel::Predications#eq          /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/predications.rb:17
+  0.00      0.001     0.000     0.000     0.001        1   ActiveRecord::ConnectionAdapters::DatabaseStatements#query_value /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/database_statements.rb:97
+  0.00      0.000     0.000     0.000     0.000        2   ActiveRecord::ConnectionAdapters::PostgreSQL::Quoting#quote_string /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/postgresql/quoting.rb:20
+  0.00      0.000     0.000     0.000     0.000        1   <Module::Arel::Nodes>#build_quoted /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/nodes/casted.rb:36
+  0.00      0.000     0.000     0.000     0.000        1   Module#to_s                    
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::Core::ClassMethods#=== /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/core.rb:257
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::QueryMethods#references_values= /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/query_methods.rb:98
+  0.00      0.002     0.000     0.000     0.002        1   Arel::Nodes::BindParam#unboundable? /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/nodes/bind_param.rb:31
+  0.00      0.000     0.000     0.000     0.000        1   ObjectSpace::WeakMap#key?      
+  0.00      0.000     0.000     0.000     0.000        2   <Class::ApplicationRecord>#attribute_type_decorations /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/class/attribute.rb:106
+  0.00      0.000     0.000     0.000     0.000        6   Array#unshift                  
+  0.00      0.000     0.000     0.000     0.000        1   WeakRef#weakref_alive?         /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/weakref.rb:57
+  0.00      0.000     0.000     0.000     0.000        1   Arel::Nodes::Binary#eql?       /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/nodes/binary.rb:24
+  0.00     26.552     0.000     0.000    26.552        1   PuppiesController#puppies!     /Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb:38
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::PredicateBuilder#resolve_column_aliases /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/predicate_builder.rb:5
+  0.00      0.000     0.000     0.000     0.000        2   String#<=>                     
+  0.00      0.000     0.000     0.000     0.000        1   Concurrent::Collection::MriMapBackend#[]= /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/concurrent-ruby-1.1.6/lib/concurrent-ruby/concurrent/collection/map/mri_map_backend.rb:17
+  0.00      0.000     0.000     0.000     0.000        1   String#underscore              /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/string/inflections.rb:127
+  0.00      0.000     0.000     0.000     0.000        5   <Class::ActiveRecord::Base>#time_zone_aware_types /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/class/attribute.rb:97
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::Core::ClassMethods#type_caster /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/core.rb:280
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::PredicateBuilder#build_from_hash /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/predicate_builder.rb:19
+  0.00      0.000     0.000     0.000     0.000        8   String#ascii_only?             
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::ConnectionAdapters::DatabaseStatements#single_value_from_rows /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/database_statements.rb:504
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::Result#length    /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/result.rb:52
+  0.00      0.000     0.000     0.000     0.000        5   <Class::ActiveRecord::Base>#lock_optimistically /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/class/attribute.rb:97
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::LogSubscriber#type_casted_binds /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/log_subscriber.rb:49
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::Delegation::GeneratedRelationMethods#generate_method /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/delegation.rb:58
+  0.00      0.000     0.000     0.000     0.000        6   Module#extended                
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::PredicateBuilder#handler_for /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/predicate_builder.rb:133
+  0.00      0.000     0.000     0.000     0.000        1   Arel::Nodes::BindParam#nil?    /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/nodes/bind_param.rb:23
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::AttributeMethods::PrimaryKey::ClassMethods#primary_key= /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/attribute_methods/primary_key.rb:115
+  0.00      0.000     0.000     0.000     0.000        1   Hash#transform_keys!           
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::AttributeMethods::ClassMethods#class_method_defined_within? /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/attribute_methods.rb:121
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::TableMetadata#reflect_on_aggregation /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/table_metadata.rb:72
+  0.00      0.000     0.000     0.000     0.000        1   Kernel#method                  
+  0.00      0.000     0.000     0.000     0.000        1   ActiveModel::Type::Boolean#serialize /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activemodel-6.0.3.2/lib/active_model/type/boolean.rb:32
+  0.00      0.000     0.000     0.000     0.000        2   FalseClass#===                 
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::Reflection::ClassMethods#_reflect_on_association /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/reflection.rb:119
+  0.00      0.000     0.000     0.000     0.000        1   ActiveModel::Type::Value#cast  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activemodel-6.0.3.2/lib/active_model/type/value.rb:37
+  0.00      0.000     0.000     0.000     0.000        2   ActiveRecord::PredicateBuilder::ArrayHandler#initialize /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/predicate_builder/array_handler.rb:8
+  0.00      0.000     0.000     0.000     0.000        1   ActiveModel::ForbiddenAttributesProtection#sanitize_forbidden_attributes /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activemodel-6.0.3.2/lib/active_model/forbidden_attributes_protection.rb:21
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::Core::ClassMethods#table_metadata /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/core.rb:305
+  0.00      0.000     0.000     0.000     0.000        1   <Module::ActiveRecord::Type>#default_value /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/type.rb:45
+  0.00      0.000     0.000     0.000     0.000        5   <Class::ActiveRecord::Base>#skip_time_zone_conversion_for_attributes /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/class/attribute.rb:97
+  0.00      0.000     0.000     0.000     0.000        1   String#tr!                     
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::TableMetadata#initialize /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/table_metadata.rb:7
+  0.00     23.051     0.000     0.000    23.051        1   ActiveRecord::Delegation#sample /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/delegation.rb:87
+  0.00      0.004     0.000     0.000     0.004        1   ActiveRecord::AttributeDecorators::ClassMethods#load_schema! /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/attribute_decorators.rb:49
+  0.00      0.000     0.000     0.000     0.000        1   Concurrent::Map#validate_options_hash! /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/concurrent-ruby-1.1.6/lib/concurrent-ruby/concurrent/map.rb:328
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::QueryMethods#references_values /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/query_methods.rb:93
+  0.00      0.000     0.000     0.000     0.000        1   Hash#select                    
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::Reflection::ClassMethods#reflect_on_aggregation /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/reflection.rb:67
+  0.00      0.000     0.000     0.000     0.000        2   ActiveModel::Type::ImmutableString#type /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activemodel-6.0.3.2/lib/active_model/type/immutable_string.rb:6
+  0.00      0.000     0.000     0.000     0.000        1   ActiveSupport::Inflector::Inflections::Uncountables#uncountable? /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/inflector/inflections.rb:54
+  0.00      0.000     0.000     0.000     0.000        1   String#to_i                    
+  0.00      0.000     0.000     0.000     0.000        1   ActiveModel::AttributeSet::Builder#initialize /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activemodel-6.0.3.2/lib/active_model/attribute_set/builder.rb:10
+  0.00      0.000     0.000     0.000     0.000        1   Arel::Predications#quoted_node /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/predications.rb:236
+  0.00      0.000     0.000     0.000     0.000        1   <Class::ApplicationRecord>#defined_enums /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/class/attribute.rb:106
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::PredicateBuilder#expand_from_hash /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/predicate_builder.rb:65
+  0.00      0.000     0.000     0.000     0.000        1   <Class::ActiveRecord::Base>#attributes_to_define_after_schema_loads /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/class/attribute.rb:97
+  0.00      0.000     0.000     0.000     0.000        1   String#match                   
+  0.00      0.000     0.000     0.000     0.000        1   <Class::ActiveRecord::Base>#attribute_type_decorations /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/class/attribute.rb:97
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::Relation::WhereClause#+ /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/where_clause.rb:12
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::QueryMethods#where_clause= /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/query_methods.rb:98
+  0.00     23.051     0.000     0.000    23.051        1   ActiveRecord::Relation#load    /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation.rb:625
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::PredicateBuilder#convert_dot_notation_to_hash /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/predicate_builder.rb:117
+  0.00      0.000     0.000     0.000     0.000        2   WeakRef#__setobj__             /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/weakref.rb:51
+  0.00      0.000     0.000     0.000     0.000        1   String#rindex                  
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::Relation::WhereClause#non_empty_predicates /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/where_clause.rb:161
+  0.00      0.000     0.000     0.000     0.000        1   Object#blank?                  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/object/blank.rb:18
+  0.00      0.000     0.000     0.000     0.000        2   ActiveRecord::Relation::WhereClause#initialize /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/where_clause.rb:8
+  0.00      0.004     0.000     0.000     0.004        1   ActiveModel::AttributeMethods::ClassMethods#define_attribute_methods /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activemodel-6.0.3.2/lib/active_model/attribute_methods.rb:251
+  0.00      0.000     0.000     0.000     0.000        2   Integer#+                      
+  0.00      0.000     0.000     0.000     0.000        1   <Class::ActiveRecord::Base>#defined_enums /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/class/attribute.rb:97
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::Relation::WhereClause#predicates_with_wrapped_sql_literals /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/where_clause.rb:150
+  0.00      0.000     0.000     0.000     0.000        1   Arel::Nodes::BindParam#initialize /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/nodes/bind_param.rb:8
+  0.00      0.000     0.000     0.000     0.000        5   #<Module:0x00007ff47202d488>#nil? 
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::Relation::WhereClauseFactory#initialize /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/where_clause_factory.rb:6
+  0.00      0.000     0.000     0.000     0.000        1   <Class::ActiveRecord::Base>#table_name_prefix /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/class/attribute.rb:97
+  0.00      0.000     0.000     0.000     0.000        1   <Class::ActiveRecord::Base>#table_name_suffix /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/class/attribute.rb:97
+  0.00      0.000     0.000     0.000     0.000        1   <Class::ApplicationRecord>#_validators /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/class/attribute.rb:106
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::TypeCaster::Map#initialize /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/type_caster/map.rb:6
+  0.00      0.000     0.000     0.000     0.000        1   <Class::ActiveRecord::Base>#_validators /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/class/attribute.rb:97
+  0.00      0.000     0.000     0.000     0.000        1   <Class::ActiveRecord::Base>#_reflections /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/class/attribute.rb:97
+  0.00      0.000     0.000     0.000     0.000        1   ActiveSupport::DescendantsTracker::DescendantsArray#initialize /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/descendants_tracker.rb:71
+  0.00      0.000     0.000     0.000     0.000        1   <Class::ActiveRecord::Base>#default_scope_override /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/class/attribute.rb:97
+  0.00      0.000     0.000     0.000     0.000        1   Arel::Collectors::Bind#add_bind /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/collectors/bind.rb:14
+  0.00      0.000     0.000     0.000     0.000        1   Method#owner                   
+  0.00      0.000     0.000     0.000     0.000        5   Hash#clear                     
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::Result#includes_column? /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/result.rb:47
+  0.00      0.000     0.000     0.000     0.000        3   String#length                  
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::TableMetadata#aggregated_with? /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/table_metadata.rb:68
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::PredicateBuilder::BaseHandler#initialize /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/predicate_builder/base_handler.rb:6
+  0.00      0.000     0.000     0.000     0.000        1   <Class::ActiveRecord::Base>#pluralize_table_names /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/class/attribute.rb:97
+  0.00      0.000     0.000     0.000     0.000        1   Integer#to_s                   
+  0.00      0.000     0.000     0.000     0.000        1   <Class::ActiveRecord::DynamicMatchers::FindByBang>#suffix /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/dynamic_matchers.rb:112
+  0.00      0.000     0.000     0.000     0.000        1   Module#inspect                 
+  0.00      0.000     0.000     0.000     0.000        1   Hash#stringify_keys!           /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/hash/keys.rb:16
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::PredicateBuilder::RangeHandler#initialize /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/predicate_builder/range_handler.rb:8
+  0.00      0.000     0.000     0.000     0.000        1   String#downcase!               
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::PredicateBuilder::BasicObjectHandler#initialize /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/predicate_builder/basic_object_handler.rb:6
+  0.00      0.000     0.000     0.000     0.000        1   <Class::ActiveRecord::DynamicMatchers::FindByBang>#prefix /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/dynamic_matchers.rb:108
+  0.00      0.000     0.000     0.000     0.000        1   <Class::ActiveRecord::DynamicMatchers::Method>#suffix /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/dynamic_matchers.rb:45
+  0.00      0.000     0.000     0.000     0.000        1   <Class::ActiveRecord::DynamicMatchers::FindBy>#prefix /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/dynamic_matchers.rb:96
+  0.00      0.000     0.000     0.000     0.000        1   ActiveModel::Type::Value#binary? /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activemodel-6.0.3.2/lib/active_model/type/value.rb:57
+  0.00      0.000     0.000     0.000     0.000        1   Thread::Backtrace::Location#lineno 
+  0.00      0.000     0.000     0.000     0.000        1   Thread::Backtrace::Location#path 
+  0.00      0.000     0.000     0.000     0.000        1   Kernel#frozen?                 
+  0.00      0.000     0.000     0.000     0.000        1   Integer#to_f                   
+  0.00     23.051     0.000     0.000    23.051        1   ActiveRecord::Relation#exec_queries /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation.rb:807
+  0.00      0.000     0.000     0.000     0.000        1   ActiveModel::Type::Value#force_equality? /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activemodel-6.0.3.2/lib/active_model/type/value.rb:93
+  0.00      0.000     0.000     0.000     0.000        1   Kennel#pet_the_younglings      /Users/jsrn/Code/profiling-talk/app/app/models/kennel.rb:14
+  0.00      0.000     0.000     0.000     0.000        1   ActiveRecord::ConnectionAdapters::Quoting#unquoted_true /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/quoting.rb:101
+  0.00      0.000     0.000     0.000     0.000        1   Hash#blank?                    
+  0.00      0.000     0.000     0.000     0.000        1   Hash#initialize                
 
 * recursively called methods
 
@@ -72,20 +919,114 @@ The interpretation of method names is:
   * MyObject#test - An instance method "test" of the class "MyObject"
   * <Object:MyObject>#test - The <> characters indicate a method on a singleton class.
 Measure Mode: wall_time
-Thread ID: 70143100406140
-Fiber ID: 70143102482020
-Total: 0.332848
+Thread ID: 70343933664400
+Fiber ID: 70343967882840
+Total: 25.711523
 Sort by: self_time
 
  %self      total      self      wait     child     calls  name                           location
-  0.01      0.102     0.000     0.101     0.000        1   <Class::File>#stat             
-  0.00      0.231     0.000     0.231     0.000        1   Kernel#sleep                   /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/plugin/tmp_restart.rb:21
-  0.00      0.333     0.000     0.000     0.333        1   #<Class:0x00007f96f116bb30>#start /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/plugin/tmp_restart.rb:24
-  0.00      0.000     0.000     0.000     0.000        1   Comparable#>                   
-  0.00      0.000     0.000     0.000     0.000        1   File::Stat#mtime               
-  0.00      0.000     0.000     0.000     0.000        1   Time#<=>                       /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/time/calculations.rb:292
-  0.00      0.000     0.000     0.000     0.000        1   Time#compare_without_coercion  
-  0.00      0.000     0.000     0.000     0.000        1   Kernel#class                   
+  0.20     25.711     0.051    25.660     0.000       25   Kernel#sleep                   /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/thread_pool.rb:262
+  0.00     25.712     0.000     0.000    25.711        1   Puma::ThreadPool::Automaton#start! /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/thread_pool.rb:261
+  0.00      0.001     0.000     0.000     0.000       25   Thread::Mutex#synchronize      
+  0.00      0.000     0.000     0.000     0.000       25   Array#reject                   
+  0.00      0.000     0.000     0.000     0.000       25   Array#delete_if                
+  0.00      0.001     0.000     0.000     0.001       25   Kernel#public_send             
+  0.00      0.000     0.000     0.000     0.000      125   Thread#alive?                  
+  0.00      0.001     0.000     0.000     0.001       25   Puma::ThreadPool#reap          /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/thread_pool.rb:231
+  0.00      0.000     0.000     0.000     0.000      125   Array#include?                 
+  0.00      0.000     0.000     0.000     0.000       25   Array#each                     
+
+* recursively called methods
+
+Columns are:
+
+  %self     - The percentage of time spent in this method, derived from self_time/total_time.
+  total     - The time spent in this method and its children.
+  self      - The time spent in this method.
+  wait      - The amount of time this method waited for other threads.
+  child     - The time spent in this method's children.
+  calls     - The number of times this method was called.
+  name      - The name of the method.
+  location  - The location of the method.
+
+The interpretation of method names is:
+
+  * MyObject#test - An instance method "test" of the class "MyObject"
+  * <Object:MyObject>#test - The <> characters indicate a method on a singleton class.
+Measure Mode: wall_time
+Thread ID: 70343933663140
+Fiber ID: 70343812216700
+Total: 24.631575
+Sort by: self_time
+
+ %self      total      self      wait     child     calls  name                           location
+  0.25      0.954     0.062     0.892     0.000       12   <Class::File>#stat             
+  0.09      0.122     0.022     0.100     0.000       12   Comparable#>                   
+  0.00     23.555     0.000    23.554     0.000       12   Kernel#sleep                   /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/plugin/tmp_restart.rb:21
+  0.00     24.632     0.000     0.000    24.631        1   #<Class:0x00007ff476a3c6c8>#start /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/plugin/tmp_restart.rb:24
+  0.00      0.000     0.000     0.000     0.000       12   File::Stat#mtime               
+  0.00      0.000     0.000     0.000     0.000       12   Time#<=>                       /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/time/calculations.rb:292
+  0.00      0.000     0.000     0.000     0.000       12   Time#compare_without_coercion  
+  0.00      0.000     0.000     0.000     0.000       12   Kernel#class                   
+
+* recursively called methods
+
+Columns are:
+
+  %self     - The percentage of time spent in this method, derived from self_time/total_time.
+  total     - The time spent in this method and its children.
+  self      - The time spent in this method.
+  wait      - The amount of time this method waited for other threads.
+  child     - The time spent in this method's children.
+  calls     - The number of times this method was called.
+  name      - The name of the method.
+  location  - The location of the method.
+
+The interpretation of method names is:
+
+  * MyObject#test - An instance method "test" of the class "MyObject"
+  * <Object:MyObject>#test - The <> characters indicate a method on a singleton class.
+Measure Mode: wall_time
+Thread ID: 70344002712740
+Fiber ID: 70343974246400
+Total: 20.725040
+Sort by: self_time
+
+ %self      total      self      wait     child     calls  name                           location
+  0.00     20.725     0.000    20.725     0.000        3   Kernel#sleep                   /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-mini-profiler-2.0.2/lib/mini_profiler/storage/file_store.rb:81
+  0.00     20.725     0.000     0.000    20.725        1   Rack::MiniProfiler::FileStore#initialize /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-mini-profiler-2.0.2/lib/mini_profiler/storage/file_store.rb:82
+  0.00      0.000     0.000     0.000     0.000        3   <Class::Thread>#current        
+  0.00      0.000     0.000     0.000     0.000        3   Thread#[]                      
+
+* recursively called methods
+
+Columns are:
+
+  %self     - The percentage of time spent in this method, derived from self_time/total_time.
+  total     - The time spent in this method and its children.
+  self      - The time spent in this method.
+  wait      - The amount of time this method waited for other threads.
+  child     - The time spent in this method's children.
+  calls     - The number of times this method was called.
+  name      - The name of the method.
+  location  - The location of the method.
+
+The interpretation of method names is:
+
+  * MyObject#test - An instance method "test" of the class "MyObject"
+  * <Object:MyObject>#test - The <> characters indicate a method on a singleton class.
+Measure Mode: wall_time
+Thread ID: 70343933664240
+Fiber ID: 70343259677260
+Total: 0.730430
+Sort by: self_time
+
+ %self      total      self      wait     child     calls  name                           location
+  0.00      0.000     0.000     0.000     0.000        1   Thread::Mutex#synchronize      
+  0.00      0.000     0.000     0.000     0.000        1   Kernel#public_send             
+  0.00      0.730     0.000     0.730     0.000        1   Kernel#sleep                   /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/thread_pool.rb:262
+  0.00      0.730     0.000     0.000     0.730        1   Puma::ThreadPool::Automaton#start! /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/thread_pool.rb:261
+  0.00      0.000     0.000     0.000     0.000        1   Puma::ThreadPool#trim          /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/thread_pool.rb:220
 
 * recursively called methods
 

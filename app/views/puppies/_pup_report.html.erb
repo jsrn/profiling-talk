@@ -1,0 +1,26 @@
+<table>
+  <thead>
+    <tr>
+      <th>Count</th>
+      <th>Average Age</th>
+      <th>Percentage Microchipped</th>
+      <th>Ears Spot Checked</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <%= @report.count %>
+      </td>
+      <td>
+        <%= @report.average_age %>
+      </td>
+      <td>
+        <%= @report.percentage_chipped.round(2) %>%
+      </td>
+      <td>
+        <%= @report.ears_spot_checked ? 'Yes' : 'No' %>
+      </td>
+    </tr>
+  </tbody>
+</table>
