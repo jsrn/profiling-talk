@@ -2,6 +2,45 @@
 
 <h1>Rack Mini Profiler</h1>
 
-<h2>The Flame Graph</h2>
+<h2>The Flame Graph (<a href="/puppies/rack_mini_profiler?pp=flamegraph">/puppies/rack_mini_profiler?pp=flamegraph</a>)</h2>
 
 <iframe src="/puppies/rack_mini_profiler?pp=flamegraph" style="height: 600px;"></iframe>
+
+<p>This is a biggie. If you're watching me demo this, you may have seen Firefox display a window that something's slowing down the page. I'm no expert, but it might be fair to say that if your flame graph threatens to crash Firefox, your code is probably not performing well enough.</p>
+
+<p>If you don't know how to read a flame graph (I didn't), it goes a little bit like this:</p>
+
+<ul>
+  <li>The <math>x</math> axis is time. The longer a block is along <math>x</math>, the longer that method call is taking.</li>
+  <li>The <math>y</math> axis is the call stack. In a Rails application, you can generally expect application code towards the top and framework code ot the bottom. A large <math>y</math> height suggests complex code, but not necessarily slow code.</li>
+</ul>
+
+<p>So what can we take away from the above?</p>
+
+<ol>
+  <li>It's pretty flat, with long, consistent stripes. Whatever's going on with this code, it's down to time, not outrageous complexity.</li>
+  <li>
+    <p>What's going on with all those gaps? It looks like a comb.</p>
+    <%= image_tag('comb.png') %>
+    <p>If we have a look riiiiight at the bottom, at that thin line:</p>
+    <%= image_tag('garbage-collection.png') %>
+    <p>So Garbage Collection is hitting our code. A <em>lot</em>. This implies that we're creating a <em>lot</em> of objects.</p>
+  </li>
+  <li>
+    <p>An overwhelming amount of the above flame graph is happening in <code>Kennel#ten_percent_of_puppies</code>.</p>
+    <blockquote>“Any improvements made anywhere besides the bottleneck are an illusion.”</blockquote>
+    <p>With the above in mind, this is absolutely the first place to look at improving our code.</p>
+  </li>
+</ol>
+
+<h2>Profile Memory (<a href="/puppies/rack_mini_profiler?pp=profile-memory">/puppies/rack_mini_profiler?pp=profile-memory</a>)</h2>
+
+<iframe src="/reports/profile-memory.txt" style="height: 600px;"></iframe>
+
+<p>Now we're getting somewhere. In the above output, we can see allocated/retained memory and allocated/retained objects. This is broken down by file, location, class, and gem.</p>
+
+<p>Additionally, reports are generated for allocated and retained strings.</p>
+
+<h2>Profile GC (<a href="/puppies/rack_mini_profiler?pp=profile-gc">/puppies/rack_mini_profiler?pp=profile-gc</a>)</h2>
+
+<iframe src="/reports/profile-gc.txt" style="height: 600px;"></iframe>

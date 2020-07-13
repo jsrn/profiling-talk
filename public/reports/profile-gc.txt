@@ -1,0 +1,1872 @@
+
+Overview
+--------
+Initial state: object count: 9195537
+Memory allocated outside heap (bytes): 1129900884
+
+GC Stats:
+--------
+count : 145
+heap_allocatable_pages : 10545
+heap_allocated_pages : 17686
+heap_available_slots : 7208835
+heap_eden_pages : 17686
+heap_final_slots : 0
+heap_free_slots : 91
+heap_live_slots : 7208744
+heap_marked_slots : 7205428
+heap_sorted_length : 77933
+heap_tomb_pages : 0
+major_gc_count : 46
+malloc_increase_bytes : 7697712
+malloc_increase_bytes_limit : 31581162
+minor_gc_count : 99
+old_objects : 7201351
+old_objects_limit : 14402702
+oldmalloc_increase_bytes : 7697712
+oldmalloc_increase_bytes_limit : 131586007
+remembered_wb_unprotected_objects : 2710
+remembered_wb_unprotected_objects_limit : 5420
+total_allocated_objects : 82228025
+total_allocated_pages : 131292
+total_freed_objects : 75019281
+total_freed_pages : 113606
+
+New bytes allocated outside of Ruby heaps: 1240804970
+New objects: 10195216
+
+ObjectSpace delta caused by request:
+-----------------------------------
+Hash : 3154401
+Array : 2130746
+String : 1676620
+ActiveModel::AttributeSet : 1076796
+Puppy : 1076792
+ActiveModel::LazyAttributeHash : 1076778
+Proc : 635
+Thread::Backtrace::Location : 492
+Binding : 465
+Pathname : 182
+MatchData : 127
+Time : 123
+Range : 82
+Enumerator::Lazy : 72
+Enumerator::Generator : 63
+Object : 63
+Sprockets::URITar : 40
+Digest::SHA1 : 38
+Set : 33
+Thread::Mutex : 32
+Digest::SHA256 : 30
+File : 29
+Integer : 28
+Concurrent::Map : 27
+Symbol : 23
+Thread::Backtrace : 21
+File::Stat : 21
+ActiveSupport::Notifications::Event : 21
+Puppy::ActiveRecord_Relation : 19
+Class : 18
+ActiveSupport::SafeBuffer : 16
+ActiveRecord::Result : 13
+Rack::BodyProxy : 12
+PG::Result : 12
+IPAddr : 12
+ActionDispatch::Request : 11
+ActiveRecord::ConnectionAdapters::PostgreSQL::OID::SpecializedString : 10
+Arel::Nodes::JoinSource : 9
+Arel::Nodes::SelectCore : 9
+Arel::SelectManager : 9
+Enumerator::Yielder : 9
+Arel::Collectors::Composite : 9
+Arel::Nodes::SelectStatement : 9
+Arel::Collectors::Bind : 9
+Arel::Collectors::SQLString : 9
+Sprockets::UnloadedAsset : 8
+ActionView::OutputBuffer : 8
+Dir : 7
+ActiveSupport::Callbacks::Filters::Environment : 7
+Regexp : 7
+Arel::Nodes::SqlLiteral : 7
+Arel::Nodes::Count : 6
+Method : 6
+ActionDispatch::Response::ContentTypeHeader : 6
+ActiveSupport::HashWithIndifferentAccess : 5
+ActionDispatch::Response::Buffer : 5
+OpenSSL::Cipher : 5
+PG::TextDecoder::Integer : 4
+ActiveModel::Type::String : 4
+Rack::Request : 4
+Arel::Attributes::Attribute : 4
+Addrinfo : 4
+Errno::ECONNREFUSED : 4
+ActionView::AbstractRenderer::RenderedTemplate : 4
+Socket : 4
+PG::TypeMapByColumn : 3
+#<Class:0x00007fef4437e228> : 3
+ActiveModel::Type::Integer : 3
+PG::TextDecoder::TimestampUtc : 2
+JSON::Ext::Parser : 2
+OpenStruct : 2
+ActiveSupport::ArrayInquirer : 2
+#<Class:0x00007feedfb60870> : 2
+ActiveSupport::InheritableOptions : 2
+ActionView::Renderer : 2
+ActionView::OutputFlow : 2
+ActionView::TemplateRenderer : 2
+ActionView::PartialRenderer : 2
+PG::TextDecoder::Float : 2
+Sprockets::Asset : 2
+ActionView::Helpers::TagHelper::TagBuilder : 2
+ActiveSupport::ParameterFilter : 2
+ActiveRecord::ConnectionAdapters::PostgreSQL::OID::Vector : 2
+Rack::MiniProfiler::TimerStruct::Request : 2
+ActiveSupport::ParameterFilter::CompiledFilter : 2
+ActiveRecord::AttributeDecorators::TypeDecorator : 2
+ActiveRecord::Relation::WhereClause : 2
+ActiveSupport::MessageEncryptor : 2
+Sprockets::CachedEnvironment : 2
+PG::TextEncoder::Boolean : 2
+ActionDispatch::Response::RackBody : 2
+Rack::Utils::HeaderHash : 2
+Rack::Response::Raw : 2
+Sprockets::Rails::HelperAssetResolvers::Environment : 2
+PG::TextDecoder::Boolean : 1
+Puma::ConnectionError : 1
+Errno::EPIPE : 1
+ActiveRecord::ConnectionAdapters::PostgreSQL::OID::TypeMapInitializer : 1
+ActiveRecord::ConnectionAdapters::PostgreSQL::OID::Xml : 1
+ActiveRecord::ConnectionAdapters::PostgreSQL::OID::Uuid : 1
+ActiveRecord::ConnectionAdapters::PostgreSQL::OID::Inet : 1
+ActiveRecord::ConnectionAdapters::PostgreSQL::OID::Cidr : 1
+ActiveRecord::ConnectionAdapters::PostgreSQL::OID::Jsonb : 1
+ActiveRecord::Type::Json : 1
+ActiveRecord::ConnectionAdapters::PostgreSQL::OID::Hstore : 1
+ActiveRecord::ConnectionAdapters::PostgreSQL::OID::Point : 1
+ActiveRecord::ConnectionAdapters::PostgreSQL::OID::Bytea : 1
+ActiveRecord::ConnectionAdapters::PostgreSQL::OID::Money : 1
+Kennel : 1
+ActiveRecord::ConnectionAdapters::PostgreSQL::OID::Date : 1
+ActiveModel::Type::Boolean : 1
+ActiveRecord::Type::Text : 1
+ActiveModel::Type::Float : 1
+ActiveRecord::ConnectionAdapters::PostgreSQL::OID::Oid : 1
+ActiveRecord::Type::HashLookupTypeMap : 1
+PG::TypeMapByOid : 1
+ActionDispatch::RemoteIp::GetIp : 1
+ActiveSupport::Cache::Strategy::LocalCache::LocalStore : 1
+#<Class:0x00007fef4430c858> : 1
+ActionDispatch::Journey::Path::Pattern::MatchData : 1
+StringScanner : 1
+ActionDispatch::Request::Session::Options : 1
+ActionDispatch::Request::Session : 1
+ActiveRecord::ConnectionAdapters::PostgreSQL::OID::DateTime : 1
+StringIO : 1
+ActiveRecord::MigrationProxy : 1
+ActiveRecord::MigrationContext : 1
+Monitor : 1
+WeakRef : 1
+ActiveRecord::Delegation::GeneratedRelationMethods : 1
+ActiveRecord::AttributeMethods::GeneratedAttributeMethods : 1
+ActionDispatch::Cookies::CookieJar : 1
+ActionDispatch::Cookies::EncryptedKeyRotatingCookieJar : 1
+ActiveRecord::ConnectionAdapters::SchemaCache : 1
+ActiveRecord::ConnectionAdapters::TransactionManager : 1
+ActiveRecord::ConnectionAdapters::NullPool : 1
+Arel::Visitors::PostgreSQL : 1
+ActiveRecord::ConnectionAdapters::PostgreSQLAdapter::StatementPool : 1
+ActiveSupport::Concurrency::LoadInterlockAwareMonitor : 1
+PG::TypeMapByClass : 1
+PG::TextEncoder::Integer : 1
+PG::Connection : 1
+WebConsole::Request : 1
+WebConsole::WhinyRequest : 1
+WebConsole::Request::GetSecureIp : 1
+ActionDispatch::Http::Headers : 1
+Rack::QueryParser::Params : 1
+ActionView::I18nProxy : 1
+ActionView::PathSet : 1
+Thread::ConditionVariable : 1
+ActionView::LookupContext : 1
+PuppiesController : 1
+Module : 1
+ActiveRecord::Relation::WhereClauseFactory : 1
+ActiveRecord::Relation::QueryAttribute : 1
+Arel::Nodes::BindParam : 1
+Arel::Nodes::Equality : 1
+Arel::Nodes::And : 1
+MonitorMixin::ConditionVariable : 1
+ActionDispatch::Response::Header : 1
+ActionDispatch::Response : 1
+PG::TextDecoder::Timestamp : 1
+ActionController::Renderer : 1
+ActiveSupport::MessageVerifier : 1
+ActiveRecord::ConnectionAdapters::PostgreSQLAdapter : 1
+
+
+ObjectSpace stats:
+-----------------
+Hash : 6003995
+Array : 4213894
+String : 3148112
+ActiveModel::AttributeSet : 2000002
+ActiveModel::LazyAttributeHash : 2000000
+Puppy : 2000000
+Class : 4316
+Proc : 4011
+Regexp : 1591
+Module : 961
+Rational : 910
+Bundler::StubSpecification : 833
+Gem::StubSpecification : 830
+Gem::StubSpecification::StubLine : 830
+Symbol : 638
+Gem::Requirement : 582
+Thread::Backtrace::Location : 492
+Pathname : 488
+Binding : 466
+Gem::Version : 451
+TZInfo::CountryTimezone : 425
+Gem::Dependency : 348
+Rails::Initializable::Initializer : 315
+Range : 287
+Thread::Mutex : 274
+ActionDispatch::Journey::Nodes::Cat : 260
+TZInfo::ZoneinfoCountryInfo : 249
+Time : 182
+Rails::Paths::Path : 178
+Integer : 172
+Set : 170
+Bundler::LazySpecification : 158
+Bundler::LazySpecification::Identifier : 158
+RubyVM::InstructionSequence : 153
+Bundler::Dependency : 148
+Object : 136
+MatchData : 131
+ActionDispatch::Journey::Nodes::Slash : 118
+ActionDispatch::Journey::Nodes::Literal : 101
+Encoding : 101
+FFI::FunctionType : 100
+FFI::DynamicLibrary::Symbol : 98
+FFI::Function : 98
+Struct::HTMLElementDescription : 90
+Concurrent::Map : 77
+Enumerator::Lazy : 72
+Sprockets::ProcessorUtils::CompositeProcessor : 66
+ActionDispatch::Journey::Format : 64
+Enumerator::Generator : 63
+Rails::Initializable::Collection : 51
+ActionDispatch::Routing::RouteSet::NamedRouteCollection::UrlHelper::OptimizedUrlHelper : 46
+ActionDispatch::Journey::Nodes::Symbol : 45
+ActionDispatch::Journey::Format::Parameter : 45
+UnboundMethod : 43
+Gem::Specification : 42
+ActiveSupport::Callbacks::CallbackChain : 42
+Sprockets::URITar : 40
+Digest::SHA1 : 38
+ActionView::Resolver::Cache::SmallCache : 37
+Mime::Type : 34
+ActionDispatch::Journey::Path::Pattern : 34
+ActionDispatch::Journey::Route : 34
+ActiveSupport::Callbacks::Callback : 32
+ActionDispatch::Routing::RouteSet::Dispatcher : 32
+File : 31
+ActionDispatch::Journey::Nodes::Dot : 30
+Digest::SHA256 : 30
+ActionDispatch::Journey::Nodes::Group : 30
+ActiveRecord::Type::Registration : 29
+ActionDispatch::MiddlewareStack::Middleware : 28
+Thread::ConditionVariable : 28
+Method : 24
+ActionDispatch::Request : 24
+ActiveSupport::Notifications::Fanout::Subscribers::Evented : 23
+Sprockets::Transformers::Transformer : 23
+ActiveSupport::OrderedOptions : 23
+File::Stat : 23
+Thread : 23
+ActiveSupport::Notifications::Event : 22
+IPAddr : 22
+FFI::Type::Builtin : 21
+ActiveSupport::SafeBuffer : 21
+Thread::Backtrace : 21
+Gem::Platform : 21
+ActiveRecord::ConnectionAdapters::PostgreSQL::OID::SpecializedString : 20
+Puppy::ActiveRecord_Relation : 20
+FFI::StructLayout::Number : 19
+ActiveRecord::Result : 18
+ActiveModel::AttributeMethods::ClassMethods::AttributeMethodMatcher : 18
+WeakRef : 16
+ActiveSupport::Callbacks::CallTemplate : 16
+FFI::StructLayout::Mapped : 15
+ActiveSupport::HashWithIndifferentAccess : 14
+Rails::Railtie::Configuration : 14
+FFI::StructLayout : 13
+PG::Result : 12
+Rack::BodyProxy : 12
+Float : 12
+Thread::Queue : 12
+ActiveSupport::DescendantsTracker::DescendantsArray : 11
+ActiveModel::Type::Registration : 11
+Thor::Option : 11
+FFI::StructByValue : 10
+Arel::Nodes::JoinSource : 10
+Arel::Nodes::SelectStatement : 10
+FFI::StructLayout::InnerStruct : 10
+Arel::SelectManager : 10
+Monitor : 10
+IO : 10
+#<Class:0x00007fef4437e228> : 10
+Arel::Nodes::SelectCore : 10
+ActiveModel::Type::String : 9
+Listen::Change : 9
+Enumerator::Yielder : 9
+Arel::Collectors::SQLString : 9
+Listen::Record : 9
+Arel::Collectors::Bind : 9
+PG::TextDecoder::Integer : 9
+Arel::Nodes::SqlLiteral : 9
+Arel::Collectors::Composite : 9
+Rails::Configuration::MiddlewareStackProxy : 8
+Puma::HttpParser : 8
+Puma::Client : 8
+TCPSocket : 8
+ActiveSupport::Callbacks::Filters::Environment : 8
+Concurrent::Event : 8
+Sprockets::UnloadedAsset : 8
+ActionView::OutputBuffer : 8
+ActionView::Resolver::Cache : 8
+Rails::Paths::Root : 8
+Rails::Configuration::Generators : 8
+Rails::Engine::Configuration : 7
+Dir : 7
+ActiveRecord::AttributeDecorators::TypeDecorator : 7
+FFI::Type::Mapped : 7
+ActionDispatch::Response::ContentTypeHeader : 7
+Rack::Request : 7
+ActiveModel::Attribute::FromDatabase : 6
+Sprockets::DirectiveProcessor : 6
+Listen::FSM::State : 6
+ActionView::OptimizedFileSystemResolver : 6
+ActionDispatch::Routing::RouteSet::CustomUrlHelper : 6
+ActionDispatch::Routing::RouteSet::NamedRouteCollection::UrlHelper : 6
+ActionDispatch::Response::Buffer : 6
+Arel::Nodes::Count : 6
+ActiveModel::Type::Integer : 6
+ActiveRecord::ConnectionAdapters::PostgreSQL::Column : 6
+ActionController::ParamsWrapper::Options : 6
+ActionDispatch::Routing::PolymorphicRoutes::HelperMethodBuilder : 6
+ActiveRecord::ConnectionAdapters::PostgreSQL::TypeMetadata : 6
+ActiveRecord::ConnectionAdapters::SqlTypeMetadata : 6
+ActiveRecord::AttributeMethods::GeneratedAttributeMethods : 6
+Arel::Attributes::Attribute : 5
+FFI::StructLayout::Pointer : 5
+PG::TextDecoder::Float : 5
+Concurrent::Hash : 5
+Puma::IOBuffer : 5
+ActionController::MiddlewareStack : 5
+Fiber : 5
+FFI::StructLayout::String : 5
+Rack::MiniProfiler::TimerStruct::Sql : 5
+ActiveSupport::Callbacks::CallbackSequence : 5
+I18n::Config : 5
+ActionController::Renderer : 5
+ActiveRecord::Delegation::GeneratedRelationMethods : 5
+OpenSSL::Cipher : 5
+Concurrent::Delay : 5
+PG::TextEncoder::Boolean : 5
+Rack::MiniProfiler::TimerStruct::Request : 4
+MonitorMixin::ConditionVariable : 4
+TracePoint : 4
+ActionView::PathSet : 4
+ActiveSupport::MessageEncryptor : 4
+ActiveSupport::ParameterFilter : 4
+ActiveSupport::Cache::Strategy::LocalCache::LocalCacheRegistry : 4
+ActiveSupport::Notifications::InstrumentationRegistry : 4
+ActiveSupport::Notifications::Instrumenter : 4
+FFI::Enum : 4
+Bundler::Index : 4
+Bundler::SpecSet : 4
+Addrinfo : 4
+ActiveRecord::Scoping::ScopeRegistry : 4
+ActionView::AbstractRenderer::RenderedTemplate : 4
+Socket : 4
+ActionDispatch::Journey::Formatter : 4
+ActionDispatch::Journey::Router : 4
+ActionDispatch::Journey::Routes : 4
+Errno::ECONNREFUSED : 4
+ActiveRecord::ConnectionAdapters::PostgreSQL::OID::Vector : 4
+ActionDispatch::Journey::Nodes::Star : 4
+ActionDispatch::Routing::RouteSet : 4
+ActiveSupport::SubscriberQueueRegistry : 4
+ActiveRecord::RuntimeRegistry : 4
+ActiveRecord::PredicateBuilder::ArrayHandler : 4
+ActiveRecord::ExplainRegistry : 4
+ActiveRecord::DatabaseConfigurations::HashConfig : 4
+Logger::Formatter : 4
+ActiveSupport::Notifications::Fanout::Subscribers::Timed : 4
+Logger::LogDevice : 4
+ActionDispatch::Routing::RouteSet::NamedRouteCollection : 4
+Listen::Adapter::Darwin : 3
+Listen::Backend : 3
+Listen::Silencer::Controller : 3
+Listen::Silencer : 3
+FSEvent : 3
+Listen::Event::Queue : 3
+PG::TypeMapByColumn : 3
+Listen::Event::Queue::Config : 3
+PG::BinaryDecoder::Integer : 3
+Listen::Listener::Config : 3
+Listen::Listener : 3
+ActiveSupport::MessageVerifier : 3
+Listen::Event::Processor : 3
+JSON::Ext::Generator::State : 3
+Rack::MiniProfiler::FileStore::FileCache : 3
+PG::TextDecoder::TimestampUtc : 3
+PG::TextDecoder::Boolean : 3
+Thor::NestedContext : 3
+ActiveSupport::InheritableOptions : 3
+ActiveSupport::Duration : 3
+ActionView::Template::Sources::File : 3
+ActionView::UnboundTemplate : 3
+ActionView::Template : 3
+Bundler::RubyVersion : 3
+PG::TextDecoder::Timestamp : 3
+Puma::DSL : 3
+FFI::StructByReference : 3
+Thor::Command : 3
+ActiveRecord::Relation::WhereClause : 3
+PG::TextEncoder::Integer : 3
+ActiveSupport::ArrayInquirer : 3
+ActiveSupport::EventedFileUpdateChecker::PathHelper : 3
+ActiveSupport::EventedFileUpdateChecker : 3
+Concurrent::AtomicBoolean : 3
+ActiveModel::Type::Helpers::AcceptsMultiparameterTime : 3
+Listen::Change::Config : 3
+Listen::Event::Loop : 3
+Listen::Event::Config : 3
+Listen::QueueOptimizer : 3
+Listen::QueueOptimizer::Config : 3
+Listen::Options : 3
+Listen::Adapter::Config : 3
+ActiveRecord::Type::DecorationRegistration : 2
+Puma::Events : 2
+Puma::Events::DefaultFormatter : 2
+Puma::ThreadPool::Automaton : 2
+ActionDispatch::Routing::Mapper::Constraints : 2
+ActionDispatch::Routing::Mapper::Scope : 2
+ActionView::FallbackFileSystemResolver : 2
+ActiveSupport::Logger : 2
+SassC::Script::Value::Bool : 2
+OptionParser::OptionMap : 2
+OptionParser::Switch::NoArgument : 2
+Fiddle::Handle : 2
+TCPServer : 2
+Zeitwerk::Loader : 2
+Rack::Head : 2
+Sprockets::Preprocessors::DefaultSourceMap : 2
+Logger : 2
+ActiveSupport::Logger::SimpleFormatter : 2
+ActiveSupport::ExecutionWrapper::RunHook : 2
+ActiveSupport::ExecutionWrapper::CompleteHook : 2
+ActiveRecord::TypeCaster::Map : 2
+Arel::Table : 2
+ActiveRecord::TableMetadata : 2
+ActiveRecord::PredicateBuilder : 2
+ActiveRecord::PredicateBuilder::BasicObjectHandler : 2
+ActiveRecord::PredicateBuilder::BaseHandler : 2
+ActiveRecord::PredicateBuilder::RangeHandler : 2
+ActiveRecord::PredicateBuilder::RelationHandler : 2
+SassC::Rails::Importer::ERBExtension : 2
+SassC::Rails::Importer::Extension : 2
+Bundler::GemHelpers::PlatformMatch : 2
+URI::HTTPS : 2
+Bundler::Source::Git : 2
+Bundler::LockfileParser : 2
+Bundler::Source::Rubygems : 2
+MessagePack::Factory : 2
+BigDecimal : 2
+ThreadSafe::Cache : 2
+Bootsnap::LoadPathCache::Cache : 2
+fatal : 2
+URI::RFC2396_Parser : 2
+Rack::MiniProfiler::ClientSettings : 2
+ActiveRecord::ConnectionAdapters::PostgreSQL::OID::DateTime : 2
+Kennel : 2
+ActiveRecord::ConnectionAdapters::SchemaCache : 2
+ActionDispatch::Request::Session : 2
+ActionDispatch::Request::Session::Options : 2
+ActionDispatch::Journey::Path::Pattern::MatchData : 2
+#<Class:0x00007fef4430c858> : 2
+ActiveSupport::Cache::Strategy::LocalCache::LocalStore : 2
+ActionDispatch::RemoteIp::GetIp : 2
+PG::TypeMapByOid : 2
+ActiveRecord::Type::HashLookupTypeMap : 2
+ActiveRecord::ConnectionAdapters::PostgreSQL::OID::Oid : 2
+ActiveModel::Type::Float : 2
+ActiveRecord::Type::Text : 2
+ActiveModel::Type::Boolean : 2
+ActiveRecord::ConnectionAdapters::PostgreSQL::OID::Date : 2
+ActiveRecord::ConnectionAdapters::PostgreSQL::OID::Money : 2
+ActiveRecord::ConnectionAdapters::PostgreSQL::OID::Bytea : 2
+ActiveRecord::ConnectionAdapters::PostgreSQL::OID::Point : 2
+ActiveRecord::ConnectionAdapters::PostgreSQL::OID::Hstore : 2
+ActiveRecord::Type::Json : 2
+ActiveRecord::ConnectionAdapters::PostgreSQL::OID::Jsonb : 2
+ActiveRecord::ConnectionAdapters::PostgreSQL::OID::Cidr : 2
+ActiveRecord::ConnectionAdapters::PostgreSQL::OID::Inet : 2
+ActiveRecord::ConnectionAdapters::PostgreSQL::OID::Uuid : 2
+ActiveRecord::ConnectionAdapters::PostgreSQL::OID::Xml : 2
+ActiveRecord::ConnectionAdapters::PostgreSQL::OID::TypeMapInitializer : 2
+ActionDispatch::Response : 2
+ActionDispatch::Response::Header : 2
+PuppiesController : 2
+ActionView::LookupContext : 2
+ActionView::I18nProxy : 2
+ActionDispatch::Http::Headers : 2
+ActionDispatch::Cookies::CookieJar : 2
+ActionDispatch::Cookies::EncryptedKeyRotatingCookieJar : 2
+ActiveRecord::ConnectionAdapters::PostgreSQLAdapter : 2
+ActiveRecord::ConnectionAdapters::TransactionManager : 2
+Arel::Visitors::PostgreSQL : 2
+ActiveRecord::ConnectionAdapters::PostgreSQLAdapter::StatementPool : 2
+ActiveSupport::Concurrency::LoadInterlockAwareMonitor : 2
+PG::TypeMapByClass : 2
+PG::Connection : 2
+ActiveSupport::ParameterFilter::CompiledFilter : 2
+WebConsole::Request : 2
+WebConsole::WhinyRequest : 2
+ActiveRecord::Relation::QueryAttribute : 2
+ActionDispatch::Response::RackBody : 2
+Rack::Utils::HeaderHash : 2
+Rack::Response::Raw : 2
+JSON::Ext::Parser : 2
+Sprockets::Asset : 2
+ActionView::Helpers::TagHelper::TagBuilder : 2
+Sprockets::Rails::HelperAssetResolvers::Environment : 2
+Sprockets::CachedEnvironment : 2
+OpenStruct : 2
+#<Class:0x00007feedfb60870> : 2
+ActionView::Renderer : 2
+ActionView::OutputFlow : 2
+ActionView::TemplateRenderer : 2
+ActionView::PartialRenderer : 2
+PG::BinaryDecoder::Float : 2
+Nokogiri::HTML::EntityLookup : 1
+SubstitutionContext : 1
+#<Class:0x00007fef444da0b8> : 1
+Webpacker::DevServerProxy : 1
+Rack::MiniProfiler::FileStore::CacheCleanupThread : 1
+Rack::MiniProfiler::FileStore : 1
+Rack::MiniProfiler : 1
+ActionDispatch::Journey::Nodes::Dummy : 1
+Concurrent::Utility::ProcessorCounter : 1
+ActionDispatch::HostAuthorization::Permissions : 1
+#<Class:0x00007fef40b42c38> : 1
+ActionDispatch::HostAuthorization : 1
+Rack::Sendfile : 1
+Gem::PathSupport : 1
+Bootsnap::LoadPathCache::Store : 1
+Arel::Nodes::And : 1
+ActionDispatch::PublicExceptions : 1
+ActionDispatch::FileHandler : 1
+ActionDispatch::Static : 1
+ActionDispatch::Executor : 1
+ActiveJob::Railtie : 1
+Rack::Files : 1
+Sprockets::Environment : 1
+ActiveRecord::ConnectionAdapters::ConnectionPool::Reaper : 1
+ActiveRecord::ConnectionAdapters::ConnectionPool::ConnectionLeasingQueue : 1
+Rack::Runtime : 1
+ActiveRecord::ConnectionAdapters::ConnectionPool : 1
+Rack::MethodOverride : 1
+ActiveRecord::ConnectionAdapters::ConnectionSpecification : 1
+Bundler::Source::Git::GitProxy : 1
+ActionDispatch::Journey::GTG::TransitionTable : 1
+Concurrent::LockFreeStack::Node : 1
+ActionDispatch::Journey::Nodes::Or : 1
+Spring::Client::Rails : 1
+Spring::Env : 1
+Concurrent::Promises::InternalStates::Fulfilled : 1
+Concurrent::Promises::InternalStates::Reserved : 1
+Concurrent::Promises::InternalStates::Pending : 1
+GlobalID::Railtie : 1
+Rails::BacktraceCleaner : 1
+OpenSSL::X509::Store : 1
+ActiveSupport::Inflector::Inflections : 1
+ActiveSupport::Inflector::Inflections::Uncountables : 1
+FFI::Enums : 1
+OpenSSL::PKey::DH : 1
+Bundler::Runtime : 1
+Bootsnap::LoadPathCache::RealpathCache : 1
+ActionDispatch::RequestId : 1
+Bundler::CurrentRuby : 1
+#<Class:0x00007fef448dfe88> : 1
+ActiveSupport::Messages::RotationConfiguration : 1
+Bundler::Source::Metadata : 1
+Bundler::SourceList : 1
+Webpacker::Instance : 1
+Webpacker::Configuration : 1
+ActiveRecord::ExplainSubscriber : 1
+ActionDispatch::RemoteIp : 1
+#<Class:0x00007fef408a7910> : 1
+Spring::Watcher::Listen : 1
+SassC::Rails::ScssTemplate : 1
+ARGF.class : 1
+Random : 1
+SystemStackError : 1
+NoMemoryError : 1
+RubyVM : 1
+IOError : 1
+ThreadGroup : 1
+Complex : 1
+Sprockets::Manifest : 1
+ActiveRecord::Type::AdapterSpecificRegistry : 1
+Puma::ThreadPool : 1
+Puma::Server : 1
+URI::RFC3986_Parser : 1
+Sprockets::Rails::QuietAssets : 1
+ActiveModel::Type::Value : 1
+Bundler::Settings : 1
+Bundler::Settings::Path : 1
+Bundler::FeatureFlag : 1
+Bundler::RubygemsIntegration::MoreFuture : 1
+ActiveSupport::Concurrency::ShareLock : 1
+ActiveSupport::Dependencies::Interlock : 1
+Bootsnap::LoadPathCache::LoadedFeaturesIndex : 1
+ActiveSupport::Dependencies::WatchStack : 1
+Rails::Rack::Logger : 1
+Rack::MiniProfiler::GCProfiler : 1
+ActiveModel::AttributeSet::Builder : 1
+ActionDispatch::ShowExceptions : 1
+Fiddle::Pointer : 1
+WebConsole::Middleware : 1
+ActiveSupport::Dependencies::ClassCache : 1
+ActionDispatch::DebugExceptions : 1
+ActionController::LogSubscriber : 1
+Psych::Handler::DumperOptions : 1
+Concurrent::ImmediateExecutor : 1
+Concurrent::AtomicReference : 1
+ActionMailbox::Engine : 1
+ActiveRecord::MigrationContext : 1
+ActiveRecord::MigrationProxy : 1
+ActionDispatch::ActionableExceptions : 1
+ActionDispatch::Reloader : 1
+StringScanner : 1
+ActionDispatch::Callbacks : 1
+ActiveRecord::Migration::CheckPending : 1
+ActionDispatch::Cookies : 1
+ActionDispatch::Session::CookieStore : 1
+ActionDispatch::ContentSecurityPolicy::Middleware : 1
+Puma::NullIO : 1
+ActiveSupport::Notifications::Fanout : 1
+StringIO : 1
+Puma::PluginLoader : 1
+Rack::ConditionalGet : 1
+Rack::ETag : 1
+Puma::UserFileDefaultOptions : 1
+Rack::TempfileReaper : 1
+Puma::Configuration : 1
+Puma::Binder : 1
+ActiveModel::Type::Registry : 1
+SassC::Rails::SassTemplate : 1
+Sprockets::Cache::MemoryStore : 1
+Sprockets::Cache::GetWrapper : 1
+Sprockets::Cache : 1
+Sprockets::Cache::FileStore : 1
+GlobalID::Verifier : 1
+ActiveSupport::Railtie : 1
+ActiveSupport::CachingKeyGenerator : 1
+I18n::Railtie : 1
+Errno::EPIPE : 1
+Puma::ConnectionError : 1
+ActionDispatch::Railtie : 1
+#<Class:0x00007fef45256480> : 1
+#<Class:0x00007fef4525e590> : 1
+Nokogiri::VersionInfo : 1
+ActiveStorage::Engine : 1
+OptionParser::List : 1
+ActiveSupport::KeyGenerator : 1
+ActiveSupport::FileUpdateChecker : 1
+OptionParser::CompletingHash : 1
+Puma::Launcher : 1
+Puma::Configuration::ConfigMiddleware : 1
+Rails::Command::ServerCommand : 1
+ActiveRecord::ConnectionAdapters::ConnectionHandler : 1
+Rack::QueryParser::Params : 1
+ActionCable::Server::Configuration : 1
+Thor::Argument : 1
+ActionDispatch::Journey::Router::Utils::UriEncoder : 1
+ActionCable::Server::Base : 1
+Puma::Single : 1
+Rails::Server : 1
+Thor::CoreExt::HashWithIndifferentAccess : 1
+Thor::Shell::Color : 1
+ActionDispatch::Journey::GTG::Simulator : 1
+ActionDispatch::Routing::Mapper : 1
+#<Class:0x00007fef4a0c7308> : 1
+ActiveRecord::ConnectionAdapters::NullPool : 1
+ActiveRecord::DatabaseConfigurations : 1
+#<Class:0x00007fef4a14db88> : 1
+NIO::Monitor : 1
+ActiveRecord::Relation::FromClause : 1
+ActionDispatch::Journey::Visitors::Dot : 1
+ActionDispatch::Journey::Visitors::String : 1
+Rack::MiniProfiler::TimerStruct::Page : 1
+ActionDispatch::Journey::Visitors::Each : 1
+Rack::MiniProfiler::Context : 1
+NIO::Selector : 1
+Puma::Reactor : 1
+WebConsole::Request::GetSecureIp : 1
+Mime::Mimes : 1
+ActionMailer::Railtie : 1
+TZInfo::DataTimezone : 1
+TZInfo::TimezoneOffset : 1
+TZInfo::ZoneinfoTimezoneInfo : 1
+#<Class:0x00007fef453a91e8> : 1
+ActionView::Railtie : 1
+ActiveRecord::Railtie : 1
+ActionController::Railtie : 1
+App::Application : 1
+Webpacker::Compiler : 1
+Webpacker::DevServer : 1
+Concurrent::FixedThreadPool : 1
+ActiveRecord::LogSubscriber : 1
+WebConsole::Railtie : 1
+Concurrent::RubyThreadPoolExecutor::Worker : 1
+ActionView::LogSubscriber : 1
+Jbuilder::Railtie : 1
+ActiveSupport::StringInquirer : 1
+Sprockets::Railtie::OrderedOptions : 1
+Sprockets::Railtie : 1
+Rails::Html::SafeListSanitizer : 1
+Rails::Html::PermitScrubber : 1
+#<Class:0x00007feedfb60730> : 1
+PG::TypeMapAllStrings : 1
+I18n::Backend::Simple : 1
+ActionView::Template::Handlers::Builder : 1
+ActionView::Template::Handlers::ERB : 1
+ActionView::Template::Handlers::Html : 1
+ActionView::Template::Handlers::Raw : 1
+WebConsole::Permissions : 1
+Rails::Engine::Railties : 1
+Rack::MiniProfiler::Config : 1
+PG::TextDecoder::Inet : 1
+Rails::Application::Configuration : 1
+#<Class:0x00007fef454f6c80> : 1
+Rails::Application::Configuration::Custom : 1
+PG::TextEncoder::Inet : 1
+PG::TextDecoder::JSON : 1
+PG::TextEncoder::JSON : 1
+Turbolinks::Engine : 1
+ActiveSupport::BacktraceCleaner : 1
+PG::TextDecoder::Date : 1
+#<Class:0x00007fef45527650> : 1
+ActionView::CacheExpiry : 1
+Jbuilder::Blank : 1
+PG::TextEncoder::Date : 1
+Webpacker::Engine : 1
+PG::TextEncoder::TimestampWithTimeZone : 1
+PG::TextDecoder::TimestampLocal : 1
+PG::TextEncoder::TimestampWithoutTimeZone : 1
+PG::TextEncoder::Float : 1
+TZInfo::ZoneinfoDataSource : 1
+ActiveSupport::Cache::NullStore : 1
+ActionView::CacheExpiry::Executor : 1
+FFI::Pointer : 1
+FFI::DynamicLibrary : 1
+Webpacker::Manifest : 1
+Webpacker::Commands : 1
+Process::Status : 1
+ActiveRecord::Relation::WhereClauseFactory : 1
+Puma::PluginRegistry : 1
+ActiveSupport::Cache::Strategy::LocalCache::Middleware : 1
+Rails::TestUnitRailtie : 1
+PG::TextDecoder::Bytea : 1
+Rack::QueryParser : 1
+Rack::MiniProfilerRails::Railtie : 1
+ActionText::Engine : 1
+ActiveModel::Railtie : 1
+ActiveSupport::Deprecation : 1
+ActiveRecord::Migration : 1
+SassC::Rails::Railtie : 1
+Mail::Ruby19::BestEffortCharsetEncoder : 1
+Arel::Nodes::BindParam : 1
+Arel::Nodes::Equality : 1
+SassC::Rails::Importer::CSSExtension : 1
+SassC::Rails::Importer::CssScssExtension : 1
+SassC::Rails::Importer::CssSassExtension : 1
+SassC::Rails::Importer::SassERBExtension : 1
+Rails::Application::RoutesReloader : 1
+ActionCable::Engine : 1
+PG::TextDecoder::String : 1
+Tilt::Mapping : 1
+ObjectSpace::WeakMap : 1
+PG::TextEncoder::String : 1
+PG::TextDecoder::Numeric : 1
+PG::TextEncoder::Numeric : 1
+PG::BinaryDecoder::TimestampUtcToLocal : 1
+ActionDispatch::Routing::RouteSet::Config : 1
+Mime::AllType : 1
+PG::BinaryDecoder::TimestampUtc : 1
+PG::BinaryDecoder::Boolean : 1
+PG::BinaryEncoder::Boolean : 1
+PG::BinaryDecoder::Bytea : 1
+Bundler::Definition : 1
+#<Class:0x00007fef44092f78> : 1
+DidYouMean::PlainFormatter : 1
+ActionDispatch::MiddlewareStack : 1
+PG::BinaryEncoder::Bytea : 1
+ActiveRecord::ConnectionAdapters::NullTransaction : 1
+PG::BinaryDecoder::String : 1
+PG::BinaryEncoder::String : 1
+PG::BinaryEncoder::Int8 : 1
+PG::BinaryEncoder::Int4 : 1
+ActiveSupport::TimeZone : 1
+PG::BinaryEncoder::Int2 : 1
+
+
+String stats:
+------------
+381555 : (
+254379 : )
+31630 : {
+413 :
+192 : /
+136 : ,
+117 : b
+104 : app
+100 : /Users/jsrn/Code/profiling-talk/app/
+100 : /Users/jsrn/Code/profiling-talk/app/app/views
+97 : puppies
+96 : /Users/jsrn/Code/profiling-talk/app/app/
+96 : /Users/jsrn/Code/profiling-talk/
+79 : array_in
+72 : /Users/jsrn/Code/
+72 : /Users/jsrn/
+72 : /Users/
+64 : views
+64 : application
+54 : activesupport (6.0.3.2) lib/active_support/concurrency/load_interlock_aware_monitor.rb:25:in `block in synchronize'
+54 : packs
+54 : public
+54 : activesupport (6.0.3.2) lib/active_support/log_subscriber.rb:107:in `finish'
+54 : activerecord (6.0.3.2) lib/active_record/relation.rb:839:in `skip_query_cache_if_necessary'
+54 : activesupport (6.0.3.2) lib/active_support/subscriber.rb:145:in `finish'
+54 : activerecord (6.0.3.2) lib/active_record/log_subscriber.rb:45:in `sql'
+54 : activerecord (6.0.3.2) lib/active_record/log_subscriber.rb:100:in `debug'
+54 : activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/query_cache.rb:105:in `select_all'
+54 : activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/query_cache.rb:113:in `cache_sql'
+54 : activesupport (6.0.3.2) lib/active_support/concurrency/load_interlock_aware_monitor.rb:21:in `synchronize'
+54 : activesupport (6.0.3.2) lib/active_support/concurrency/load_interlock_aware_monitor.rb:21:in `handle_interrupt'
+54 : activesupport (6.0.3.2) lib/active_support/notifications/fanout.rb:62:in `each'
+54 : activesupport (6.0.3.2) lib/active_support/concurrency/load_interlock_aware_monitor.rb:25:in `handle_interrupt'
+54 : activesupport (6.0.3.2) lib/active_support/concurrency/load_interlock_aware_monitor.rb:26:in `block (2 levels) in synchronize'
+54 : activesupport (6.0.3.2) lib/active_support/notifications/fanout.rb:160:in `finish'
+54 : activesupport (6.0.3.2) lib/active_support/notifications/fanout.rb:62:in `block in finish'
+54 : activesupport (6.0.3.2) lib/active_support/notifications/instrumenter.rb:30:in `instrument'
+54 : activesupport (6.0.3.2) lib/active_support/notifications/instrumenter.rb:45:in `finish_with_state'
+54 : activesupport (6.0.3.2) lib/active_support/notifications/fanout.rb:62:in `finish'
+48 : /Users/jsrn/Code/profiling-talk/app/app/assets/stylesheets/application
+48 : /Users/jsrn/Code/profiling-talk/app/app/assets/config/application
+48 : /Users/jsrn/Code/profiling-talk/app/app/assets/images/application
+48 : manifest.json
+46 : /Users/jsrn/Code/profiling-talk/app
+45 : /Users/jsrn/Code/profiling-talk/app/app/views/
+45 : text
+41 : jsrn
+40 : profiling-talk
+40 : Code
+40 : Users
+38 : /Users/jsrn/Code/profiling-talk/app/app/assets/stylesheets/application.css
+36 : activerecord (6.0.3.2) lib/active_record/relation/calculations.rb:298:in `execute_simple_calculation'
+36 : activerecord (6.0.3.2) lib/active_record/relation/calculations.rb:49:in `count'
+36 : activerecord (6.0.3.2) lib/active_record/relation/calculations.rb:252:in `perform_calculation'
+36 : /a
+36 : activerecord (6.0.3.2) lib/active_record/relation/calculations.rb:298:in `block in execute_simple_calculation'
+36 : activerecord (6.0.3.2) lib/active_record/relation/calculations.rb:142:in `calculate'
+36 : css
+35 : 1
+34 : ::1
+31 : /Users/jsrn/Code/profiling-talk/app/app/views/puppies/rack_mini_profiler.html.erb
+30 : activerecord (6.0.3.2) lib/active_record/querying.rb:21:in `count'
+30 : /Users/jsrn/Code/profiling-talk/app/app/views/puppies
+30 : /Users/jsrn/Code/profiling-talk/app/public/packs
+30 : activesupport (6.0.3.2) lib/active_support/notifications.rb:180:in `instrument'
+30 : activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/query_cache.rb:116:in `block in cache_sql'
+30 : /Users/jsrn/Code/profiling-talk/app/public
+29 : puppies/rack_mini_profiler.html.erb
+28 : /Users/jsrn/Code/profiling-talk/app/app/views/puppies/
+28 : last-compilation-digest-development
+26 : puppies/
+26 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/executor.rb:14:in `call'
+26 : application.css
+24 : activerecord (6.0.3.2) lib/active_record/connection_adapters/postgresql_adapter.rb:673:in `exec_no_cache'
+24 : activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/query_cache.rb:105:in `block in select_all'
+24 : activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract_adapter.rb:712:in `log'
+24 : /Users/jsrn/Code/profiling-talk/app/public/packs/manifest.json
+24 : text/css
+24 : activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/query_cache.rb:122:in `block in cache_sql'
+24 : activerecord (6.0.3.2) lib/active_record/connection_adapters/postgresql/database_statements.rb:98:in `exec_query'
+23 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/notifications.rb:180:in `instrument'
+22 : /packs/js/application-9afcbb5693aa87623e69.js
+22 : count
+20 : tmp/cache/webpacker
+20 : rack_mini_profiler.html.erb
+20 : a
+20 : /Users/jsrn/Code/profiling-talk/app/tmp/cache/webpacker
+20 : /Users/jsrn/Code/profiling-talk/app/app/assets/stylesheets
+19 : /Users/jsrn/Code/profiling-talk/app/app/views/puppies/index.html.erb
+19 : puppies/_pup_report.html.erb
+19 : /Users/jsrn/Code/profiling-talk/app/app/views/puppies/_pup_report.html.erb
+19 : /Users/jsrn/Code/profiling-talk/app/app/views/puppies/the_puts_classic.html.erb
+19 : /Users/jsrn/Code/profiling-talk/app/app/views/puppies/ruby_prof.html.erb
+19 : /Users/jsrn/Code/profiling-talk/app/app/views/puppies/benchmark.html.erb
+18 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/notifications/instrumenter.rb:45:in `finish_with_state'
+18 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/notifications/instrumenter.rb:30:in `instrument'
+18 : rb
+18 : activerecord (6.0.3.2) lib/active_record/connection_adapters/postgresql_adapter.rb:654:in `execute_and_clear'
+18 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/log_subscriber.rb:107:in `finish'
+18 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/notifications/fanout.rb:160:in `finish'
+18 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/concurrency/load_interlock_aware_monitor.rb:25:in `block in synchronize'
+18 : /Users/jsrn/Code/profiling-talk/app/app/assets/images
+18 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/notifications/fanout.rb:62:in `block in finish'
+18 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/concurrency/load_interlock_aware_monitor.rb:21:in `handle_interrupt'
+18 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/concurrency/load_interlock_aware_monitor.rb:21:in `synchronize'
+18 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:113:in `cache_sql'
+18 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:105:in `select_all'
+18 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/notifications/fanout.rb:62:in `each'
+18 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/subscriber.rb:145:in `finish'
+18 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/log_subscriber.rb:45:in `sql'
+18 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/concurrency/load_interlock_aware_monitor.rb:26:in `block (2 levels) in synchronize'
+18 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/log_subscriber.rb:100:in `debug'
+18 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation.rb:839:in `skip_query_cache_if_necessary'
+18 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/concurrency/load_interlock_aware_monitor.rb:25:in `handle_interrupt'
+18 : /Users/jsrn/Code/profiling-talk/app/app/assets/config
+18 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/notifications/fanout.rb:62:in `finish'
+16 : webpacker
+16 : <link rel="stylesheet" media="all" href="/assets/application.debug-469043b11c1c21e2467f72921c520c48271ea742e4a22403e479cf59d7f75d5f.css" data-turbolinks-track="reload" />
+16 : tmp/
+16 : Puppy
+16 : app/javascript
+16 : /Users/jsrn/Code/profiling-talk/app/tmp/cache/webpacker/last-compilation-digest-development
+16 : tmp/cache/
+16 : reload
+16 : file-digest:///Users/jsrn/Code/profiling-talk/app/app/assets/stylesheets/application.css
+16 : .
+16 : <script src="/packs/js/application-9afcbb5693aa87623e69.js" data-turbolinks-track="reload"></script>
+15 : active_record
+15 : sql
+15 : oid
+15 : puppies/index.html.erb
+15 : _pup_report.html.erb
+14 : *
+14 : .css
+14 : /assets/application.debug-469043b11c1c21e2467f72921c520c48271ea742e4a22403e479cf59d7f75d5f.css
+14 : yarn.lock
+14 : package.json
+14 : all
+14 : /Users/jsrn/Code/profiling-talk/app/app/javascript
+14 : dev_server
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/rack/logger.rb:26:in `call'
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:260:in `call'
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/cookies.rb:648:in `call'
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/migration.rb:567:in `call'
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/tagged_logging.rb:80:in `tagged'
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/tagged_logging.rb:28:in `tagged'
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/tagged_logging.rb:80:in `block in tagged'
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/rack/logger.rb:26:in `block in call'
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/static.rb:126:in `call'
+13 : the_puts_classic.html.erb
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/rack/logger.rb:37:in `call_app'
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/routing/route_set.rb:834:in `call'
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:266:in `context'
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+13 : index.html.erb
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:101:in `run_callbacks'
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/server.rb:328:in `block in run'
+13 : ruby_prof.html.erb
+13 : puppies/ruby_prof.html.erb
+13 : puppies/benchmark.html.erb
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/web-console-4.0.3/lib/web_console/middleware.rb:17:in `call'
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/web-console-4.0.3/lib/web_console/middleware.rb:17:in `catch'
+13 : puppies/the_puts_classic.html.erb
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_controller/metal.rb:190:in `dispatch'
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/rendering.rb:39:in `process'
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/abstract_controller/base.rb:136:in `process'
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/server.rb:472:in `process_client'
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/journey/router.rb:32:in `serve'
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/server.rb:713:in `handle_request'
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+13 : benchmark.html.erb
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/configuration.rb:228:in `call'
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/engine.rb:527:in `call'
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-proxy-0.6.5/lib/rack/proxy.rb:57:in `call'
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/webpacker-4.2.2/lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_controller/metal.rb:254:in `dispatch'
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/journey/router.rb:32:in `each'
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/routing/route_set.rb:33:in `serve'
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-2.2.3/lib/rack/head.rb:12:in `call'
+13 : ^\.\.?($|/)
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/abstract_controller/base.rb:195:in `process_action'
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_controller/metal/rendering.rb:30:in `process_action'
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-2.2.3/lib/rack/conditional_get.rb:27:in `call'
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/notifications.rb:180:in `block in instrument'
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/web-console-4.0.3/lib/web_console/middleware.rb:132:in `call_app'
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-2.2.3/lib/rack/etag.rb:27:in `call'
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/journey/router.rb:49:in `block in serve'
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:135:in `run_callbacks'
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/abstract_controller/callbacks.rb:41:in `process_action'
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-2.2.3/lib/rack/tempfile_reaper.rb:15:in `call'
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_controller/metal/rescue.rb:22:in `process_action'
+13 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/web-console-4.0.3/lib/web_console/middleware.rb:28:in `block in call'
+12 : debug
+12 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/calculations.rb:252:in `perform_calculation'
+12 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/calculations.rb:298:in `execute_simple_calculation'
+12 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/calculations.rb:298:in `block in execute_simple_calculation'
+12 : activerecord (6.0.3.2) lib/active_record/relation/calculations.rb:193:in `pluck'
+12 : activerecord (6.0.3.2) lib/active_record/querying.rb:21:in `pluck'
+12 :   [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "puppies"[0m
+12 : /Users/jsrn/Code/profiling-talk/app/tmp/miniprofiler/mp_views_::1
+12 : Puppies
+12 : activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/database_statements.rb:493:in `select_prepared'
+12 : activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/database_statements.rb:70:in `select_all'
+12 : activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/database_statements.rb:489:in `select'
+12 : name
+12 : activerecord (6.0.3.2) lib/active_record/relation/calculations.rb:193:in `block in pluck'
+12 : application.debug.css
+12 : activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/database_statements.rb:68:in `select_all'
+12 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/calculations.rb:142:in `calculate'
+12 : /Users/jsrn/Code/profiling-talk/app/public/
+12 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/calculations.rb:49:in `count'
+11 : /puppies/rack_mini_profiler
+11 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-mini-profiler-2.0.2/lib/mini_profiler/profiler.rb:229:in `call'
+11 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-mini-profiler-2.0.2/lib/mini_profiler/gc_profiler.rb:104:in `profile_gc'
+10 : 9
+10 : name=
+10 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/querying.rb:21:in `count'
+10 : type=text/css
+10 : oid=
+10 : file://
+10 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:116:in `block in cache_sql'
+10 : layouts/application
+10 : type=text/css&pipeline=debug
+10 : manifest.js
+10 : type
+9 : password
+9 : 2
+9 : 7
+9 : /Users/jsrn/Code/profiling-talk/app/app/controllers/puppies_controller.rb:33:in `rack_mini_profiler'
+9 : 0
+8 : file-digest:///Users/jsrn/Code/profiling-talk/app/app/assets/stylesheets
+8 : cache
+8 : 6
+8 : <table>
+  <thead>
+    <tr>
+      <th>Count</th>
+      <th>Average Age</th>
+      <th>Percentage Microchipped</th>
+      <th>Ears Spot Checked</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        1000000
+      </td>
+      <td>
+        7
+      </td>
+      <td>
+        49.9%
+      </td>
+      <td>
+        Yes
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h1>Rack Mini Profiler</h1>
+
+<h2>The Flame Graph</h2>
+
+<iframe src="/puppies/rack_mini_profiler?pp=flamegraph" style="height: 600px;"></iframe>
+
+<h2>Analyse Memory</h2>
+
+<iframe src="/reports/analyse-memory.txt" style="height: 600px;"></iframe>
+
+<h2>Profile Memory</h2>
+
+<iframe src="/reports/profile-memory.txt" style="height: 600px;"></iframe>
+8 : app/
+8 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:105:in `block in select_all'
+8 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:122:in `block in cache_sql'
+8 : file-digest:///Users/jsrn/Code/profiling-talk/app/app/assets/config
+8 : file-digest:///Users/jsrn/Code/profiling-talk/app/app/assets/images
+8 :   [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "puppies"[0m
+
+8 : config/webpack/test.js
+8 : file-digest:///Users/jsrn/Code/profiling-talk/app/app/assets/config/application
+8 : pipeline
+8 : app/views/puppies/rack_mini_profiler.html.erb
+8 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract_adapter.rb:712:in `log'
+8 : utf-8
+8 : javascript
+8 : Û����������
+8 : tmp
+8 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/postgresql_adapter.rb:673:in `exec_no_cache'
+8 : app/models/kennel.rb:3:in `average_age'
+8 : app/models/kennel.rb:7:in `percentage_chipped'
+8 : Û�����������������������
+8 : tmp/restart.txt
+8 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/postgresql/database_statements.rb:98:in `exec_query'
+8 :  within layouts/application
+8 : file-digest:///Users/jsrn/Code/profiling-talk/app/app/assets/images/application
+8 : /Users/jsrn/Code/profiling-talk/app/tmp/cache/
+8 :   Rendering puppies/rack_mini_profiler.html.erb within layouts/application
+8 : file-digest:///Users/jsrn/Code/profiling-talk/app/app/assets/stylesheets/application
+8 : app/models/kennel.rb:25:in `ten_percent_of_puppies'
+7 : Billy Walker
+7 : Willie Legros
+7 : pp
+7 : PuppiesController
+7 : Lorenzo Bahringer
+7 : ..
+7 : Users/jsrn/Code/profiling-talk/app/app/views
+7 : set-cookie
+7 : Val Lehner
+6 : Aubrey Haag
+6 : COUNT(
+6 : SELECT COUNT(*) FROM "puppies"
+6 : Kris Cassin
+6 : Casey Bosco
+6 :   â†³ app/models/kennel.rb:3:in `average_age'
+6 : localhost
+6 : Jonah Bosco
+6 : app/assets/stylesheets/application.css
+6 : Robin Lind
+6 : development
+6 : environment-version
+6 : Gerald Vandervort
+6 : rails-env
+6 : 4
+6 : Steven Kuphal
+6 : environment-paths
+6 : application.js
+6 : Jewell Schuster
+6 : Garfield Turner
+6 : Alec Senger
+6 : Michael Kovacek
+6 : Corey Schimmel
+6 : Shayne Pouros
+6 : Timothy Macejkovic
+6 : public_output_path
+6 : rack_mini_profiler
+6 : public_root_path
+6 : pipeline=debug
+6 : Buster Kuphal
+6 : Weldon Kreiger
+6 : stylesheet
+6 : file:///Users/jsrn/Code/profiling-talk/app/app/assets/stylesheets/application.css?type=text/css&pipeline=debug
+6 : /Users/jsrn/Code/profiling-talk/app/app/models/kennel.rb:7:in `percentage_chipped'
+6 : Carl Altenwerth
+6 : /Users/jsrn/Code/profiling-talk/app/app/models/kennel.rb:3:in `average_age'
+6 : pp=profile-gc
+6 : Brady Ernser
+6 : Mark Mitchell
+6 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/postgresql_adapter.rb:654:in `execute_and_clear'
+6 : 5
+6 :   â†³ app/models/kennel.rb:25:in `ten_percent_of_puppies'
+6 : /Users/jsrn/Code/profiling-talk/app/app/models/kennel.rb:25:in `ten_percent_of_puppies'
+6 : activerecord (6.0.3.2) lib/active_record/relation/delegation.rb:87:in `sample'
+6 : Jessie Kozey
+6 : Milan Veum
+6 : activerecord (6.0.3.2) lib/active_record/relation.rb:250:in `records'
+6 : activerecord (6.0.3.2) lib/active_record/relation.rb:626:in `load'
+6 : activerecord (6.0.3.2) lib/active_record/relation.rb:808:in `exec_queries'
+6 : activerecord (6.0.3.2) lib/active_record/relation.rb:821:in `block in exec_queries'
+6 : activerecord (6.0.3.2) lib/active_record/querying.rb:46:in `find_by_sql'
+6 : application.debug
+6 : text/html
+6 : Eddie Durgan
+6 :   â†³ app/models/kennel.rb:7:in `percentage_chipped'
+6 : activerecord (6.0.3.2) lib/active_record/connection_adapters/postgresql_adapter.rb:656:in `execute_and_clear'
+6 : r
+6 : range_in
+6 : Richard Monahan
+6 : Joey Littel
+6 : Rickey Schmidt
+5 : Burton Kuhlman
+5 : Leigh Mertz
+5 : Darius Okuneva
+5 : Salvatore Hilll
+5 : Moses Windler
+5 : Ignacio Dibbert
+5 : Ike Monahan
+5 : Tim Rutherford
+5 : Cleo Halvorson
+5 : Augustus Deckow
+5 : Willie Abshire
+5 : Chi Gutmann
+5 : Alfred Murazik
+5 : Blair Nicolas
+5 : Jude Roberts
+5 : Valentine Waelchi
+5 : Justin Ritchie
+5 : Wally Crona
+5 : Richie Mills
+5 : Fletcher Pagac
+5 : Keith Hettinger
+5 : Werner Braun
+5 : Harold Cummings
+5 : Justin Breitenberg
+5 : Lucretia Hauck
+5 : Jewell Harris
+5 : Kristofer Mann
+5 : Christopher Carter
+5 : Man Bosco
+5 : Lemuel Gibson
+5 : Val Keebler
+5 : Masako Johns
+5 : Jeramy Metz
+5 : Murray Predovic
+5 : Roosevelt Hand
+5 : Dee Powlowski
+5 : Ezra Bashirian
+5 : Kendall Haley
+5 : Sam Rosenbaum
+5 : Cody Rowe
+5 : Harrison Mosciski
+5 : Ricky Rogahn
+5 : Foster Gibson
+5 : Reinaldo Schinner
+5 : Roy Jerde
+5 : Bradley Zieme
+5 : Kareem Gottlieb
+5 : Lindsay Cremin
+5 : Courtney Littel
+5 : Aldo Erdman
+5 : Armando Beer
+5 : Burton Herzog
+5 : Newton Rau
+5 : Markus Mohr
+5 : Tyrone Prosacco
+5 : Grant Feil
+5 : Everette Jenkins
+5 : Dewey Nikolaus
+5 : Augustine Pollich
+5 : Carmen Schmeler
+5 : Dalton Deckow
+5 : Brian Sawayn
+5 : Matt Langworth
+5 : Thanh Hartmann
+5 : Jesus Stehr
+5 : Luciano Emmerich
+5 : Stephen Johnson
+5 : Gerry Kuhlman
+5 : flags
+5 : Scott Rowe
+5 : Darren Herman
+5 : Bryon Kunze
+5 : Courtney Thiel
+5 : Dallas Bernier
+5 : Joan Schuppe
+5 : Vince Schmitt
+5 : Josue Olson
+5 : Adolfo Kirlin
+5 : Deshawn Murphy
+5 : Darrin Steuber
+5 : Mauro Lind
+5 : Eusebio Wisoky
+5 : Eusebio Wiza
+5 : Harvey Schneider
+5 : Dana Kling
+5 : Abram Lynch
+5 : Mauro Weissnat
+5 : Jay Rippin
+5 : Winford Heller
+5 : Sebastian Christiansen
+5 : Scott Shanahan
+5 : Blake Kshlerin
+5 : Thaddeus Bednar
+5 : Kenneth Treutel
+5 : Gregg Grant
+5 : Colby Swaniawski
+5 : Mimi Halvorson
+5 : text/html; charset=utf-8
+5 : Ronny Conroy
+5 : Son Windler
+5 : Jonah Douglas
+5 : Roger Fay
+5 : Mitchell Larson
+5 : Kirk Bogan
+5 : Buster Bayer
+5 : Oscar Morar
+5 : Keith Emard
+5 : Rosario Hauck
+5 : Marcus Mertz
+5 : Kent Brekke
+5 : Dominique Langosh
+5 : Darryl Oberbrunner
+5 : Deon Bins
+5 : Nelson Johnson
+5 : Jamey Thiel
+5 : Jody Upton
+5 : Otis Schmidt
+5 : Alfredo Gulgowski
+5 : Jessie Carter
+5 : Trinidad Dare
+5 : Andy Champlin
+5 : Mike Crona
+5 : Omar Feil
+5 : Brady Cruickshank
+5 : Austin Tremblay
+5 : Leigh Emmerich
+5 : Walker Wunsch
+5 : Dante Nicolas
+5 : Xavier Walsh
+5 : Emerson Raynor
+5 : Colby Grimes
+5 : Shelby Nitzsche
+5 : Mary Reinger
+5 : Jan Kris
+5 : Sang Boyer
+5 : Sandy Bayer
+5 : Sonny Bins
+5 : Ty Champlin
+5 : Jewel Runte
+5 : Wyatt Wilderman
+5 : Stacy Tromp
+5 : Napoleon Cremin
+5 : Danilo Bogisich
+5 : Rosario Lebsack
+5 : Sung Boyer
+5 : Von Kunze
+5 : Angelo Dibbert
+5 : Alexis Marvin
+5 : Carmine Nitzsche
+5 : Eduardo Beier
+5 : Allen Conroy
+5 : Mario Lemke
+5 : Arlen Schiller
+5 : Lucas Kautzer
+5 : Gino Cummings
+5 : Mary Goyette
+5 : Ike Price
+5 : Robby Ward
+5 : Frances Haley
+5 : Matthew Gibson
+5 : Maurice Denesik
+5 : Pete O'Connell
+5 : Dale Purdy
+5 : Perry Murazik
+5 : Erwin Langosh
+5 : x-runtime
+5 : Joel Howe
+5 : Dan Renner
+5 : Erich Altenwerth
+5 : Bobbie Christiansen
+5 : Bobbie Konopelski
+5 : Tracey Toy
+5 : Angelo Klein
+5 : Darius Cassin
+5 : Norberto Stracke
+5 : Milford Hilll
+5 : Eugene Thiel
+5 : Stan Carter
+5 : Virgilio Adams
+5 : Jermaine Lockman
+5 : Britt Batz
+5 : Billy Spinka
+5 : Ronnie Bernhard
+5 : Yong Beer
+5 : Carol Kshlerin
+5 : Kenton Reinger
+5 : Francis Lang
+5 : Lavern Blick
+5 : Norbert Renner
+5 : Carter Wisoky
+5 : Robert Cummings
+5 : Nathanial Mohr
+5 : Troy Kessler
+5 : Theron MacGyver
+5 : Major O'Connell
+5 : Greg Roob
+5 : Aron White
+5 : Brooks Schaefer
+5 : Von Purdy
+5 : Shawn Koch
+5 : Jon Keeling
+5 : Chris Pollich
+5 : Rolando Morar
+5 : Gregorio Wyman
+5 : Kent Kling
+5 : George Runolfsdottir
+5 : Lupe Monahan
+5 : Bart Koepp
+5 : Lynwood Schmitt
+5 : Melvin Deckow
+5 : 0.0
+5 : Michael D'Amore
+5 :  (0.0ms)
+5 : Carrol Dibbert
+5 : domain_in
+5 : d
+5 : Deon Ankunding
+5 : Jon Hansen
+5 : Marco Dickens
+5 : CACHE  (0.0ms)
+5 : Ashley Ebert
+5 : Bernardo Nikolaus
+5 : [1m[35mCACHE  (0.0ms)[0m
+5 : Colby Streich
+5 : [1m[34mSELECT COUNT(*) FROM "puppies"[0m
+5 : Louis Schoen
+5 : Felton Torp
+5 : Dustin Waelchi
+5 : Kevin Wiegand
+5 : Lester Torphy
+5 : Rene Haag
+5 : Omer Renner
+5 : Maurice Brekke
+5 : Jame Brakus
+5 : Garland Bradtke
+5 : Ben Bartoletti
+5 : Melvin Braun
+5 : Rack::MiniProfiler::TimerStruct::Sql
+5 : Derrick Leuschke
+5 : ActiveSupport::SafeBuffer
+5 : Ahmed Murphy
+5 : James Strosin
+5 : Darnell Koepp
+5 : Steven Ankunding
+5 : Sebastian Quitzon
+5 : Zachary Wilkinson
+5 : Carroll Heaney
+5 : Marlin Bode
+5 : Curtis Adams
+5 : Anton Hessel
+5 : Donald Abbott
+5 : Isaias O'Hara
+5 : Merle Ratke
+5 : Johnie Jones
+5 : Timothy Kreiger
+5 : Milo Greenholt
+5 : Nick Durgan
+5 : Alfredo Lebsack
+5 : Karl Jerde
+5 : Anderson Sauer
+5 : Johnnie Sawayn
+5 : John Powlowski
+5 : Orville Smith
+5 : Anderson Schneider
+5 : Pat Ziemann
+5 : Cecil Satterfield
+5 : Tommy Mayer
+5 : Lucius Lesch
+5 : LISTEN_GEM_DISABLE_HASHING
+5 : Manual Dach
+5 : Jordan Howell
+5 : Leonel Cassin
+5 : Cary Hammes
+5 : Dallas Kautzer
+5 : Jackie Stokes
+5 : Eugenio Stamm
+5 : Johnie Krajcik
+5 : Richie Stehr
+5 : Angel Donnelly
+5 : Brady Hammes
+5 : Leonel Lubowitz
+5 : Carl Hoeger
+4 : Mohammad Kuphal
+4 : Courtney Reynolds
+4 : Angelo Bradtke
+4 : Shirley Moore
+4 : Santiago Morar
+4 : Maurice Mayert
+4 : Jamie Crona
+4 : Max Stokes
+4 : Chas Flatley
+4 : Cedrick Wisoky
+4 : Hong Heathcote
+4 : Anton Volkman
+4 : Sam Marquardt
+4 : Donny Davis
+4 : Thomas Kunze
+4 : Jarod Mohr
+4 : Randall Mayert
+4 : Jan Sawayn
+4 : Alfonzo Effertz
+4 : Stacy Treutel
+4 : Tyrell Block
+4 : Norman Collier
+4 : Don Schaden
+4 : Donovan Wintheiser
+4 : Mose Marquardt
+4 : Tyron Stracke
+4 : Jerald Kulas
+4 : Robbie Rolfson
+4 : Darell Mayert
+4 : Dante Larkin
+4 : Lester Breitenberg
+4 : Clint Kovacek
+4 : Dino Schulist
+4 : Rosario Von
+4 : Wilbur Stiedemann
+4 : Johnathon Reichert
+4 : Isreal Lind
+4 : Bennie Lesch
+4 : Waldo DuBuque
+4 : Rob Blanda
+4 : Philip Koelpin
+4 : Chad Jones
+4 : Felton Renner
+4 : Vern Effertz
+4 : Antoine Halvorson
+4 : Mickey Klein
+4 : Burton Wintheiser
+4 : Waldo Schaefer
+4 : Hector McLaughlin
+4 : Dusty Gleichner
+4 : Rhett Kihn
+4 : Francesco Strosin
+4 : Refugio Cartwright
+4 : Mauricio Hayes
+4 : Ross Heathcote
+4 : Cesar Weber
+4 : Evan Cartwright
+4 : Jody Russel
+4 : Darrin Stanton
+4 : Clyde Mertz
+4 : Shelby Franecki
+4 : Rolland Prohaska
+4 : George Sawayn
+4 : Carter Crooks
+4 : Hal Robel
+4 : Billy Gerhold
+4 : Monte Auer
+4 : Jacob Swaniawski
+4 : Francisco Emmerich
+4 : Stanton Waelchi
+4 : Marcel Christiansen
+4 : Glenn Okuneva
+4 : Devin Kunde
+4 : Joe Schuster
+4 : Rodrick Braun
+4 : Ellis Wyman
+4 : Thaddeus Ernser
+4 : Malik Harber
+4 : Brent Bergstrom
+4 : Val Rempel
+4 : Leigh Marks
+4 : Jason Leffler
+4 : Nathaniel Jerde
+4 : Charlie Stark
+4 : Dennis Homenick
+4 : Ellsworth Marvin
+4 : Gale King
+4 : Tomas Ferry
+4 : Bradley Mills
+4 : Irwin Reichel
+4 : Marcelino Boyer
+4 : Bertram Mills
+4 : Joe Rath
+4 : Tyler Rath
+4 : Brendan Monahan
+4 : Brain Johnson
+4 : Carroll Schaden
+4 : Scott Bartoletti
+4 : Art Doyle
+4 : Daryl Huel
+4 : Shelby Altenwerth
+4 : Maxwell Gaylord
+4 : Oswaldo Cruickshank
+4 : Dennis Gleason
+4 : Refugia Stracke
+4 : Gary Mertz
+4 : Curtis Koch
+4 : Terrence Toy
+4 : Tobias Greenholt
+4 : Luigi O'Reilly
+4 : Laurence McDermott
+4 : Nita Hackett
+4 : Gary Volkman
+4 : Jose Balistreri
+4 : Cruz Lemke
+4 : Rigoberto Waters
+4 : Rupert Auer
+4 : Marion Rohan
+4 : Moises Hermiston
+4 : Billie Wilkinson
+4 : Michale Kuphal
+4 : Jarvis Bednar
+4 : Victor Hegmann
+4 : Demetrius Streich
+4 : Geraldo Marvin
+4 : Leonardo Gibson
+4 : Lee Buckridge
+4 : Michael Corwin
+4 : Dewitt Mills
+4 : Ethan Donnelly
+4 : Lonny Breitenberg
+4 : Donald Schaefer
+4 : Miquel Dibbert
+4 : Ernesto Morissette
+4 : Alan Medhurst
+4 : Joshua Gusikowski
+4 : Delbert Nitzsche
+4 : Gale Kutch
+4 : Wade O'Keefe
+4 : Richard Fritsch
+4 : Oliver Schroeder
+4 : Napoleon Borer
+4 : Jamison Greenfelder
+4 : Tyler Jacobs
+4 : Burt Sipes
+4 : Clyde Walker
+4 : Ivan Dicki
+4 : Clayton Boyle
+4 : Frederic Bernier
+4 : Woodrow Prosacco
+4 : Elisha Gleichner
+4 : Pasquale Zemlak
+4 : Mickey Steuber
+4 : Royce Beatty
+4 : Miquel Goyette
+4 : Albert Nader
+4 : Landon D'Amore
+4 : Gregg Runolfsdottir
+4 : Dominique Sauer
+4 : Roberto Gaylord
+4 : Lewis Wiegand
+4 : Ali Hammes
+4 : Omer Dooley
+4 : Ozzie Farrell
+4 : Marshall Mraz
+4 : microchipped
+4 : Sidney Grady
+4 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/database_statements.rb:489:in `select'
+4 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/database_statements.rb:70:in `select_all'
+4 : Gail Schmitt
+4 : Alfred Leuschke
+4 :   â†³ app/models/kennel.rb:3:in `average_age'
+
+4 : Myles Considine
+4 : Julio Pouros
+4 : app/controllers/puppies_controller.rb:45:in `puppies!'
+4 : age
+4 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/calculations.rb:193:in `block in pluck'
+4 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/calculations.rb:193:in `pluck'
+4 : /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/querying.rb:21:in `pluck'
+4 : Mark Mraz
+4 : Alexis Davis
+4 : Nicky MacGyver
+4 : app/javascript/**/*{.mjs,.js,.sass,.scss,.css,.module.sass,.module.scss,.module.css,.png,.svg,.gif,.jpeg,.jpg}
+4 : Denny Heathcote
+4 : Alfonso Little
+4 : Gregory Wisozk
+4 : config/webpack/**/*
+4 : app/javascript/packs/application.js
+4 : Christopher Nicolas
+4 : Efren Hermiston
+4 : Jerrod Green
+4 : app/javascript/channels/index.js
+4 : Dylan Wisozk
+4 : Keenan Heller
+4 : Lupe Hayes
+4 : Samuel Moore
+4 : Judson Gusikowski
+4 : app/javascript/channels/consumer.js
+4 : Whitney Gibson
+4 : Ruben Gulgowski
+4 : Everette Bode
+4 : config/webpack/development.js
+4 : Johnathon Halvorson
+4 : Sam Gleason
+4 : config/webpack/production.js
+4 : config/webpack/environment.js
+4 : Stacey Auer
+4 : Ashleigh Konopelski
+4 : Ronald Luettgen
+4 : Omar Smith
+4 : Elton Ruecker
+4 : Chang Roberts
+4 : Abdul Schultz
+4 : Alan Gorczany
+4 : Dale McClure
+4 : Luigi O'Conner
+4 : Marcus Batz
+4 : Eloy Harris
+4 : Patrick Lynch
+4 : Peter Adams
+4 : Felton Harris
+4 : Elton Bruen
+4 : Micheal Gleason
+4 : Myles Hartmann
+4 : Irving Cremin
+4 : Chuck Hauck
+4 : Grant Brown
+4 : Willard Russel
+4 : Lincoln Wehner
+4 : Patricia Kohler
+4 : Val Green
+4 : Sal Abbott
+4 : Myles Crist
+4 : Gene Ullrich
+4 : Thanh Turner
+4 : Justin Smitham
+4 : Jay Gusikowski
+4 : Joshua Larson
+4 : Graham Herman
+4 : Jamie Ward
+4 : Fred Mills
+4 : Herman Kertzmann
+4 : Angel Kuphal
+4 : Rolando Kemmer
+4 : James Pagac
+4 : Robby Greenholt
+4 : Dario Witting
+4 : Moshe Goodwin
+4 : Carey Carter
+4 : Earl Littel
+4 : Les Crona
+4 : Hal Hoeger
+4 : Adolfo Tremblay
+4 : Jaime Stoltenberg
+4 : Joshua Trantow
+4 : Manual Aufderhar
+4 : Irwin Ullrich
+4 : Maurice Borer
+4 : Thurman Yost
+4 : Millard Watsica
+4 : Eddie Shields
+4 : Weston Homenick
+4 : Bart Ullrich
+4 : ¼àè¶ù^£tE¯XMÎD?ñÇ°I
+4 : Michel Heidenreich
+4 : bce016e8b6f95ea37445af584dce443ff1c7b049
+4 : Billie Brown
+4 : Juan Turner
+4 : Noble Cartwright
+4 : Wesley Littel
+4 : Pasquale Gusikowski
+4 : Rico Marquardt
+4 : Janee Orn
+4 : Wendell Rice
+4 : Eduardo Roob
+4 : Britt Tromp
+4 : Lauren Block
+4 : Jason Conn
+4 : Antwan Walsh
+4 : Boyd Bernhard
+4 : Stefan Donnelly
+4 : Allan Raynor
+4 : Sergio Wilkinson
+4 : Scot Bashirian
+4 : Calvin Paucek
+4 : Mel Herman
+4 : Pete Zboncak
+4 : Thaddeus Funk
+4 : Edgar Greenfelder
+4 : Lawerence Block
+4 : John Wehner
+4 : Willian Pagac
+4 : Reggie Schoen
+4 : Jame Wisoky
+4 : Augustine Fay
+4 : Gerald Ward
+4 : Shayne Labadie
+4 : Donald Howell
+4 : Jess Lubowitz
+4 : Wilton Nitzsche
+4 : Chi Rau
+4 : Hai Wolff
+4 : Shaun Pouros
+4 : Lynn Denesik
+4 : Benjamin Waters
+4 : Bud Kub
+4 : Freddy Bogan
+4 : Francis Zulauf
+4 : Kim Feest
+4 : Michel McClure
+4 : Delbert Kerluke
+4 : Gregorio Fahey
+4 : James Dibbert
+4 : Angel Goyette
+4 : Jesus Swaniawski
+4 : Val Mills
+4 : Billie Purdy
+4 : Noel Schuppe
+4 : Erick Emmerich
+4 : Raymond Trantow
+4 : Van Batz
+4 : Sergio Frami
+4 : Parker Padberg
+4 : Mauricio Reilly
+4 : Prince Zulauf
+4 : Raymond Sporer
+4 : Ezekiel Rempel
+4 : Rodney Toy
+4 : Jaime Grant
+4 : Albert Dooley
+4 : </packs/js/application-9afcbb5693aa87623e69.js>; rel=preload; as=script
+4 : Earl Crooks
+4 : html
+4 : Sylvester Bosco
+4 : Tyler Muller
+4 : Hans Walter
+4 : Hosea Boehm
+4 : Annmarie Dicki
+4 : Pedro Lesch
+4 : Hugo Gleason
+4 : Ray Frami
+4 : Adrian Rolfson
+4 : Josue Schuster
+4 : Malik Ondricka
+4 : Mohammed Cartwright
+4 : Edmund Franecki
+4 : Kirby Collier
+4 : Heath Shanahan
+4 : 200
+4 : Roland Koch
+4 : Charlie Wiza
+4 : ?
+4 : Carl McCullough
+4 : Leonardo Johnston
+4 : Completed 200 OK in 6039ms (Views: 9.4ms | ActiveRecord: 610.9ms | Allocations: 9636352)
+
+
+4 : Tory Quitzon
+4 : Phillip Nader
+4 : Ariel Weimann
+4 : Leroy Kilback
+4 : Minh Cummerata
+4 : Benton Feil
+4 : Winfred Ankunding
+4 : Ezequiel White
+4 : Shawn Bernier
+4 : Mckinley Jast
+4 : Alton Franecki

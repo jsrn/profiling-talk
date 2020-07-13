@@ -1,0 +1,1261 @@
+Total allocated: 1178004089 bytes (9635000 objects)
+Total retained:  52018 bytes (377 objects)
+
+allocated memory by gem
+-----------------------------------
+ 628665496  activerecord-6.0.3.2
+ 360000288  activemodel-6.0.3.2
+ 160212081  rack-mini-profiler-2.0.2
+  28210864  profiling-talk/app
+    237274  activesupport-6.0.3.2
+    150753  digest
+    125852  socket
+    122415  actionview-6.0.3.2
+     79528  railties-6.0.3.2
+     54297  sprockets-4.0.2
+     36786  actionpack-6.0.3.2
+     30837  pathname
+     13091  webpacker-4.2.2
+      9757  erubi-1.9.0
+      8848  concurrent-ruby-1.1.6
+      8528  ipaddr
+      8295  set
+      7397  rack-2.2.3
+      5912  logger
+      4160  sprockets-rails-3.2.1
+      3499  uri
+      2544  ostruct
+      2380  puma-4.3.5
+      1698  json
+       677  securerandom
+       416  web-console-4.0.3
+       176  monitor
+       120  fileutils
+        80  turbolinks-5.2.1
+        40  i18n-1.8.3
+
+allocated memory by file
+-----------------------------------
+ 360000000  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activemodel-6.0.3.2/lib/active_model/attribute_set/builder.rb
+ 256005120  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/result.rb
+ 232000000  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/associations.rb
+ 160210465  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-mini-profiler-2.0.2/lib/patches/db/pg.rb
+ 120800000  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/persistence.rb
+  28208352  /Users/jsrn/Code/profiling-talk/app/app/models/puppy.rb
+  11637016  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/querying.rb
+   8004528  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/delegation.rb
+    174709  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/log_subscriber.rb
+    161854  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/backtrace_cleaner.rb
+    150753  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/digest.rb
+    125852  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/socket.rb
+     77766  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb
+     58841  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template/resolver.rb
+     30837  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/pathname.rb
+     23546  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template.rb
+     16297  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/path_utils.rb
+      9757  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/erubi-1.9.0/lib/erubi.rb
+      9712  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation.rb
+      9670  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/tagged_logging.rb
+      8862  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/webpacker-4.2.2/lib/webpacker/compiler.rb
+      8528  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/ipaddr.rb
+      8295  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/set.rb
+      7364  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/logger.rb
+      7350  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/resolve.rb
+      7128  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_controller/renderer.rb
+      7040  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/concurrent-ruby-1.1.6/lib/concurrent-ruby/concurrent/collection/map/non_concurrent_map_backend.rb
+      6528  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/concurrency/load_interlock_aware_monitor.rb
+      6384  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb
+      5912  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/logger.rb
+      5752  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template/handlers/erb.rb
+      5460  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/base.rb
+      4836  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/log_subscriber.rb
+      4480  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/http_utils.rb
+      4304  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/hash_with_indifferent_access.rb
+      4296  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/lookup_context.rb
+      4232  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/notifications/instrumenter.rb
+      4120  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/uri_utils.rb
+      4080  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-rails-3.2.1/lib/sprockets/rails/helper.rb
+      4056  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/unbound_template.rb
+      3920  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb
+      3880  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/http/response.rb
+      3712  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/parameter_filter.rb
+      3472  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/subscriber.rb
+      3440  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/query_methods.rb
+      3142  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-2.2.3/lib/rack/utils.rb
+      2968  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/inflector/methods.rb
+      2800  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/routing/route_set.rb
+      2737  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/uri_tar.rb
+      2720  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/cookies.rb
+
+allocated memory by location
+-----------------------------------
+ 232000000  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activemodel-6.0.3.2/lib/active_model/attribute_set/builder.rb:25
+ 232000000  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/associations.rb:265
+ 232000000  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/result.rb:154
+ 160206897  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-mini-profiler-2.0.2/lib/patches/db/pg.rb:9
+ 120800000  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/persistence.rb:403
+  88000000  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activemodel-6.0.3.2/lib/active_model/attribute_set/builder.rb:16
+  40000000  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activemodel-6.0.3.2/lib/active_model/attribute_set/builder.rb:17
+  23200000  /Users/jsrn/Code/profiling-talk/app/app/models/puppy.rb:9
+  16000080  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/result.rb:115
+  11636312  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/querying.rb:61
+   8000040  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/delegation.rb:87
+   8000040  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/result.rb:149
+   4000000  /Users/jsrn/Code/profiling-talk/app/app/models/puppy.rb:10
+   1008080  /Users/jsrn/Code/profiling-talk/app/app/models/puppy.rb:14
+    162845  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/log_subscriber.rb:105
+    147825  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/digest.rb:51
+    115846  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/backtrace_cleaner.rb:96
+     75468  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/socket.rb:1213
+     55837  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:16
+     45600  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/socket.rb:66
+     24192  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/backtrace_cleaner.rb:109
+     21816  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/backtrace_cleaner.rb:117
+     14766  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template/resolver.rb:369
+     11529  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:17
+     10400  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:18
+     10052  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/pathname.rb:42
+      9942  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template.rb:340
+      9744  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template/resolver.rb:42
+      9110  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/tagged_logging.rb:23
+      8928  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template/resolver.rb:363
+      8270  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/pathname.rb:46
+      7364  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/logger.rb:89
+      6517  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/erubi-1.9.0/lib/erubi.rb:94
+      5568  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/concurrent-ruby-1.1.6/lib/concurrent-ruby/concurrent/collection/map/non_concurrent_map_backend.rb:16
+      4896  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/log_subscriber.rb:113
+      4872  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template/resolver.rb:41
+      4472  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/logger.rb:472
+      4432  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template/handlers/erb.rb:48
+      4320  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/socket.rb:227
+      4256  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/delegation.rb:117
+      4246  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template.rb:225
+      4160  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/path_utils.rb:164
+      4065  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/webpacker-4.2.2/lib/webpacker/compiler.rb:55
+      4032  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/pathname.rb:351
+      3952  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/path_utils.rb:17
+      3712  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/notifications/instrumenter.rb:66
+      3424  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_controller/renderer.rb:101
+      3424  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_controller/renderer.rb:68
+      3328  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-mini-profiler-2.0.2/lib/patches/db/pg.rb:56
+      3264  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/concurrency/load_interlock_aware_monitor.rb:21
+
+allocated memory by class
+-----------------------------------
+ 696118992  Hash
+ 170962736  Array
+ 120800000  Puppy
+  88000000  ActiveModel::LazyAttributeHash
+  61903031  String
+  40000000  ActiveModel::AttributeSet
+     35456  Thread::Backtrace
+     28400  Proc
+     27176  MatchData
+     20064  Binding
+     15360  Thread::Backtrace::Location
+     10114  Regexp
+      9360  Enumerator::Lazy
+      7296  Class
+      6880  Time
+      5584  Object
+      4240  Addrinfo
+      3528  Enumerator::Generator
+      3488  PG::Result
+      3480  File
+      2896  ActionView::OutputBuffer
+      2552  ActiveRecord::Relation
+      2016  Thread::Mutex
+      1592  ActionDispatch::Request
+      1560  ActiveSupport::Notifications::Event
+      1440  Sprockets::URITar
+      1288  File::Stat
+      1280  Range
+      1240  Pathname
+      1224  Fiber
+      1160  ActiveSupport::HashWithIndifferentAccess
+      1008  Arel::Nodes::SelectCore
+       944  Rack::Utils::HeaderHash
+       936  ActiveRecord::Result
+       840  ActionView::Resolver::Cache::SmallCache
+       792  Arel::Nodes::SelectStatement
+       760  <<Unknown>>
+       760  Digest::SHA1
+       680  Set
+       600  Digest::SHA256
+       576  Enumerator::Yielder
+       544  Module
+       480  IPAddr
+       464  Socket
+       456  ActionView::Template
+       448  ActiveSupport::SafeBuffer
+       432  ActionView::Resolver::Path
+       400  Integer
+       360  Arel::Collectors::Bind
+       360  Arel::Collectors::Composite
+
+allocated objects by gem
+-----------------------------------
+   3001810  activerecord-6.0.3.2
+   3000039  rack-mini-profiler-2.0.2
+   3000004  activemodel-6.0.3.2
+    625238  profiling-talk/app
+      2112  activesupport-6.0.3.2
+      1123  actionview-6.0.3.2
+      1069  railties-6.0.3.2
+      1002  socket
+       761  sprockets-4.0.2
+       630  pathname
+       314  actionpack-6.0.3.2
+       164  webpacker-4.2.2
+       130  ipaddr
+        91  erubi-1.9.0
+        83  logger
+        78  rack-2.2.3
+        61  set
+        58  concurrent-ruby-1.1.6
+        50  uri
+        42  sprockets-rails-3.2.1
+        39  digest
+        31  puma-4.3.5
+        26  ostruct
+        17  json
+        12  securerandom
+         7  web-console-4.0.3
+         3  fileutils
+         3  monitor
+         2  turbolinks-5.2.1
+         1  i18n-1.8.3
+
+allocated objects by file
+-----------------------------------
+   3000013  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-mini-profiler-2.0.2/lib/patches/db/pg.rb
+   3000000  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activemodel-6.0.3.2/lib/active_model/attribute_set/builder.rb
+   1000055  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/result.rb
+   1000000  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/associations.rb
+   1000000  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/persistence.rb
+    625204  /Users/jsrn/Code/profiling-talk/app/app/models/puppy.rb
+      1347  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/backtrace_cleaner.rb
+      1084  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/log_subscriber.rb
+      1049  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb
+      1002  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/socket.rb
+       630  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/pathname.rb
+       581  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template/resolver.rb
+       214  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template.rb
+       194  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/path_utils.rb
+       137  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/resolve.rb
+       130  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/ipaddr.rb
+       116  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/tagged_logging.rb
+       113  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/webpacker-4.2.2/lib/webpacker/compiler.rb
+       104  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/http_utils.rb
+        91  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/erubi-1.9.0/lib/erubi.rb
+        86  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/query_methods.rb
+        83  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/logger.rb
+        71  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/uri_utils.rb
+        61  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/set.rb
+        59  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb
+        57  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/lookup_context.rb
+        57  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/base.rb
+        56  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/subscriber.rb
+        54  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/nodes/select_core.rb
+        52  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/logger.rb
+        50  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation.rb
+        49  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/hash_with_indifferent_access.rb
+        47  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/delegation.rb
+        42  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract_adapter.rb
+        41  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/http/response.rb
+        41  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/inflector/methods.rb
+        40  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/class/attribute.rb
+        40  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/uri_tar.rb
+        40  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-rails-3.2.1/lib/sprockets/rails/helper.rb
+        39  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/digest.rb
+        37  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/numeric/conversions.rb
+        36  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/log_subscriber.rb
+        36  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/calculations.rb
+        36  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/uri/rfc2396_parser.rb
+        34  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/concurrency/load_interlock_aware_monitor.rb
+        33  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb
+        32  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/scoping.rb
+        32  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/concurrent-ruby-1.1.6/lib/concurrent-ruby/concurrent/collection/map/non_concurrent_map_backend.rb
+        31  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/digest_utils.rb
+        30  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template/handlers/erb/erubi.rb
+
+allocated objects by location
+-----------------------------------
+   3000006  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-mini-profiler-2.0.2/lib/patches/db/pg.rb:9
+   1000000  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activemodel-6.0.3.2/lib/active_model/attribute_set/builder.rb:16
+   1000000  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activemodel-6.0.3.2/lib/active_model/attribute_set/builder.rb:17
+   1000000  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activemodel-6.0.3.2/lib/active_model/attribute_set/builder.rb:25
+   1000000  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/associations.rb:265
+   1000000  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/persistence.rb:403
+   1000000  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/result.rb:154
+    500000  /Users/jsrn/Code/profiling-talk/app/app/models/puppy.rb:9
+    100000  /Users/jsrn/Code/profiling-talk/app/app/models/puppy.rb:10
+     25202  /Users/jsrn/Code/profiling-talk/app/app/models/puppy.rb:14
+       954  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/log_subscriber.rb:105
+       780  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/backtrace_cleaner.rb:96
+       754  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/socket.rb:1213
+       520  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:16
+       324  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/backtrace_cleaner.rb:109
+       269  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:17
+       260  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:18
+       243  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/backtrace_cleaner.rb:117
+       242  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/socket.rb:66
+       229  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/pathname.rb:42
+       180  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/pathname.rb:46
+       144  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template/resolver.rb:363
+       115  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template.rb:340
+       102  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/tagged_logging.rb:23
+        63  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/log_subscriber.rb:113
+        60  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template/resolver.rb:369
+        60  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/webpacker-4.2.2/lib/webpacker/compiler.rb:55
+        58  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/erubi-1.9.0/lib/erubi.rb:94
+        56  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/pathname.rb:351
+        52  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/logger.rb:89
+        52  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/logger.rb:472
+        48  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template/resolver.rb:366
+        45  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/delegation.rb:117
+        42  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template/resolver.rb:42
+        42  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/http_utils.rb:17
+        42  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/http_utils.rb:18
+        40  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/path_utils.rb:164
+        39  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/subscriber.rb:144
+        38  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/path_utils.rb:17
+        37  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/numeric/conversions.rb:108
+        30  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/pathname.rb:410
+        28  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/pathname.rb:389
+        28  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/pathname.rb:390
+        27  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template/resolver.rb:330
+        27  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/hash_with_indifferent_access.rb:367
+        27  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/path_utils.rb:58
+        26  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-mini-profiler-2.0.2/lib/mini_profiler_rails/railtie.rb:134
+        26  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/webpacker-4.2.2/lib/webpacker/compiler.rb:54
+        24  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template/resolver.rb:326
+        24  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template/resolver.rb:365
+
+allocated objects by class
+-----------------------------------
+   3000476  Hash
+   2102030  Array
+   1530728  String
+   1000000  ActiveModel::AttributeSet
+   1000000  ActiveModel::LazyAttributeHash
+   1000000  Puppy
+       355  Proc
+       240  Thread::Backtrace::Location
+       228  Binding
+        93  MatchData
+        80  Time
+        72  Enumerator::Lazy
+        64  Object
+        63  Enumerator::Generator
+        32  Range
+        31  Pathname
+        28  Thread::Mutex
+        21  ActionView::Resolver::Cache::SmallCache
+        20  Sprockets::URITar
+        19  ActiveRecord::Relation
+        19  Digest::SHA1
+        17  Set
+        15  Digest::SHA256
+        15  File
+        14  Class
+        14  Regexp
+        13  ActiveRecord::Result
+        13  ActiveSupport::Notifications::Event
+        13  Thread::Backtrace
+        12  IPAddr
+        11  ActionDispatch::Request
+        10  Integer
+         9  Arel::Collectors::Bind
+         9  Arel::Collectors::Composite
+         9  Arel::Collectors::SQLString
+         9  Arel::Nodes::JoinSource
+         9  Arel::Nodes::SelectCore
+         9  Arel::Nodes::SelectStatement
+         9  Arel::SelectManager
+         9  Enumerator::Yielder
+         8  ActiveSupport::SafeBuffer
+         7  Arel::Nodes::SqlLiteral
+         7  File::Stat
+         6  ActionView::Resolver::Path
+         6  Arel::Nodes::Count
+         6  Rack::BodyProxy
+         5  <<Unknown>>
+         5  ActiveSupport::Callbacks::Filters::Environment
+         5  ActiveSupport::HashWithIndifferentAccess
+         5  OpenSSL::Cipher
+
+retained memory by gem
+-----------------------------------
+     11245  actionview-6.0.3.2
+     10059  actionpack-6.0.3.2
+     10048  activesupport-6.0.3.2
+      8304  concurrent-ruby-1.1.6
+      3995  rack-2.2.3
+      1632  activerecord-6.0.3.2
+      1584  ostruct
+      1487  set
+      1355  sprockets-4.0.2
+      1082  json
+       350  puma-4.3.5
+       240  socket
+       184  railties-6.0.3.2
+       176  monitor
+       117  securerandom
+        80  uri
+        40  i18n-1.8.3
+        40  profiling-talk/app
+
+retained memory by file
+-----------------------------------
+      6576  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/concurrent-ruby-1.1.6/lib/concurrent-ruby/concurrent/collection/map/non_concurrent_map_backend.rb
+      3703  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template.rb
+      2746  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-2.2.3/lib/rack/utils.rb
+      2704  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template/resolver.rb
+      2600  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/routing/route_set.rb
+      1896  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/execution_wrapper.rb
+      1728  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/concurrent-ruby-1.1.6/lib/concurrent-ruby/concurrent/collection/map/mri_map_backend.rb
+      1688  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/rendering.rb
+      1584  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/http/response.rb
+      1584  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/ostruct.rb
+      1487  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/set.rb
+      1224  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/logger_thread_safe_level.rb
+      1216  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/cookies.rb
+      1160  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/concurrency/share_lock.rb
+      1082  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/json/common.rb
+       984  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/host_authorization.rb
+       960  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/base.rb
+       912  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb
+       720  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/module/redefine_method.rb
+       704  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/lookup_context.rb
+       651  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/uri_tar.rb
+       640  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/request/session.rb
+       584  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/scoping.rb
+       576  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/unbound_template.rb
+       552  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/view_paths.rb
+       544  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/routing/url_for.rb
+       504  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/notifications.rb
+       480  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-2.2.3/lib/rack/body_proxy.rb
+       464  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb
+       464  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/hash/indifferent_access.rb
+       464  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/messages/rotator.rb
+       360  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/http/url.rb
+       352  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/subscriber.rb
+       320  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/class/attribute.rb
+       312  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/message_encryptor.rb
+       312  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/ordered_options.rb
+       312  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/cache.rb
+       310  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/plugin/tmp_restart.rb
+       256  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/remote_ip.rb
+       241  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-2.2.3/lib/rack/etag.rb
+       240  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/per_thread_registry.rb
+       240  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/socket.rb
+       232  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_controller/log_subscriber.rb
+       232  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/http/cache.rb
+       232  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/journey/router.rb
+       232  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/session/cookie_store.rb
+       232  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/cache_expiry.rb
+       232  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/relation/delegation.rb
+       232  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/arel/visitors/visitor.rb
+       232  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/cache/strategy/local_cache.rb
+
+retained memory by location
+-----------------------------------
+      5568  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/concurrent-ruby-1.1.6/lib/concurrent-ruby/concurrent/collection/map/non_concurrent_map_backend.rb:16
+      1728  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/concurrent-ruby-1.1.6/lib/concurrent-ruby/concurrent/collection/map/mri_map_backend.rb:14
+      1688  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/rendering.rb:52
+      1592  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template.rb:182
+      1224  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/logger_thread_safe_level.rb:32
+      1160  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/execution_wrapper.rb:106
+      1082  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/json/common.rb:156
+       952  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/routing/route_set.rb:487
+       944  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-2.2.3/lib/rack/utils.rb:422
+       928  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/http/response.rb:57
+       928  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-2.2.3/lib/rack/utils.rb:428
+       912  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb:428
+       800  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/base.rb:185
+       720  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/module/redefine_method.rb:20
+       712  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/routing/route_set.rb:482
+       712  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/ostruct.rb:190
+       696  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template/resolver.rb:219
+       696  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/concurrent-ruby-1.1.6/lib/concurrent-ruby/concurrent/collection/map/non_concurrent_map_backend.rb:109
+       696  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/set.rb:136
+       661  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template.rb:340
+       651  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/uri_tar.rb:73
+       559  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/set.rb:349
+       544  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/routing/route_set.rb:481
+       544  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/scoping.rb:75
+       504  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template.rb:370
+       480  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-2.2.3/lib/rack/body_proxy.rb:12
+       474  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-2.2.3/lib/rack/utils.rb:461
+       464  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/routing/url_for.rb:100
+       464  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/hash/indifferent_access.rb:10
+       456  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/unbound_template.rb:23
+       400  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-2.2.3/lib/rack/utils.rb:592
+       360  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/http/url.rb:233
+       360  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/host_authorization.rb:90
+       352  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template.rb:377
+       344  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/cookies.rb:603
+       344  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/messages/rotator.rb:28
+       320  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/host_authorization.rb:24
+       320  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/ostruct.rb:191
+       320  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/ostruct.rb:192
+       312  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/message_encryptor.rb:223
+       312  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/cache.rb:173
+       310  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/plugin/tmp_restart.rb:24
+       288  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/request/session.rb:45
+       272  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/notifications.rb:247
+       258  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template.rb:153
+       240  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template/resolver.rb:117
+       240  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template/resolver.rb:211
+       240  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template/resolver.rb:47
+       240  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template/resolver.rb:48
+       240  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template/resolver.rb:49
+
+retained memory by class
+-----------------------------------
+     21632  Hash
+      5954  String
+      5776  Class
+      2960  Proc
+      2016  Thread::Mutex
+      1760  Array
+      1592  ActionView::OutputBuffer
+      1224  Fiber
+      1120  MatchData
+       944  Rack::Utils::HeaderHash
+       928  ActiveSupport::HashWithIndifferentAccess
+       840  ActionView::Resolver::Cache::SmallCache
+       728  ActionDispatch::Request
+       544  Module
+       456  ActionView::Template
+       344  Time
+       312  <<Unknown>>
+       240  ActionView::UnboundTemplate
+       240  Rack::BodyProxy
+       224  ActiveSupport::MessageEncryptor
+       184  File::Stat
+       160  Set
+       144  ActionDispatch::Response
+       144  PuppiesController
+       120  ActionView::Template::Sources::File
+       120  Concurrent::Map
+        96  ActionDispatch::Cookies::CookieJar
+        88  ActionView::LookupContext
+        80  ActionDispatch::Request::Session
+        80  ActiveSupport::MessageVerifier
+        72  ActionDispatch::RemoteIp::GetIp
+        72  ActionDispatch::Response::Buffer
+        64  Thread::ConditionVariable
+        40  ActionDispatch::Cookies::EncryptedKeyRotatingCookieJar
+        40  ActionDispatch::Http::Headers
+        40  ActionDispatch::Request::Session::Options
+        40  ActionDispatch::Response::Header
+        40  ActionDispatch::Response::RackBody
+        40  ActionView::PathSet
+        40  ActiveRecord::ExplainRegistry
+        40  ActiveRecord::RuntimeRegistry
+        40  ActiveRecord::Scoping::ScopeRegistry
+        40  ActiveSupport::ArrayInquirer
+        40  ActiveSupport::Cache::Strategy::LocalCache::LocalCacheRegistry
+        40  ActiveSupport::Notifications::InstrumentationRegistry
+        40  ActiveSupport::Notifications::Instrumenter
+        40  ActiveSupport::SubscriberQueueRegistry
+        40  I18n::Config
+        40  MonitorMixin::ConditionVariable
+        40  Object
+
+retained objects by gem
+-----------------------------------
+        95  actionview-6.0.3.2
+        67  actionpack-6.0.3.2
+        60  activesupport-6.0.3.2
+        54  concurrent-ruby-1.1.6
+        34  rack-2.2.3
+        12  sprockets-4.0.2
+        11  activerecord-6.0.3.2
+        10  ostruct
+         9  json
+         7  set
+         4  puma-4.3.5
+         3  monitor
+         3  socket
+         2  railties-6.0.3.2
+         2  securerandom
+         2  uri
+         1  i18n-1.8.3
+         1  profiling-talk/app
+
+retained objects by file
+-----------------------------------
+        49  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template/resolver.rb
+        30  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/concurrent-ruby-1.1.6/lib/concurrent-ruby/concurrent/collection/map/non_concurrent_map_backend.rb
+        24  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/concurrent-ruby-1.1.6/lib/concurrent-ruby/concurrent/collection/map/mri_map_backend.rb
+        20  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template.rb
+        17  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-2.2.3/lib/rack/utils.rb
+        10  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/host_authorization.rb
+        10  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/ostruct.rb
+         9  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/routing/route_set.rb
+         9  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/module/redefine_method.rb
+         9  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/json/common.rb
+         8  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/http/response.rb
+         8  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/cookies.rb
+         8  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/lookup_context.rb
+         7  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/set.rb
+         6  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/unbound_template.rb
+         6  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/execution_wrapper.rb
+         6  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/per_thread_registry.rb
+         6  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-2.2.3/lib/rack/body_proxy.rb
+         5  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/concurrency/share_lock.rb
+         5  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/messages/rotator.rb
+         4  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/request/session.rb
+         4  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/routing/url_for.rb
+         4  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/base.rb
+         4  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/scoping.rb
+         4  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/class/attribute.rb
+         4  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/subscriber.rb
+         4  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-2.2.3/lib/rack/etag.rb
+         4  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/loader.rb
+         4  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/uri_tar.rb
+         3  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/http/mime_negotiation.rb
+         3  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/http/url.rb
+         3  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/remote_ip.rb
+         3  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/view_paths.rb
+         3  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/notifications.rb
+         3  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/plugin/tmp_restart.rb
+         3  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/cache.rb
+         3  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/monitor.rb
+         3  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/socket.rb
+         2  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_controller/metal.rb
+         2  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/executor.rb
+         2  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/static.rb
+         2  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/rendering.rb
+         2  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb
+         2  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/callbacks.rb
+         2  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/concern.rb
+         2  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/hash/indifferent_access.rb
+         2  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/message_encryptor.rb
+         2  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/ordered_options.rb
+         2  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-2.2.3/lib/rack/runtime.rb
+         2  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-2.2.3/lib/rack/tempfile_reaper.rb
+
+retained objects by location
+-----------------------------------
+        24  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/concurrent-ruby-1.1.6/lib/concurrent-ruby/concurrent/collection/map/mri_map_backend.rb:14
+        24  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/concurrent-ruby-1.1.6/lib/concurrent-ruby/concurrent/collection/map/non_concurrent_map_backend.rb:16
+        11  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-2.2.3/lib/rack/utils.rb:461
+         9  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/module/redefine_method.rb:20
+         9  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/json/common.rb:156
+         6  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template/resolver.rb:117
+         6  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template/resolver.rb:47
+         6  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template/resolver.rb:48
+         6  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template/resolver.rb:49
+         6  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/per_thread_registry.rb:47
+         6  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-2.2.3/lib/rack/body_proxy.rb:12
+         4  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/host_authorization.rb:91
+         4  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template.rb:340
+         4  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-2.2.3/lib/rack/utils.rb:592
+         4  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/loader.rb:89
+         4  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/uri_tar.rb:73
+         4  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/ostruct.rb:191
+         4  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/ostruct.rb:192
+         3  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/http/url.rb:233
+         3  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/host_authorization.rb:90
+         3  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template.rb:153
+         3  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template.rb:157
+         3  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template.rb:196
+         3  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template.rb:370
+         3  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template.rb:377
+         3  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template/resolver.rb:19
+         3  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template/resolver.rb:193
+         3  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template/resolver.rb:196
+         3  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template/resolver.rb:209
+         3  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template/resolver.rb:211
+         3  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template/resolver.rb:219
+         3  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template/resolver.rb:330
+         3  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template/resolver.rb:50
+         3  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/unbound_template.rb:13
+         3  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/unbound_template.rb:23
+         3  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/scoping.rb:75
+         3  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/messages/rotator.rb:10
+         3  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/subscriber.rb:166
+         3  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/concurrent-ruby-1.1.6/lib/concurrent-ruby/concurrent/collection/map/non_concurrent_map_backend.rb:109
+         3  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/plugin/tmp_restart.rb:24
+         3  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/cache.rb:173
+         3  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/set.rb:136
+         3  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/set.rb:349
+         3  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/socket.rb:1213
+         2  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/cookies.rb:603
+         2  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/executor.rb:15
+         2  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/host_authorization.rb:24
+         2  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/routing/route_set.rb:487
+         2  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/routing/url_for.rb:100
+         2  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/routing/url_for.rb:95
+
+retained objects by class
+-----------------------------------
+        84  Hash
+        76  String
+        44  Array
+        37  Proc
+        28  Thread::Mutex
+        21  ActionView::Resolver::Cache::SmallCache
+        10  Class
+         6  Rack::BodyProxy
+         5  ActionDispatch::Request
+         4  ActiveSupport::HashWithIndifferentAccess
+         4  MatchData
+         4  Set
+         4  Time
+         3  <<Unknown>>
+         3  ActionView::Template
+         3  ActionView::Template::Sources::File
+         3  ActionView::UnboundTemplate
+         3  Concurrent::Map
+         2  ActiveSupport::MessageEncryptor
+         1  ActionDispatch::Cookies::CookieJar
+         1  ActionDispatch::Cookies::EncryptedKeyRotatingCookieJar
+         1  ActionDispatch::Http::Headers
+         1  ActionDispatch::RemoteIp::GetIp
+         1  ActionDispatch::Request::Session
+         1  ActionDispatch::Request::Session::Options
+         1  ActionDispatch::Response
+         1  ActionDispatch::Response::Buffer
+         1  ActionDispatch::Response::Header
+         1  ActionDispatch::Response::RackBody
+         1  ActionView::LookupContext
+         1  ActionView::OutputBuffer
+         1  ActionView::PathSet
+         1  ActiveRecord::ExplainRegistry
+         1  ActiveRecord::RuntimeRegistry
+         1  ActiveRecord::Scoping::ScopeRegistry
+         1  ActiveSupport::ArrayInquirer
+         1  ActiveSupport::Cache::Strategy::LocalCache::LocalCacheRegistry
+         1  ActiveSupport::MessageVerifier
+         1  ActiveSupport::Notifications::InstrumentationRegistry
+         1  ActiveSupport::Notifications::Instrumenter
+         1  ActiveSupport::SubscriberQueueRegistry
+         1  Fiber
+         1  File::Stat
+         1  I18n::Config
+         1  Module
+         1  MonitorMixin::ConditionVariable
+         1  Object
+         1  OpenStruct
+         1  PuppiesController
+         1  Rack::Request
+
+
+Allocated String Report
+-----------------------------------
+    300000  "("
+    300000  /Users/jsrn/Code/profiling-talk/app/app/models/puppy.rb:9
+
+    200002  ")"
+    100000  /Users/jsrn/Code/profiling-talk/app/app/models/puppy.rb:10
+    100000  /Users/jsrn/Code/profiling-talk/app/app/models/puppy.rb:9
+         2  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/path_utils.rb:101
+
+     25202  "{"
+     25202  /Users/jsrn/Code/profiling-talk/app/app/models/puppy.rb:14
+
+       204  ""
+        56  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/pathname.rb:42
+        50  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/tagged_logging.rb:23
+        28  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/pathname.rb:46
+         9  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/digest.rb:51
+         8  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/log_subscriber.rb:30
+         8  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/log_subscriber.rb:45
+         8  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/ipaddr.rb:644
+         8  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/ipaddr.rb:646
+         6  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template/resolver.rb:363
+         3  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/host_authorization.rb:91
+         3  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/helpers/asset_url_helper.rb:214
+         3  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template.rb:365
+         2  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/http/request.rb:263
+         2  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-mini-profiler-2.0.2/lib/mini_profiler_rails/railtie.rb:134
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/helpers/asset_url_helper.rb:243
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/migration.rb:1162
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/core_ext/string/output_safety.rb:39
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/inflector/methods.rb:75
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/erubi-1.9.0/lib/erubi.rb:97
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-2.2.3/lib/rack/query_parser.rb:88
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-2.2.3/lib/rack/utils.rb:592
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-rails-3.2.1/lib/sprockets/rails/helper.rb:236
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-rails-3.2.1/lib/sprockets/rails/helper.rb:348
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/webpacker-4.2.2/lib/webpacker/manifest.rb:74
+
+        54  "activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/query_cache.rb:105:in `select_all'"
+        18  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/backtrace_cleaner.rb:96
+        18  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:16
+         9  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:17
+         9  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:18
+
+        54  "activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/query_cache.rb:113:in `cache_sql'"
+        18  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/backtrace_cleaner.rb:96
+        18  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:16
+         9  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:17
+         9  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:18
+
+        54  "activerecord (6.0.3.2) lib/active_record/log_subscriber.rb:100:in `debug'"
+        18  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/backtrace_cleaner.rb:96
+        18  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:16
+         9  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:17
+         9  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:18
+
+        54  "activerecord (6.0.3.2) lib/active_record/log_subscriber.rb:45:in `sql'"
+        18  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/backtrace_cleaner.rb:96
+        18  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:16
+         9  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:17
+         9  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:18
+
+        54  "activerecord (6.0.3.2) lib/active_record/relation.rb:839:in `skip_query_cache_if_necessary'"
+        18  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/backtrace_cleaner.rb:96
+        18  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:16
+         9  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:17
+         9  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:18
+
+        54  "activesupport (6.0.3.2) lib/active_support/concurrency/load_interlock_aware_monitor.rb:21:in `handle_interrupt'"
+        18  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/backtrace_cleaner.rb:96
+        18  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:16
+         9  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:17
+         9  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:18
+
+        54  "activesupport (6.0.3.2) lib/active_support/concurrency/load_interlock_aware_monitor.rb:21:in `synchronize'"
+        18  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/backtrace_cleaner.rb:96
+        18  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:16
+         9  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:17
+         9  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:18
+
+        54  "activesupport (6.0.3.2) lib/active_support/concurrency/load_interlock_aware_monitor.rb:25:in `block in synchronize'"
+        18  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/backtrace_cleaner.rb:96
+        18  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:16
+         9  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:17
+         9  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:18
+
+        54  "activesupport (6.0.3.2) lib/active_support/concurrency/load_interlock_aware_monitor.rb:25:in `handle_interrupt'"
+        18  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/backtrace_cleaner.rb:96
+        18  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:16
+         9  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:17
+         9  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:18
+
+        54  "activesupport (6.0.3.2) lib/active_support/concurrency/load_interlock_aware_monitor.rb:26:in `block (2 levels) in synchronize'"
+        18  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/backtrace_cleaner.rb:96
+        18  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:16
+         9  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:17
+         9  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:18
+
+        54  "activesupport (6.0.3.2) lib/active_support/log_subscriber.rb:107:in `finish'"
+        18  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/backtrace_cleaner.rb:96
+        18  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:16
+         9  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:17
+         9  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:18
+
+        54  "activesupport (6.0.3.2) lib/active_support/notifications/fanout.rb:160:in `finish'"
+        18  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/backtrace_cleaner.rb:96
+        18  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:16
+         9  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:17
+         9  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:18
+
+        54  "activesupport (6.0.3.2) lib/active_support/notifications/fanout.rb:62:in `block in finish'"
+        18  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/backtrace_cleaner.rb:96
+        18  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:16
+         9  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:17
+         9  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:18
+
+        54  "activesupport (6.0.3.2) lib/active_support/notifications/fanout.rb:62:in `each'"
+        18  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/backtrace_cleaner.rb:96
+        18  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:16
+         9  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:17
+         9  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:18
+
+        54  "activesupport (6.0.3.2) lib/active_support/notifications/fanout.rb:62:in `finish'"
+        18  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/backtrace_cleaner.rb:96
+        18  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:16
+         9  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:17
+         9  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:18
+
+        54  "activesupport (6.0.3.2) lib/active_support/notifications/instrumenter.rb:30:in `instrument'"
+        18  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/backtrace_cleaner.rb:96
+        18  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:16
+         9  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:17
+         9  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:18
+
+        54  "activesupport (6.0.3.2) lib/active_support/notifications/instrumenter.rb:45:in `finish_with_state'"
+        18  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/backtrace_cleaner.rb:96
+        18  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:16
+         9  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:17
+         9  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:18
+
+        54  "activesupport (6.0.3.2) lib/active_support/subscriber.rb:145:in `finish'"
+        18  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/backtrace_cleaner.rb:96
+        18  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:16
+         9  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:17
+         9  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:18
+
+        38  "application"
+        12  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/resolve.rb:219
+         6  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/http_utils.rb:18
+         2  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template.rb:340
+         2  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/path_utils.rb:203
+         2  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/path_utils.rb:236
+         2  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/resolve.rb:147
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/helpers/asset_url_helper.rb:243
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/layouts.rb:326
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/lookup_context.rb:233
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template.rb:144
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template.rb:145
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template.rb:146
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template/resolver.rb:273
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/resolve.rb:144
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/webpacker-4.2.2/lib/webpacker/manifest.rb:74
+         1  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/json/common.rb:156
+         1  /Users/jsrn/Code/profiling-talk/app/app/views/layouts/application.html.erb:7
+         1  /Users/jsrn/Code/profiling-talk/app/app/views/layouts/application.html.erb:8
+
+        36  "activerecord (6.0.3.2) lib/active_record/relation/calculations.rb:142:in `calculate'"
+        12  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/backtrace_cleaner.rb:96
+        12  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:16
+         6  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:17
+         6  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:18
+
+        36  "activerecord (6.0.3.2) lib/active_record/relation/calculations.rb:252:in `perform_calculation'"
+        12  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/backtrace_cleaner.rb:96
+        12  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:16
+         6  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:17
+         6  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:18
+
+        36  "activerecord (6.0.3.2) lib/active_record/relation/calculations.rb:298:in `block in execute_simple_calculation'"
+        12  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/backtrace_cleaner.rb:96
+        12  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:16
+         6  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:17
+         6  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:18
+
+        36  "activerecord (6.0.3.2) lib/active_record/relation/calculations.rb:298:in `execute_simple_calculation'"
+        12  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/backtrace_cleaner.rb:96
+        12  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:16
+         6  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:17
+         6  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:18
+
+        36  "activerecord (6.0.3.2) lib/active_record/relation/calculations.rb:49:in `count'"
+        12  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/backtrace_cleaner.rb:96
+        12  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:16
+         6  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:17
+         6  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:18
+
+        36  "html"
+        18  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template/resolver.rb:363
+         5  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/http/mime_type.rb:147
+         3  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template/resolver.rb:273
+         3  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template/resolver.rb:279
+         3  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template/resolver.rb:345
+         3  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template/resolver.rb:349
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_controller/log_subscriber.rb:13
+
+        30  "activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/query_cache.rb:116:in `block in cache_sql'"
+        10  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/backtrace_cleaner.rb:96
+        10  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:16
+         5  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:17
+         5  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:18
+
+        30  "activerecord (6.0.3.2) lib/active_record/querying.rb:21:in `count'"
+        10  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/backtrace_cleaner.rb:96
+        10  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:16
+         5  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:17
+         5  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:18
+
+        30  "activesupport (6.0.3.2) lib/active_support/notifications.rb:180:in `instrument'"
+        10  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/backtrace_cleaner.rb:96
+        10  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:16
+         5  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:17
+         5  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:18
+
+        29  "/Users/jsrn/Code/profiling-talk/app"
+        13  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/pathname.rb:42
+         6  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template.rb:196
+         6  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/pathname.rb:375
+         2  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/pathname.rb:119
+         1  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/pathname.rb:508
+         1  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/pathname.rb:72
+
+        27  "/"
+         8  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/pathname.rb:42
+         4  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/pathname.rb:116
+         4  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/pathname.rb:46
+         4  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/pathname.rb:66
+         2  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/journey/gtg/simulator.rb:26
+         2  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/helpers/asset_url_helper.rb:197
+         2  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/path_utils.rb:101
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/webpacker-4.2.2/lib/webpacker/compiler.rb:56
+
+        27  "packs"
+        18  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/pathname.rb:42
+         3  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/pathname.rb:351
+         3  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/pathname.rb:389
+         3  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/pathname.rb:410
+
+        27  "public"
+        18  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/pathname.rb:42
+         3  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/pathname.rb:351
+         3  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/pathname.rb:389
+         3  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/pathname.rb:410
+
+        25  "/Users/jsrn/Code/profiling-talk/app/"
+        12  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/path_utils.rb:164
+         8  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/pathname.rb:46
+         3  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template.rb:196
+         2  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/pathname.rb:42
+
+        24  "/Users/jsrn/Code/profiling-talk/app/app/assets/config/application"
+        12  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/path_utils.rb:17
+         4  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/resolve.rb:218
+         2  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/bower.rb:22
+         2  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/npm.rb:15
+         2  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/resolve.rb:240
+         2  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/uri/rfc2396_parser.rb:305
+
+        24  "/Users/jsrn/Code/profiling-talk/app/app/assets/images/application"
+        12  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/path_utils.rb:17
+         4  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/resolve.rb:218
+         2  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/bower.rb:22
+         2  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/npm.rb:15
+         2  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/resolve.rb:240
+         2  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/uri/rfc2396_parser.rb:305
+
+        24  "/Users/jsrn/Code/profiling-talk/app/app/assets/stylesheets/application"
+        12  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/path_utils.rb:17
+         4  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/resolve.rb:218
+         2  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/bower.rb:22
+         2  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/npm.rb:15
+         2  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/resolve.rb:240
+         2  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/uri/rfc2396_parser.rb:305
+
+        24  "::1"
+         8  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/ipaddr.rb:570
+         8  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/ipaddr.rb:637
+         4  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/http/request.rb:410
+         4  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/remote_ip.rb:162
+
+        24  "activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/query_cache.rb:105:in `block in select_all'"
+         8  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/backtrace_cleaner.rb:96
+         8  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:16
+         4  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:17
+         4  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:18
+
+        24  "activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract/query_cache.rb:122:in `block in cache_sql'"
+         8  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/backtrace_cleaner.rb:96
+         8  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:16
+         4  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:17
+         4  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:18
+
+        24  "activerecord (6.0.3.2) lib/active_record/connection_adapters/abstract_adapter.rb:712:in `log'"
+         8  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/backtrace_cleaner.rb:96
+         8  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:16
+         4  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:17
+         4  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:18
+
+        24  "activerecord (6.0.3.2) lib/active_record/connection_adapters/postgresql/database_statements.rb:98:in `exec_query'"
+         8  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/backtrace_cleaner.rb:96
+         8  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:16
+         4  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:17
+         4  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:18
+
+        24  "activerecord (6.0.3.2) lib/active_record/connection_adapters/postgresql_adapter.rb:673:in `exec_no_cache'"
+         8  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activesupport-6.0.3.2/lib/active_support/backtrace_cleaner.rb:96
+         8  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:16
+         4  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:17
+         4  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/railties-6.0.3.2/lib/rails/backtrace_cleaner.rb:18
+
+        24  "app"
+        20  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/pathname.rb:42
+         4  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-mini-profiler-2.0.2/lib/mini_profiler_rails/railtie.rb:134
+
+        24  "manifest.json"
+        12  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/pathname.rb:42
+         3  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/webpacker-4.2.2/lib/webpacker/configuration.rb:51
+         3  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/pathname.rb:351
+         3  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/pathname.rb:389
+         3  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/pathname.rb:410
+
+        23  "\n"
+         7  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template.rb:340
+         7  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template/handlers/erb/erubi.rb:41
+         7  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/erubi-1.9.0/lib/erubi.rb:94
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-rails-3.2.1/lib/sprockets/rails/helper.rb:152
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-rails-3.2.1/lib/sprockets/rails/helper.rb:181
+
+        22  "/Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/executor.rb:14:in `call'"
+        18  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/log_subscriber.rb:105
+         4  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/socket.rb:66
+
+
+Retained String Report
+-----------------------------------
+         4  ""
+         3  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/host_authorization.rb:91
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-2.2.3/lib/rack/utils.rb:592
+
+         4  "/puppies/rack_mini_profiler"
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/journey/path/pattern.rb:163
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/journey/router/utils.rb:20
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/static.rb:119
+         1  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/uri/rfc2396_parser.rb:334
+
+         3  "/packs/js/application-9afcbb5693aa87623e69.js"
+         2  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/json/common.rb:156
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/helpers/asset_url_helper.rb:243
+
+         3  "localhost"
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/http/url.rb:233
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/host_authorization.rb:24
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/host_authorization.rb:90
+
+         3  "puppies"
+         2  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/concurrent-ruby-1.1.6/lib/concurrent-ruby/concurrent/collection/map/non_concurrent_map_backend.rb:24
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-2.2.3/lib/rack/utils.rb:592
+
+         2  "/packs/js/application-9afcbb5693aa87623e69.js.map"
+         2  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/json/common.rb:156
+
+         2  "/puppies/rack_mini_profiler?pp=profile-memory"
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/http/filter_parameters.rb:55
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-2.2.3/lib/rack/request.rb:516
+
+         2  "_app_views_layouts_application_html_erb__578440389927866704_70331644109020"
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template.rb:340
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template.rb:370
+
+         2  "_app_views_puppies__pup_report_html_erb___3104561848163130944_70331670800380"
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template.rb:340
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template.rb:370
+
+         2  "_app_views_puppies_rack_mini_profiler_html_erb___2093901791099971774_70331644098480"
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template.rb:340
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template.rb:370
+
+         2  "app/views/layouts/application.html.erb"
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template.rb:196
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template.rb:377
+
+         2  "app/views/puppies/_pup_report.html.erb"
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template.rb:196
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template.rb:377
+
+         2  "app/views/puppies/rack_mini_profiler.html.erb"
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template.rb:196
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template.rb:377
+
+         2  "localhost:3000"
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/http/url.rb:233
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/host_authorization.rb:90
+
+         2  "puppies/rack_mini_profiler"
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template/resolver.rb:19
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template/resolver.rb:326
+
+         2  "text/html; charset=utf-8"
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/http/response.rb:431
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/http/response.rb:445
+
+         1  "\n\n<h1>Rack Mini Profiler</h1>\n\n<h2>The Flame Graph</h2>\n\n<iframe src=\"/puppies/rack_mini_profiler?pp=flamegraph\" style=\"height: 600px;\"></iframe>\n\n<h2>Analyse Memory</h2>\n\n<iframe src=\"/puppies/rack_m"
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template.rb:340
+
+         1  "/Users/jsrn/Code/profiling-talk/app/app/assets/stylesheets"
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/uri_tar.rb:73
+
+         1  "/Users/jsrn/Code/profiling-talk/app/app/assets/stylesheets/application.css"
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/uri_tar.rb:73
+
+         1  "/Users/jsrn/Code/profiling-talk/app/app/views/layouts/application.html.erb"
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template/resolver.rb:330
+
+         1  "/Users/jsrn/Code/profiling-talk/app/app/views/puppies/_pup_report.html.erb"
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template/resolver.rb:330
+
+         1  "/Users/jsrn/Code/profiling-talk/app/app/views/puppies/rack_mini_profiler.html.erb"
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template/resolver.rb:330
+
+         1  "12.482874"
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-2.2.3/lib/rack/runtime.rb:28
+
+         1  "1e39fdefb6b59db20ab7"
+         1  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/securerandom.rb:157
+
+         1  "68c7e6b1f75b18affe648d85d3459c5c"
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-2.2.3/lib/rack/etag.rb:72
+
+         1  "75e3f115-f5d8-437f-bf37-96edcc572413"
+         1  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/securerandom.rb:237
+
+         1  "::1"
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/middleware/remote_ip.rb:162
+
+         1  "Puppy"
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/activerecord-6.0.3.2/lib/active_record/scoping.rb:94
+
+         1  "W/\"68c7e6b1f75b18affe648d85d3459c5c\""
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-2.2.3/lib/rack/etag.rb:35
+
+         1  "cache-control"
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-2.2.3/lib/rack/utils.rb:461
+
+         1  "content-type"
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-2.2.3/lib/rack/utils.rb:461
+
+         1  "etag"
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-2.2.3/lib/rack/utils.rb:461
+
+         1  "file-digest:///Users/jsrn/Code/profiling-talk/app/app/assets/stylesheets/application.css"
+         1  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/set.rb:349
+
+         1  "file:///Users/jsrn/Code/profiling-talk/app/app/assets/stylesheets/application.css?type=application/css-sourcemap+json&id=2c866e9c8e8f4bf1ab76e4d7bec49a281722ecf688ba525d1c36718f1f671149"
+         1  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/set.rb:349
+
+         1  "file:///Users/jsrn/Code/profiling-talk/app/app/assets/stylesheets/application.css?type=text/css&id=016e54eed31851b4f58578f1fe7aa6234b8bc149515ed83771ab35a1e3e4356d"
+         1  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/set.rb:349
+
+         1  "file:///Users/jsrn/Code/profiling-talk/app/app/assets/stylesheets/application.css?type=text/css&pipeline=debug&id=539c6a9c1aae4d31cd8d69df794968ab99dfa96dbb003be615c2b521a51696cd"
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/uri_tar.rb:73
+
+         1  "file:///Users/jsrn/Code/profiling-talk/app/app/assets/stylesheets/application.css?type=text/css&pipeline=self&id=fa324c228311d52bbe3d859e234bc0a0607b51ec638d069054ce831c428fe9c5"
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/uri_tar.rb:73
+
+         1  "layouts/application"
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template/resolver.rb:19
+
+         1  "profile-memory"
+         1  /Users/jsrn/.rvm/rubies/ruby-2.6.2/lib/ruby/2.6.0/uri/common.rb:388
+
+         1  "puppies/_pup_report"
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionview-6.0.3.2/lib/action_view/template/resolver.rb:19
+
+         1  "referrer-policy"
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-2.2.3/lib/rack/utils.rb:461
+
+         1  "sprockets/v4.0.0/LG/LGf_e9izbkWKU5Lz9anlZ_N3AQ_ZG0Rsyv9EZiH5I2w"
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/cache.rb:173
+
+         1  "sprockets/v4.0.0/ix/ix2S0cqpRbcUE6yYGOemTydz1fQfSEHfBgVD9fQboVo"
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/cache.rb:173
+
+         1  "sprockets/v4.0.0/ly/ly6EXR7KPBVIe70mRIzyymqEoYO9qiyrL-AdN-OOg0M"
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/sprockets-4.0.2/lib/sprockets/cache.rb:173
+
+         1  "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8"
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/actionpack-6.0.3.2/lib/action_dispatch/http/mime_negotiation.rb:161
+
+         1  "tmp/restart.txt"
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/puma-4.3.5/lib/puma/plugin/tmp_restart.rb:24
+
+         1  "x-content-type-options"
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-2.2.3/lib/rack/utils.rb:461
+
+         1  "x-download-options"
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-2.2.3/lib/rack/utils.rb:461
+
+         1  "x-frame-options"
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-2.2.3/lib/rack/utils.rb:461
+
+         1  "x-permitted-cross-domain-policies"
+         1  /Users/jsrn/.rvm/gems/ruby-2.6.2/gems/rack-2.2.3/lib/rack/utils.rb:461
+
