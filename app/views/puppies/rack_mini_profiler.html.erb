@@ -11,7 +11,7 @@
 <p>If you don't know how to read a flame graph (I didn't), it goes a little bit like this:</p>
 
 <ul>
-  <li>The <math>x</math> axis is time. The longer a block is along <math>x</math>, the longer that method call is taking.</li>
+  <li>The <math>x</math> axis spans our sample results. It isn't chronological, but the longer a block is along <math>x</math>, the longer that method call is taking.</li>
   <li>The <math>y</math> axis is the call stack. In a Rails application, you can generally expect application code towards the top and framework code ot the bottom. A large <math>y</math> height suggests complex code, but not necessarily slow code.</li>
 </ul>
 
@@ -27,7 +27,7 @@
     <p>So Garbage Collection is hitting our code. A <em>lot</em>. This implies that we're creating a <em>lot</em> of objects.</p>
   </li>
   <li>
-    <p>An overwhelming amount of the above flame graph is happening in <code>Kennel#ten_percent_of_puppies</code>.</p>
+    <p>An overwhelming amount of the above flame graph is happening in <code>Kennel#spot_check_batch</code>.</p>
     <blockquote>“Any improvements made anywhere besides the bottleneck are an illusion.”</blockquote>
     <p>With the above in mind, this is absolutely the first place to look at improving our code.</p>
   </li>

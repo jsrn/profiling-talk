@@ -37,7 +37,7 @@
           <h2>Profiling Rails Applications</h2>
 					<em style="font-family: serif;">the Pups Unlimited story</em>
           <br><br>
-          <small>header image: <a href="https://icons8.com/illustrations/illustration/hugo-searching">icons8</a> / css: <a href="https://github.com/andybrewer/mvp">mvp</a> / twitter: <a href="https://twitter.com/jsrndoftime">jsrndoftime</a> / feedback: <a href="mailto:jsrn@hey.com">jsrn@hey.com</a></small>
+          <small>twitter: <a href="https://twitter.com/jsrndoftime">jsrndoftime</a> / feedback: <a href="mailto:jsrn@hey.com">jsrn@hey.com</a> / header image: <a href="https://icons8.com/illustrations/illustration/hugo-searching">icons8</a></small>
 				</section>
         <section><h1>🐶 Background 🐶</h1></section>
         <section>
@@ -55,25 +55,29 @@
           </ul>
         </section>
         <section>
-          <p>Despite its name, Pups Unlimited is a pretty small company. You usually have anywhere from 5 to 10 pups on the go at any one time. The app is pretty happy running under these conditions.</p>
+          <p>You usually have anywhere from 50 to 100 pups on the go at any one time. The app is pretty happy running under these conditions.</p>
         </section>
         <section>
-          <p>But one day, disaster strikes.</p>
+          <p>But one day, disaster strikes. <em>(thunder sound effect)</em></p>
         </section>
         <section>
           <p>An illegal breeding operation running from nearby industrial estate has just gotten busted.</p>
         </section>
         <section>
-          <p>You have to shift a million dogs. And the page is timing out. And setting your server on fire.</p>
-          <p>And you can't just solve this with pagination for some reason.</p>
+          <p>Pups Unlimited has to process and house the rescued dogs. There are literally a million of them. And an important endpoint that handles reporting is timing out. Your server is on fire.</p>
         </section>
+				<section>
+					<p>It's your job to fix it.</p>
+				</section>
 				<section>
 					<h2>Why Profile?</h2>
 
-					<ul>
-						<li>no investor cash</li>
-						<li>users getting mad</li>
-					</ul>
+					<p>Profiling is a fast way of getting from "the app is running slowly" to "this block of code is running slowly."</p>
+				</section>
+				<section>
+					<h2>Why Profile?</h2>
+
+					<p>It's not always what you think. Starting by reading the code might lead you to fix code that <em>looks</em> inefficient, rather than code that actually is.</p>
 				</section>
 
         <section>
@@ -89,33 +93,41 @@
 				<section>
 					<h2>"The Puts Classic"</h2>
 
-          <a href="/puppies/the_puts_classic" target="_blank">click me!</a>
+          <a href="/puppies/the_puts_classic" target="_blank">View</a>
 				</section>
 
         <section>
           <h2>Benchmark</h2>
 
-          <li><a href="/puppies/benchmark" target="_blank">click me!</a></li>
+          <li><a href="/puppies/benchmark" target="_blank">View</a></li>
         </section>
 
         <section>
           <h2>ruby-prof</h2>
 
-          <li><a href="/puppies/ruby_prof" target="_blank">click me!</a></li>
+          <li><a href="/puppies/ruby_prof" target="_blank">View</a></li>
         </section>
 
         <section>
           <h2>rack-mini-profiler</h2>
 
-          <li><a href="/puppies/rack_mini_profiler" target="_blank">click me!</a></li>
+          <li><a href="/puppies/rack_mini_profiler" target="_blank">View</a></li>
         </section>
 
 				<section>
-					<h2>Problems</h2>
+					<h2>Profiling in Development</h2>
 
-					<img src="/slideshow/img/memprof-site.png">
-					<img src="/slideshow/img/memprof-support.png">
+					<p>A few things that can influence your profiles:</p>
+
+					<ul>
+						<li><code>config.cache_classes</code></li>
+						<li><code>config.eager_load</code></li>
+					</ul>
 				</section>
+
+				<section>
+          <h2>Thanks!</h2>
+        </section>
 			</div>
 		</div>
 

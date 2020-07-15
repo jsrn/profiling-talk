@@ -7,6 +7,6 @@ class Puppy < ApplicationRecord
   end
 
   def fix_ear
-    @ear = '{'
+    @ear = '('
   end
 end

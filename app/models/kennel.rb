@@ -12,7 +12,7 @@ class Kennel
   end
 
   def perform_ear_spot_check
-    ten_percent_of_puppies.each do |puppy|
+    spot_check_batch.each do |puppy|
       puppy.fix_ear if puppy.ear_inside_out?
     end
 
@@ -21,7 +21,8 @@ class Kennel
 
   private
 
-  def ten_percent_of_puppies
-    Puppy.all.sample(Puppy.count / 10)
+  def spot_check_batch
+    limit = Puppy.count / 10
+    Puppy.all.sample(limit)
   end
 end
